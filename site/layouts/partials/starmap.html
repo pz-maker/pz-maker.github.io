@@ -1,0 +1,53 @@
+{{- /* 知识星图数据层：节点 = 有 date 的文章，边 = 站内互链（移植自原 VitePress 版逻辑） */ -}}
+{{- $nodes := slice -}}
+{{- $byId := dict -}}
+{{- range where site.RegularPages "Section" "posts" -}}
+  {{- $page := . -}}
+  {{- with $page.Params.date -}}
+    {{- $raw := strings.TrimSuffix "/" $page.RelPermalink -}}
+    {{- $id := strings.TrimSuffix ".html" $raw -}}
+    {{- $sec := "" -}}
+    {{- with $page.Params.categories -}}
+      {{- if reflect.IsSlice . }}{{ $sec = index . 0 }}{{ else }}{{ $sec = . }}{{ end -}}
+    {{- end -}}
+    {{- if eq $sec "" }}{{ $sec = "posts" }}{{ end -}}
+    {{- $node := dict "id" $id "title" $page.Title "url" $page.RelPermalink "section" $sec "date" ($page.Date.Format "2006-01-02") -}}
+    {{- $nodes = $nodes | append $node -}}
+    {{- $byId = merge $byId (dict $id true) -}}
+  {{- end -}}
+{{- end -}}
+{{- $links := slice -}}
+{{- $seen := dict -}}
+{{- range where site.RegularPages "Section" "posts" -}}
+  {{- $page := . -}}
+  {{- $srcRaw := strings.TrimSuffix "/" $page.RelPermalink -}}
+  {{- $srcId := strings.TrimSuffix ".html" $srcRaw -}}
+  {{- if index $byId $srcId -}}
+    {{- $re := `\[[^]]*\]\(\s*(/[^)\s]+)\)` -}}
+    {{- range findRE $re $page.RawContent -}}
+      {{- $m := . -}}
+      {{- $urlRe := `\(\s*(/[^)\s]+)\)` -}}
+      {{- $target := index (findRE $urlRe $m) 0 | strings.TrimPrefix "(" -}}
+      {{- $target = strings.TrimSuffix ")" $target -}}
+      {{- $target = index (strings.Split $target "#") 0 -}}
+      {{- $target = index (strings.Split $target "?") 0 -}}
+      {{- $target = strings.TrimSuffix "/" $target -}}
+      {{- $target = strings.TrimSuffix ".html" $target -}}
+      {{- $target = strings.TrimSuffix ".md" $target -}}
+      {{- if and (index $byId $target) (ne $target $srcId) -}}
+        {{- $key := delimit (sort (slice $srcId $target)) "|" -}}
+        {{- if not (index $seen $key) -}}
+          {{- $seen = merge $seen (dict $key true) -}}
+          {{- $links = $links | append (dict "source" $srcId "target" $target) -}}
+        {{- end -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- $data := dict "nodes" $nodes "links" $links -}}
+{{- if gt (len $nodes) 0 -}}
+<section class="star-map" id="star-map" data-map='{{ $data | jsonify }}'>
+  <svg class="star-map__svg" viewBox="0 0 920 560" role="img" aria-label="知识星图：节点为文章，连线为互相引用"></svg>
+  <p class="star-map__hint">// hover 牵引邻近星 · 熔橙 = 当前阅读 · 青蓝 = 相关</p>
+</section>
+{{- end -}}

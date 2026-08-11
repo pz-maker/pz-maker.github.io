@@ -1,0 +1,250 @@
+# ===== AI Infra Wiki · Molten（熔炉）主题配置 =====
+# 基于 hugo-theme-aiovtue 改造；设计语言延续 Molten：冷却液青蓝主色 + 熔橙/品红霓虹点缀
+
+baseURL = 'https://pz-maker3.github.io/'
+locale = 'zh-cn'
+defaultContentLanguage = 'zh'
+title = 'AI Infra Wiki'
+theme = 'aiovtue'
+hasCJKLanguage = true
+enableRobotsTXT = true
+
+[sitemap]
+  changefreq = 'weekly'
+  priority = 0.5
+  filename = 'sitemap.xml'
+
+[pagination]
+  pagerSize = 10
+
+[taxonomies]
+  category = 'categories'
+  tag = 'tags'
+
+[outputs]
+  home = ['HTML', 'RSS']
+  section = ['HTML', 'RSS']
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+    [markup.goldmark.extensions]
+      [markup.goldmark.extensions.passthrough]
+        enable = true
+        [markup.goldmark.extensions.passthrough.delimiters]
+          block = [['\[', '\]'], ['$$', '$$']]
+          inline = [['\(', '\)'], ['$', '$']]
+  [markup.highlight]
+    style = "github-dark"
+    noClasses = false
+    lineNos = false
+    tabWidth = 4
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel = 4
+    ordered = false
+
+[mediaTypes]
+  [mediaTypes."application/json"]
+    suffixes = ["json", "excalidraw"]
+
+[params]
+  subtitle = '熔炉'
+  description = 'AI 基础设施学习记录：算力、显存、并行与瓶颈'
+  primaryColor = '#5bc8d6'                     # 冷却液青蓝（Molten 主色，主题自动派生 --va-c-primary 系列）
+  favicon = '/hero/avatar.png'
+  math = false
+  postIndent = true
+
+  [params.post]
+    fontSize = "1.05rem"
+
+  [params.links]
+    layout = 'preview'
+    rssEnable = false
+    footerEnable = false
+
+  [params.moments]
+    layout = 'memos'
+
+  [params.loader]
+    enable = false
+
+  [params.author]
+    name = 'pz-maker3'
+    avatar = '/hero/avatar.png'
+    statusEmoji = '⚙'
+    statusMessage = '训练中...'
+
+  [params.hero]
+    title = 'AI INFRA WIKI'
+    motto = [
+      '算力由 SM 决定，带宽由 HBM 决定',
+      '先让模型跑起来，再让它跑得快',
+      '记录每一次显存溢出的心跳',
+    ]
+    randomUrls = false
+    enableHitokoto = false
+    typewriter = true
+    typewriterSpeed = 80
+    style = 'dot'
+    fixedImg = true
+    urls = ['/hero/hero-bg.jpg']
+
+  [params.footer]
+    since = 2026
+    runtimeSince = '2026-08-01'
+
+  [params.home]
+    layout = 'list'
+    desktopListColumns = 'single'
+    desktopListItemStyle = 'cards'
+    mobileCardsLayout = 'list'
+    mobileCardsBatchSize = 10
+    archiveHeatmapColumns = 13
+    archiveHeatmapRows = 4
+    randomSidebarCount = 7
+    featuredCount = 4
+    featuredPoolCount = 12
+    mobileNoticeTicker = true
+    featuredDesktop = true
+    featuredMobile = true
+
+  [params.notice]
+    title = '公告栏'
+    rotateInterval = 5000
+    [[params.notice.sections]]
+      label = '--- 站点 ---'
+      lines = ['Obsidian 写作 → GitHub Pages 发布', '每周学习记录固定更新']
+    [[params.notice.sections]]
+      label = '--- 近期 ---'
+      lines = ['从零到一搭建 AI 训练知识体系']
+
+  [[params.social]]
+    name = 'GitHub'
+    link = 'https://github.com/pz-maker3'
+    icon = 'ri:github-line'
+    color = '#6e5494'
+  [[params.social]]
+    name = 'RSS'
+    link = '/index.xml'
+    icon = 'ri:rss-line'
+    color = 'orange'
+
+  [params.charts]
+    archivesStartMonth = '2026-08'
+    tagsChartLength = 10
+
+  [params.sponsor]
+    enable = false
+
+  [params.license]
+    enable = true
+    type = 'by-nc-sa'
+    language = 'zh'
+
+  [params.signature]
+    postCopyrightEnable = false
+    footerEnable = false
+
+  [params.postFooter]
+    navigationMerge = true
+
+  [params.comment]
+    provider = 'twikoo'
+
+  [params.waline]
+    serverURL = 'https://your-waline-url'
+    placeholder = '分享你的想法...'
+
+  [params.twikoo]
+    envId = ''
+    visitorEnable = false
+
+  [params.navbar]
+    titleParts = ['AI INFRA ', 'WIKI']
+    subTitle = '熔炉'
+    offset = 0
+    [params.navbar.mobileCollapse]
+      enable = true
+      includeHome = false
+      scrollThreshold = 5
+      scrollDelta = 10
+      revealMode = 'scrollUp'
+    [params.navbar.desktopCollapse]
+      enable = true
+      includeHome = false
+      scrollThreshold = 5
+      scrollDelta = 5
+      revealMode = 'scrollUp'
+    [params.navbar.scrollWithPage]
+      enable = false
+      includeHome = false
+
+  [params.search]
+    enable = true
+    threshold = 0.35
+
+  [[params.menu.main]]
+    name = '首页'
+    url = '/'
+    icon = 'ant-design:home-filled'
+    weight = 1
+  [[params.menu.main]]
+    name = '文章'
+    url = '/categories/'
+    icon = 'ant-design:read-filled'
+    navGroup = 'posts'
+    weight = 2
+    [[params.menu.main.items]]
+      name = '分类'
+      url = '/categories/'
+      icon = 'ant-design:appstore-filled'
+    [[params.menu.main.items]]
+      name = '归档'
+      url = '/archives/'
+      icon = 'ant-design:container-filled'
+    [[params.menu.main.items]]
+      name = '标签'
+      url = '/tags/'
+      icon = 'ant-design:tags-filled'
+  [[params.menu.main]]
+    name = '动态'
+    url = '/moments/'
+    icon = 'ant-design:compass-filled'
+    weight = 3
+  [[params.menu.main]]
+    name = '友链'
+    url = '/links/'
+    icon = 'ant-design:global-outlined'
+    weight = 4
+  [[params.menu.main]]
+    name = '关于'
+    url = '/about/'
+    icon = 'ant-design:idcard-filled'
+    weight = 5
+
+  [params.music]
+    enable = false
+
+  [params.live2d]
+    enable = false
+
+  [params.mouse]
+    enable = false
+
+  [params.effects]
+    enable = true
+    type = 'snow'
+    randomTypes = ['snow', 'firefly']
+    randomize = true
+    mobile = false
+    maxDuration = 12
+    zIndex = 5
+    script = '/vendor/yzhanweather/yzhanweather.min.js'
+
+  [params.pjax]
+    enable = true
+    fadeDuration = 200
+    mountDelay = 120

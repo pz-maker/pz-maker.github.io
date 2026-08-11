@@ -1,0 +1,6 @@
+*
+!.gitignore
+!site/
+!site/**
+site/public/
+site/.hugo_build.lock
