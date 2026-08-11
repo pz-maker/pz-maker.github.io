@@ -1,7 +1,7 @@
 # ===== AI Infra Wiki · Molten（熔炉）主题配置 =====
 # 基于 hugo-theme-aiovtue 改造；设计语言延续 Molten：冷却液青蓝主色 + 熔橙/品红霓虹点缀
 
-baseURL = 'https://pz-maker3.github.io/'
+baseURL = 'https://pz-maker.github.io/'
 locale = 'zh-cn'
 defaultContentLanguage = 'zh'
 title = 'AI Infra Wiki'
@@ -72,7 +72,7 @@ enableRobotsTXT = true
     enable = false
 
   [params.author]
-    name = 'pz-maker3'
+    name = 'pz-maker'
     avatar = '/hero/avatar.png'
     statusEmoji = '⚙'
     statusMessage = '训练中...'
@@ -123,7 +123,7 @@ enableRobotsTXT = true
 
   [[params.social]]
     name = 'GitHub'
-    link = 'https://github.com/pz-maker3'
+    link = 'https://github.com/pz-maker'
     icon = 'ri:github-line'
     color = '#6e5494'
   [[params.social]]
