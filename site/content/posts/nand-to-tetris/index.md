@@ -4,7 +4,7 @@ date: 2026-08-03
 lastmod: 2026-08-12
 tags: [nand2tetris, computer-architecture]
 categories:
-  - 学习路径
+  - 技术文章
 description: "计算机系统要素课程笔记：从 NAND 推导全部基础逻辑门，到多路选择器、ALU 与行波加法器。配套代码练习在 my_python_computer/my_cpu 项目。"
 ---
 
@@ -59,4 +59,4 @@ description: "计算机系统要素课程笔记：从 NAND 推导全部基础逻
 - [ ] Project 3：时序逻辑（触发器、寄存器、计数器）
 - [ ] 用 Python 实现并测试全部基础门（见 [my_cpu 测试](/posts/00-prerequisites/) 配套练习）
 
-> 相关：[00 前置基础](/posts/00-prerequisites/) ｜ [学习任务清单](/posts/study-plan/)
+> 相关：[00 前置基础](/posts/00-prerequisites/) ｜ [AI Infra 学习路线](/posts/knowledge-map/)

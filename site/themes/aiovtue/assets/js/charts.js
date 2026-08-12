@@ -171,7 +171,7 @@ function initCategoriesPage(echartsLib, textColor, primary) {
     })
     chart.on('click', 'series', (event) => {
       const key = event.data?.categoryKey || event.data?.name
-      if (key) selectCategory(String(key))
+      if (key) window.location.assign('/categories/' + encodeURIComponent(key) + '/')
     })
     bindChartResize(chart)
 

@@ -12,7 +12,7 @@
     <script type="application/json" id="categories-chart-data">{{ $data := slice }}{{ range .Data.Terms.ByCount }}{{ $data = $data | append (dict "name" .Page.Title "value" .Count "categoryKey" .Term) }}{{ end }}{{ $data | jsonify | safeHTML }}</script>
     <div class="sakura-tag-buttons sakura-categories-list">
       {{ range .Data.Terms.ByCount }}
-      <button type="button" class="sakura-tag-button" data-category="{{ .Term }}">{{ .Page.Title }} [{{ .Count }}]</button>
+      <a class="sakura-tag-button" href="{{ .Page.RelPermalink }}">{{ .Page.Title }} [{{ .Count }}]</a>
       {{ end }}
     </div>
     <div id="categories-post-section" class="sakura-categories-posts" data-list-layout="{{ if $listArchives }}archives{{ else }}cards{{ end }}" hidden>

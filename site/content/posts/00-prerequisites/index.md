@@ -4,14 +4,14 @@ date: 2026-08-10
 status: doing
 tags: [basics, linux, python]
 categories:
-  - 学习路径
+  - 技术文章
 lastmod: 2026-08-12
-description: "进入 CUDA / 分布式之前的地基：操作系统、编程语言、深度学习与数学基础。参考 AIInfraGuide「前置基础」模块（约 20 篇），逐项任务见 [学习任务清单](/posts/study-plan/)。"
+description: "进入 CUDA / 分布式之前的地基：操作系统、编程语言、深度学习与数学基础。参考 AIInfraGuide「前置基础」模块（约 20 篇），逐项任务见 [AI Infra 学习路线](/posts/knowledge-map/)。"
 ---
 
 # 00 前置基础
 
-> 进入 CUDA / 分布式之前的<mark class="va-hl">地基</mark>：操作系统、编程语言、深度学习与数学基础。参考 AIInfraGuide「前置基础」模块（约 20 篇），逐项任务见 [学习任务清单](/posts/study-plan/)。本页清单从本地旧站「第零层」合并而来。
+> 进入 CUDA / 分布式之前的<mark class="va-hl">地基</mark>：操作系统、编程语言、深度学习与数学基础。参考 AIInfraGuide「前置基础」模块（约 20 篇），逐项任务见 [AI Infra 学习路线](/posts/knowledge-map/)。本页清单从本地旧站「第零层」合并而来。
 
 ## Linux 与命令行
 
@@ -107,5 +107,5 @@ description: "进入 CUDA / 分布式之前的地基：操作系统、编程语�
 ## 参考
 
 - [AIInfraGuide 前置基础](https://caomaolufei.github.io/AIInfraGuide/)
-- 配套任务：[学习任务清单 → 模块一](/posts/study-plan/)
+- 配套任务：[阶段一 · 基础工程筑基](/posts/km-phase-1/)
 - 相关笔记：[Python 学习笔记](/posts/python-notes/) ｜ [From Nand to Tetris 学习笔记](/posts/nand-to-tetris/)

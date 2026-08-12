@@ -11,7 +11,7 @@ lastmod: 2026-08-11
 ## 本周完成
 
 - [x] 搭建本 Wiki 站点（VitePress 壳层 + 全局鼠标 + 本地歌单播放器）
-- [x] 学习路径 [00 前置基础](/posts/00-prerequisites/)：Linux 进程与作业控制（`tmux` / `nohup`）
+- [x] 技术文章 [00 前置基础](/posts/00-prerequisites/)：Linux 进程与作业控制（`tmux` / `nohup`）
 - [x] 阅读《FlashAttention》论文前半部分，记录 <mark class="va-hl">I/O 复杂度推导</mark>
 
 ## 卡点与思考

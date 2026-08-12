@@ -3,14 +3,14 @@ title: 04 性能分析
 date: 2026-08-10
 status: todo
 tags: [profiling, nsight, pytorch]categories:
-  - 学习路径
+  - 技术文章
 lastmod: 2026-08-11
 description: "不靠猜：用工具定位瓶颈，用数据驱动优化。Roofline 是标尺，对照实验是方法。参考 AIInfraGuide「性能分析」模块，逐项任务见 [学习任务清单](/posts/stu…"
 ---
 
 # 04 性能分析
 
-> 不靠猜：用工具定位瓶颈，用数据驱动优化。<mark class="va-hl">Roofline 是标尺，对照实验是方法</mark>。参考 AIInfraGuide「性能分析」模块，逐项任务见 [学习任务清单](/posts/study-plan/)。
+> 不靠猜：用工具定位瓶颈，用数据驱动优化。<mark class="va-hl">Roofline 是标尺，对照实验是方法</mark>。参考 AIInfraGuide「性能分析」模块，逐项任务见 [AI Infra 学习路线](/posts/knowledge-map/)。
 
 ## 工具链
 
@@ -41,4 +41,4 @@ description: "不靠猜：用工具定位瓶颈，用数据驱动优化。Roofli
 
 - [AIInfraGuide 性能分析](https://caomaolufei.github.io/AIInfraGuide/)
 - [Nsight Compute User Guide](https://docs.nvidia.com/nsight-compute/)
-- 配套任务：[学习任务清单 → 模块五](/posts/study-plan/)
+- 配套任务：[阶段三 · 系统能力进阶](/posts/km-phase-3/)

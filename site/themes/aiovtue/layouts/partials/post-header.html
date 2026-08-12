@@ -21,15 +21,11 @@
       </div>
       {{- if or $categories $tags -}}
       <div class="sakura-post-header-meta__row sakura-post-header-meta__row--taxonomy">
-        {{- with $categories -}}
+        {{- with .GetTerms "categories" -}}
         <span class="sakura-post-header-meta__item">分类：
-          {{- if reflect.IsSlice . -}}
           {{- range $i, $c := . -}}
           {{- if $i }} / {{ end -}}
-          <a href="{{ `/categories/` | relLangURL }}?category={{ $c | urlquery }}">{{ $c }}</a>
-          {{- end -}}
-          {{- else -}}
-          <a href="{{ `/categories/` | relLangURL }}?category={{ . | urlquery }}">{{ . }}</a>
+          <a href="{{ $c.RelPermalink }}">{{ $c.LinkTitle }}</a>
           {{- end -}}
         </span>
         {{- end -}}

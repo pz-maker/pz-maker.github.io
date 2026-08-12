@@ -4,7 +4,7 @@ date: 2026-08-10
 lastmod: 2026-08-12
 tags: [guide]
 categories:
-  - 站点指南
+  - 零碎想法
 description: "新增三步（Ctrl+N 自动模板 → 填 frontmatter → Ctrl+Shift+S 发布），删除两步（删文件夹 → 清理站内引用），全站 Hugo 静态站，文章即文件。"
 ---
 
@@ -19,7 +19,7 @@ description: "新增三步（Ctrl+N 自动模板 → 填 frontmatter → Ctrl+Sh
 在 Obsidian 中进入 `site/content/posts/` 目录，`Ctrl+N` 新建笔记，输入标题回车：
 
 - Templater 自动创建 `site/content/posts/<slug>/index.md`（每篇一个文件夹，附件同目录）
-- frontmatter（标题 / 日期 / 分类）已自动填好，分类默认「学习路径」
+- frontmatter（标题 / 日期 / 分类）已自动填好，分类默认「技术文章」
 - 在 `site/content/posts/weekly/` 下新建 = 周记模板（自动算 ISO 周号、写 `issue` 编号）
 
 ### 2. 填写 frontmatter（文件顶部的 `---` 块）
@@ -29,7 +29,7 @@ description: "新增三步（Ctrl+N 自动模板 → 填 frontmatter → Ctrl+Sh
 title: 文章标题            # 必填：列表 / 星图显示用
 date: 2026-08-10          # 必填：YYYY-MM-DD，缺失则不进入列表与星图
 categories:
-  - 学习路径              # 可选值：学习路径 / 周记 / 精读 / 站点指南（首页星图按此分组）
+  - 技术文章              # 可选值：技术文章 / 精读 / 周记 / 知识地图 / 零碎想法（首页星图按此分组）
 tags: [cuda, kernel]      # 可选：显示在文章右侧 META 栏
 description: ""           # 可选：留空则卡片自动从正文截取摘要
 draft: true               # 可选：填 true 则文章不出现在任何列表（草稿）
@@ -39,7 +39,7 @@ pinned: true              # 可选：填 true 则置顶（首页 / 分类列表�
 
 ### 3. 写正文，一键发布
 
-按分区约定写（周记四段式 / 学习路径清单式），写完 `Ctrl+Shift+S` 一键提交推送，约 1 分钟后上线。
+按分区约定写（周记四段式 / 知识地图清单式），写完 `Ctrl+Shift+S` 一键提交推送，约 1 分钟后上线。
 
 > 想给首页「最近更新」露脸，什么都不用做——它按日期自动收录；想给首页知识星图加连线，在正文里链接到其他站内文章即可（见「站内链接 / 星图」）。
 

@@ -3,7 +3,7 @@ title: 文字高亮演示
 date: 2026-08-10
 tags: [guide, typography]
 categories:
-  - 站点指南
+  - 零碎想法
 lastmod: 2026-08-11
 description: "引用的作用：本文档是 排版演示，语法说明见 [增删文章指南](/posts/howto/)。"
 ---
@@ -36,7 +36,7 @@ description: "引用的作用：本文档是 排版演示，语法说明见 [增
 | --- | --- |
 | 周总结 | 本周 <mark class="va-hl">完成了 FlashAttention 精读</mark>，下周计划 <mark class="va-hl">Triton 复现核心循环</mark> |
 | 阅读小记 | 论文的 <mark class="va-hl">I/O 复杂度推导</mark> 是全文最精彩的部分 |
-| 学习路径 | 目标：<mark class="va-hl">手写 GEMM 达到 cuBLAS 80% 性能</mark> |
+| 知识地图 | 目标：<mark class="va-hl">手写 GEMM 达到 cuBLAS 80% 性能</mark> |
 
 代码块内的高亮由语法着色负责，与荧光笔互不干扰：
 

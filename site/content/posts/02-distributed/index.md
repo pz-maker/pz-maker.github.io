@@ -3,14 +3,14 @@ title: 02 分布式训练
 date: 2026-08-10
 status: todo
 tags: [distributed, nccl, megatron]categories:
-  - 学习路径
+  - 技术文章
 lastmod: 2026-08-11
 description: "单卡到千卡：并行策略、通信与框架实践。核心是算清显存账本与通信账本。参考 AIInfraGuide「分布式训练」模块（约 17 篇），逐项任务见 [学习任务清单](/posts/s…"
 ---
 
 # 02 分布式训练
 
-> 单卡到千卡：并行策略、通信与框架实践。核心是算清<mark class="va-hl">显存账本与通信账本</mark>。参考 AIInfraGuide「分布式训练」模块（约 17 篇），逐项任务见 [学习任务清单](/posts/study-plan/)。
+> 单卡到千卡：并行策略、通信与框架实践。核心是算清<mark class="va-hl">显存账本与通信账本</mark>。参考 AIInfraGuide「分布式训练」模块（约 17 篇），逐项任务见 [AI Infra 学习路线](/posts/knowledge-map/)。
 
 ## 并行策略
 
@@ -41,4 +41,4 @@ description: "单卡到千卡：并行策略、通信与框架实践。核心是
 
 - [AIInfraGuide 分布式训练](https://caomaolufei.github.io/AIInfraGuide/)
 - [NCCL Documentation](https://docs.nvidia.com/deeplearning/nccl/user-guide/)
-- 配套任务：[学习任务清单 → 模块三](/posts/study-plan/)
+- 配套任务：[阶段三 · 系统能力进阶](/posts/km-phase-3/)

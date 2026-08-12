@@ -3,14 +3,14 @@ title: 03 推理优化
 date: 2026-08-10
 status: todo
 tags: [inference, quantization, vllm]categories:
-  - 学习路径
+  - 技术文章
 lastmod: 2026-08-11
 description: "从模型压缩到服务化部署的推理链路：KV Cache 是起点，PagedAttention 是引擎，量化是杠杆。参考 AIInfraGuide「推理优化」模块（约 18 篇），逐项任…"
 ---
 
 # 03 推理优化
 
-> 从模型压缩到服务化部署的推理链路：<mark class="va-hl">KV Cache 是起点，PagedAttention 是引擎，量化是杠杆</mark>。参考 AIInfraGuide「推理优化」模块（约 18 篇），逐项任务见 [学习任务清单](/posts/study-plan/)。
+> 从模型压缩到服务化部署的推理链路：<mark class="va-hl">KV Cache 是起点，PagedAttention 是引擎，量化是杠杆</mark>。参考 AIInfraGuide「推理优化」模块（约 18 篇），逐项任务见 [AI Infra 学习路线](/posts/knowledge-map/)。
 
 ## 模型压缩
 
@@ -41,4 +41,4 @@ description: "从模型压缩到服务化部署的推理链路：KV Cache 是起
 
 - [AIInfraGuide 推理优化](https://caomaolufei.github.io/AIInfraGuide/)
 - [vLLM Documentation](https://docs.vllm.ai/)
-- 配套任务：[学习任务清单 → 模块四](/posts/study-plan/)
+- 配套任务：[阶段三 · 系统能力进阶](/posts/km-phase-3/)

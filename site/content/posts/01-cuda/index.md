@@ -3,14 +3,14 @@ title: 01 CUDA 与算子优化
 date: 2026-08-10
 status: todo
 tags: [cuda, kernel, triton]categories:
-  - 学习路径
+  - 技术文章
 lastmod: 2026-08-11
 description: "从编程模型到算子性能的关键路径：先懂 warp 与内存层次，再谈 tile 与融合。参考 AIInfraGuide「CUDA 编程」模块（约 23 篇），逐项任务见 [学习任务清单…"
 ---
 
 # 01 CUDA 与算子优化
 
-> 从编程模型到算子性能的<mark class="va-hl">关键路径</mark>：先懂 warp 与内存层次，再谈 tile 与融合。参考 AIInfraGuide「CUDA 编程」模块（约 23 篇），逐项任务见 [学习任务清单](/posts/study-plan/)。
+> 从编程模型到算子性能的<mark class="va-hl">关键路径</mark>：先懂 warp 与内存层次，再谈 tile 与融合。参考 AIInfraGuide「CUDA 编程」模块（约 23 篇），逐项任务见 [AI Infra 学习路线](/posts/knowledge-map/)。
 
 ## CUDA 编程模型
 
@@ -47,4 +47,4 @@ description: "从编程模型到算子性能的关键路径：先懂 warp 与内
 
 - [AIInfraGuide CUDA 编程](https://caomaolufei.github.io/AIInfraGuide/)
 - [CUDA C++ Programming Guide](https://docs.nvidia.com/cuda/cuda-c-programming-guide/)
-- 配套任务：[学习任务清单 → 模块二](/posts/study-plan/)
+- 配套任务：[阶段三 · 系统能力进阶](/posts/km-phase-3/)

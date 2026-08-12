@@ -4,7 +4,7 @@ date: 2026-08-03
 lastmod: 2026-08-12
 tags: [python]
 categories:
-  - 学习路径
+  - 技术文章
 description: "名字与对象引用、函数参数传递、深浅拷贝、闭包与高阶函数——Python 对象模型的核心概念，配代码示例逐条验证。"
 ---
 
@@ -136,4 +136,4 @@ print(double(3.0))  # 6.0
 - [ ] 面向对象、装饰器、生成器（见 [00 前置基础](/posts/00-prerequisites/) 的 Python 模块）
 - [ ] 多进程 / 多线程与 GIL 影响边界
 
-> 相关：[00 前置基础](/posts/00-prerequisites/) ｜ [学习任务清单](/posts/study-plan/)
+> 相关：[00 前置基础](/posts/00-prerequisites/) ｜ [AI Infra 学习路线](/posts/knowledge-map/)
