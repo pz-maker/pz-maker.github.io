@@ -71,6 +71,15 @@
 
   const linkEls = links.map((l) => {
     const line = el('line', { class: 'star-map__link', 'data-k': linkKey(l) });
+    // 创建时写入初始坐标：rAF 未调度（后台标签页/未聚焦）时连线也不会堆在原点
+    const a = nodeById.get(l.source);
+    const b = nodeById.get(l.target);
+    if (a && b) {
+      line.setAttribute('x1', a.x);
+      line.setAttribute('y1', a.y);
+      line.setAttribute('x2', b.x);
+      line.setAttribute('y2', b.y);
+    }
     svg.appendChild(line);
     return { l, line };
   });
@@ -282,18 +291,18 @@
   };
 
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  if (!reducedMotion) {
+  // 后台标签页 rAF 不调度：等页面可见再启动动画（连线坐标创建时已写入，可见前也不空白）
+  const startLoop = () => {
+    if (rafId !== null || reducedMotion) return;
     rafId = requestAnimationFrame(tick);
-  } else {
-    // 静态：直接渲染一帧初始位置
-    for (const { l, line } of linkEls) {
-      const a = nodeById.get(l.source);
-      const b = nodeById.get(l.target);
-      if (!a || !b) continue;
-      line.setAttribute('x1', a.x);
-      line.setAttribute('y1', a.y);
-      line.setAttribute('x2', b.x);
-      line.setAttribute('y2', b.y);
+  };
+  if (!reducedMotion) {
+    if (document.visibilityState === 'visible') {
+      rafId = requestAnimationFrame(tick);
+    } else {
+      document.addEventListener('visibilitychange', () => {
+        if (document.visibilityState === 'visible') startLoop();
+      }, { once: true });
     }
   }
 })();
