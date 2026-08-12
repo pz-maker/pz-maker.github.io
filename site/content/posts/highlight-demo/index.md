@@ -1,7 +1,8 @@
 ---
 title: 文字高亮演示
 date: 2026-08-10
-tags: [guide, typography]categories:
+tags: [guide, typography]
+categories:
   - 站点指南
 lastmod: 2026-08-11
 description: "引用的作用：本文档是 排版演示，语法说明见 [增删文章指南](/posts/howto/)。"

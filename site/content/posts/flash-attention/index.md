@@ -3,7 +3,8 @@ title: FlashAttention 精读笔记
 date: 2026-08-08
 
 status: reading
-tags: [attention, kernel, cuda]categories:
+tags: [attention, kernel, cuda]
+categories:
   - 精读
 lastmod: 2026-08-11
 description: "一句话总结：把 attention 的中间矩阵拆成 tile，全程驻留 SRAM，把 O(N²) 显存占用降到 O(N)，并利用重计算实现精确而非近似的 attention。"
