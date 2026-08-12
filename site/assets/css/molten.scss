@@ -244,3 +244,153 @@ a:active {
     transform: none;
   }
 }
+// ===== 归档页 · 知识树（自上而下生长，动画参照 apple-design）=====
+.arch-tree {
+  position: relative;
+  max-width: 680px;
+  margin: 2.5rem auto 3rem;
+  padding-left: 44px; // 留出左侧主干空间
+}
+
+// 主干：从根节点向下生长（scaleY 0→1，critically damped 无回弹）
+.arch-tree__trunk {
+  position: absolute;
+  top: 8px;
+  bottom: 8px;
+  left: 17px;
+  width: 2px;
+  background: linear-gradient(180deg, rgba(255, 158, 94, 0.55), rgba(91, 200, 214, 0.35) 55%, rgba(91, 200, 214, 0.08));
+  transform-origin: top center;
+  animation: arch-tree-grow 1.4s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+// 根节点（熔橙核心，呼应星图 active 色）
+.arch-tree__root {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 26px;
+  animation: arch-tree-pop 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.arch-tree__root-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #ff9e5e;
+  box-shadow: 0 0 14px rgba(255, 158, 94, 0.8);
+}
+.arch-tree__root-label {
+  font-family: var(--va-font-mono);
+  font-size: 13px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(232, 236, 244, 0.85);
+}
+
+// 年份分支：圆点 + 年份标签
+.arch-tree__year {
+  position: relative;
+  margin-bottom: 22px;
+  animation: arch-tree-pop 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation-delay: calc(0.35s + var(--y) * 0.15s);
+}
+.arch-tree__year-node {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.arch-tree__year-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #5bc8d6;
+  box-shadow: 0 0 10px rgba(91, 200, 214, 0.7);
+}
+.arch-tree__year-label {
+  font-family: var(--va-font-mono);
+  font-size: 13px;
+  letter-spacing: 0.18em;
+  color: rgba(154, 168, 186, 0.9);
+  margin: 0;
+}
+
+// 叶片：从枝上交错发芽（stagger 逐片淡入上浮，只用 transform+opacity）
+.arch-tree__leaves {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.arch-tree__leaf {
+  opacity: 0;
+  animation: arch-tree-leaf-in 0.45s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation-delay: calc(0.5s + var(--y) * 0.15s + var(--l) * 0.04s);
+}
+.arch-tree__leaf-link {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  padding: 7px 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(91, 200, 214, 0.12);
+  background: rgba(15, 19, 25, 0.45);
+  text-decoration: none;
+  transition: border-color 150ms ease-out, background 150ms ease-out, transform 150ms ease-out;
+}
+.arch-tree__leaf-date {
+  font-family: var(--va-font-mono);
+  font-size: 11px;
+  color: rgba(91, 200, 214, 0.65);
+  flex-shrink: 0;
+}
+.arch-tree__leaf-title {
+  color: rgba(232, 236, 244, 0.85);
+  font-size: 0.95rem;
+  transition: color 150ms ease-out;
+}
+.arch-tree__leaf-link:hover {
+  border-color: rgba(192, 90, 201, 0.55);
+  background: rgba(192, 90, 201, 0.07);
+  transform: translateX(3px);
+}
+.arch-tree__leaf-link:hover .arch-tree__leaf-title {
+  color: #c05ac9;
+  text-shadow: 0 0 12px rgba(192, 90, 201, 0.4);
+}
+
+@keyframes arch-tree-grow {
+  from { transform: scaleY(0); }
+  to { transform: scaleY(1); }
+}
+@keyframes arch-tree-pop {
+  from { opacity: 0; transform: scale(0.7); }
+  to { opacity: 1; transform: scale(1); }
+}
+@keyframes arch-tree-leaf-in {
+  from { opacity: 0; transform: translateY(8px) scale(0.96); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .arch-tree__trunk,
+  .arch-tree__root,
+  .arch-tree__year {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+  .arch-tree__leaf {
+    opacity: 1;
+    animation: none;
+  }
+  .arch-tree__leaf-link,
+  .arch-tree__leaf-title {
+    transition: none;
+  }
+  .arch-tree__leaf-link:hover {
+    transform: none;
+  }
+}

@@ -1,0 +1,36 @@
+{{ define "main" }}
+<article class="sakura-page sakura-archives-page">
+  {{- partial "page-header.html" . -}}
+  <div class="sakura-page-content">
+    <script type="application/json" id="archives-posts-data">{{ $posts := slice }}{{ range where .Site.RegularPages "Section" "in" (slice "posts" "excalidraw") }}{{ $posts = $posts | append (dict "date" (.Date.Format "2006-01-02")) }}{{ end }}{{ $posts | jsonify | safeHTML }}</script>
+    {{- $posts := where .Site.RegularPages "Section" "in" (slice "posts" "excalidraw") -}}
+    {{- $posts = partial "posts-sorted.html" (dict "Pages" $posts) -}}
+    {{- $years := $posts.GroupByDate "2006" -}}
+    <div class="arch-tree" id="arch-tree">
+      <div class="arch-tree__root">
+        <span class="arch-tree__root-dot" aria-hidden="true"></span>
+        <span class="arch-tree__root-label">{{ .Site.Title }}</span>
+      </div>
+      <div class="arch-tree__trunk" aria-hidden="true"></div>
+      {{- range $i, $year := $years -}}
+      <section class="arch-tree__year" data-year="{{ $year.Key }}" style="--y: {{ $i }}">
+        <div class="arch-tree__year-node">
+          <span class="arch-tree__year-dot" aria-hidden="true"></span>
+          <h2 class="arch-tree__year-label">{{ $year.Key }}</h2>
+        </div>
+        <ul class="arch-tree__leaves">
+          {{- range $j, $page := $year.Pages -}}
+          <li class="arch-tree__leaf" style="--l: {{ $j }}">
+            <a class="arch-tree__leaf-link" href="{{ $page.RelPermalink }}">
+              <time class="arch-tree__leaf-date">{{ $page.Date.Format "01-02" }}</time>
+              <span class="arch-tree__leaf-title">{{ $page.Title }}</span>
+            </a>
+          </li>
+          {{- end -}}
+        </ul>
+      </section>
+      {{- end -}}
+    </div>
+  </div>
+</article>
+{{ end }}
