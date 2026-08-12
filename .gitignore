@@ -6,3 +6,4 @@ site/public/
 site/.hugo_build.lock
 !.github/
 !.github/**
+site/resources/
