@@ -2,7 +2,8 @@
 title: 00 前置基础
 date: 2026-08-10
 status: doing
-tags: [basics, linux, python]categories:
+tags: [basics, linux, python]
+categories:
   - 学习路径
 lastmod: 2026-08-11
 description: "进入 CUDA / 分布式之前的地基：操作系统、编程语言、深度学习与数学基础。参考 AIInfraGuide「前置基础」模块（约 20 篇），逐项任务见 [学习任务清单](/pos…"
