@@ -125,7 +125,7 @@ enableRobotsTXT = true
       lines = ['从零到一搭建 AI 训练知识体系']
     [[params.notice.sections]]
       label = '--- 找到我 ---'
-      lines = ['[知乎](https://www.zhihu.com/people/zhezhe-5-23)', '小红书：26776116234']
+      lines = ['[知乎](https://www.zhihu.com/people/zhezhe-5-23)', '[小红书](https://www.xiaohongshu.com/user/profile/6795d4e8000000000a03c78a)']
 
   [[params.social]]
     name = 'GitHub'
@@ -137,6 +137,11 @@ enableRobotsTXT = true
     link = 'https://www.zhihu.com/people/zhezhe-5-23'
     icon = 'ri:zhihu-line'
     color = '#0084ff'
+  [[params.social]]
+    name = '小红书'
+    link = 'https://www.xiaohongshu.com/user/profile/6795d4e8000000000a03c78a'
+    icon = 'simple-icons:xiaohongshu'
+    color = '#ff2442'
   [[params.social]]
     name = 'RSS'
     link = '/index.xml'
