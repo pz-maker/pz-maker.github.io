@@ -7,7 +7,7 @@ categories:
 tags:
   - paper
   - ai-infra
-draft: true
+draft: false
 description: 这是一篇不知所云的文章
 ---
 
