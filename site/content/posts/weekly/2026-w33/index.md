@@ -1,7 +1,8 @@
 ---
 title: 2026-W33 周总结
 date: 2026-08-09
-tags: [weekly, linux, cuda]categories:
+tags: [weekly, linux, cuda]
+categories:
   - 周记
 lastmod: 2026-08-11
 ---
