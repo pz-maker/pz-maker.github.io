@@ -75,7 +75,7 @@ enableRobotsTXT = true
     name = 'pz-maker'
     avatar = '/hero/avatar.png'
     statusEmoji = '⚙'
-    statusMessage = '训练中...'
+    statusMessage = '训练中 × 战地一'
 
   [params.hero]
     title = 'AI INFRA WIKI'
@@ -123,12 +123,20 @@ enableRobotsTXT = true
     [[params.notice.sections]]
       label = '--- 近期 ---'
       lines = ['从零到一搭建 AI 训练知识体系']
+    [[params.notice.sections]]
+      label = '--- 找到我 ---'
+      lines = ['[知乎](https://www.zhihu.com/people/zhezhe-5-23)', '小红书：26776116234']
 
   [[params.social]]
     name = 'GitHub'
     link = 'https://github.com/pz-maker'
     icon = 'ri:github-line'
     color = '#6e5494'
+  [[params.social]]
+    name = '知乎'
+    link = 'https://www.zhihu.com/people/zhezhe-5-23'
+    icon = 'ri:zhihu-line'
+    color = '#0084ff'
   [[params.social]]
     name = 'RSS'
     link = '/index.xml'
