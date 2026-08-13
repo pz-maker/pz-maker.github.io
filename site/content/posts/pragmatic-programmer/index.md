@@ -44,4 +44,4 @@ The early bird might get the worm, but what happens to the early worm?
 6. Experiment with different environments. (windows/linux)
 7. Stay current.
 
-> 用行动落实：本站在践行第 2、3 条（[精读](/categories/?category=精读) 分类下的读书笔记）；第 6 条正在做——本地 Linux 环境练习见 [00 前置基础](/posts/00-prerequisites/)。
+> 用行动落实：本站在践行第 2、3 条（[精读](/categories/?category=精读) 分类下的读书笔记）；第 6 条正在做——本地 Linux 环境练习见 [阶段一](/posts/km-phase-1/)。

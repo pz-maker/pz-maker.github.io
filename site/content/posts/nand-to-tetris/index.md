@@ -57,6 +57,6 @@ description: "计算机系统要素课程笔记：从 NAND 推导全部基础逻
 ## 下一步
 
 - [ ] Project 3：时序逻辑（触发器、寄存器、计数器）
-- [ ] 用 Python 实现并测试全部基础门（见 [my_cpu 测试](/posts/00-prerequisites/) 配套练习）
+- [ ] 用 Python 实现并测试全部基础门（配套练习存档本地 my_cpu 项目）
 
-> 相关：[00 前置基础](/posts/00-prerequisites/) ｜ [AI Infra 学习路线](/posts/knowledge-map/)
+> 相关：[AI Infra 学习路线](/posts/knowledge-map/)

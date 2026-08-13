@@ -83,6 +83,9 @@ enableRobotsTXT = true
       '算力由 SM 决定，带宽由 HBM 决定',
       '先让模型跑起来，再让它跑得快',
       '记录每一次显存溢出的心跳',
+      '所谓无底深渊，下去，也是前程万里',
+      '学习如春起之苗，不见其增，日有所长',
+      '每一个不曾起舞的日子，都是对生命的辜负',
     ]
     randomUrls = false
     enableHitokoto = false

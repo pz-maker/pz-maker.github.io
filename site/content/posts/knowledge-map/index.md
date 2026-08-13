@@ -54,5 +54,5 @@ description: "四阶段 18 个月：基础工程筑基 → AI 工程入门 → �
 ## 关联
 
 - 方法论：[《学习变现》读书笔记](/posts/learn-for-money/)
-- 本站实践笔记：[00 前置基础](/posts/00-prerequisites/) · [01 CUDA 与算子优化](/posts/01-cuda/) · [02 分布式训练](/posts/02-distributed/) · [03 推理优化](/posts/03-inference/) · [04 性能分析](/posts/04-profiling/) · [Nand to Tetris](/posts/nand-to-tetris/) · [Python 学习笔记](/posts/python-notes/)
+- 本站实践笔记：[Nand to Tetris](/posts/nand-to-tetris/) · [Python 学习笔记](/posts/python-notes/) · [FlashAttention 阅读小记](/posts/flash-attention/)
 - 每周复盘：[周记](/posts/weekly/)
