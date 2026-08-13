@@ -51,7 +51,7 @@ enableRobotsTXT = true
 
 [params]
   subtitle = '熔炉'
-  description = 'AI 基础设施学习记录：算力、显存、并行与瓶颈 · 热爱战地一、王以太'
+  description = 'AI 基础设施学习记录 · 战地一训练中'
   primaryColor = '#5bc8d6'                     # 冷却液青蓝（Molten 主色，主题自动派生 --va-c-primary 系列）
   favicon = '/hero/avatar.png'
   math = false
