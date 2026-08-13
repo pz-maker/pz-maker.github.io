@@ -54,5 +54,5 @@ description: "四阶段 18 个月：基础工程筑基 → AI 工程入门 → �
 ## 关联
 
 - 方法论：[《学习变现》读书笔记](/posts/learn-for-money/)
-- 本站实践笔记：[Nand to Tetris](/posts/nand-to-tetris/) · [Python 学习笔记](/posts/python-notes/) · [FlashAttention 阅读小记](/posts/flash-attention/)
+- 本站实践笔记：[Nand to Tetris](/posts/nand-to-tetris/) · [Python 学习笔记](/posts/python-notes/)
 - 每周复盘：[周记](/posts/weekly/)
