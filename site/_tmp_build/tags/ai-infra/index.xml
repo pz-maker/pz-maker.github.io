@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Ai-Infra on AI Infra Wiki</title>
+		<link>https://pz-maker.github.io/tags/ai-infra/</link>
+		<description>Recent content in Ai-Infra on AI Infra Wiki</description>
+		<generator>Hugo</generator>
+		<language>zh-cn</language>
+		
+		
+		
+		
+			<lastBuildDate>Thu, 13 Aug 2026 00:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="https://pz-maker.github.io/tags/ai-infra/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>战地一学习记录</title>
+				<link>https://pz-maker.github.io/posts/%E6%88%98%E5%9C%B0%E4%B8%80%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/</link>
+				<pubDate>Thu, 13 Aug 2026 00:00:00 +0000</pubDate>
+				<guid>https://pz-maker.github.io/posts/%E6%88%98%E5%9C%B0%E4%B8%80%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/</guid>
+				<description>&lt;blockquote&gt;&#xA;&lt;p&gt;解决一下这个问题&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;h2 id=&#34;背景&#34;&gt;背景&lt;/h2&gt;&#xA;&lt;p&gt;必须得写点啥东西呢，打开obsidian开始写东西喽。战地一真好玩。&lt;/p&gt;&#xA;&lt;h2 id=&#34;正文&#34;&gt;正文&lt;/h2&gt;&#xA;&lt;p&gt;&lt;mark class=&#34;va-hl&#34;&gt;我真得强调一些东西了&lt;/mark&gt;&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;没错我要&lt;strong&gt;强调一些事情&lt;/strong&gt;&#xA;用上一些标题&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;h1 id=&#34;大标题&#34;&gt;大标题&lt;/h1&gt;&#xA;&lt;h2 id=&#34;次标题&#34;&gt;次标题&lt;/h2&gt;&#xA;&lt;h3 id=&#34;次次标题&#34;&gt;次次标题&lt;/h3&gt;&#xA;&lt;h4 id=&#34;次次次标题&#34;&gt;次次次标题&lt;/h4&gt;&#xA;&lt;h5 id=&#34;次次次次标题&#34;&gt;次次次次标题&lt;/h5&gt;&#xA;&lt;h6 id=&#34;究极小标题&#34;&gt;究极小标题&lt;/h6&gt;&#xA;&lt;p&gt;==高亮==（已验证，网页渲染不出）&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>AI Infra 学习路线总览</title>
+				<link>https://pz-maker.github.io/posts/knowledge-map/</link>
+				<pubDate>Wed, 12 Aug 2026 00:00:00 +0000</pubDate>
+				<guid>https://pz-maker.github.io/posts/knowledge-map/</guid>
+				<description>&lt;h1 id=&#34;ai-infra-学习路线总览&#34;&gt;AI Infra 学习路线总览&lt;/h1&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;方法论参照《&lt;a href=&#34;https://pz-maker.github.io/posts/learn-for-money/&#34;&gt;学习变现&lt;/a&gt;》：&lt;strong&gt;知识地图（本篇）→ 学习路线图（四阶段页）→ 关键词便签 → 学习日志&lt;/strong&gt;。&#xA;知识地图回答&amp;quot;学什么&amp;quot;（书单节点 + 阅读范围 + 深度要求），学习路线图回答&amp;quot;怎么学&amp;quot;（&lt;strong&gt;有截止时间、有学习顺序、有意识输出&lt;/strong&gt;）。&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

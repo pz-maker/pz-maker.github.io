@@ -60,11 +60,13 @@ git log --oneline --all
 ### 我的第一个桌宠
 >德国突击兵Q版桌宠，名字叫做盔仔 / Helmchen
 
-[![[Pasted image 20260823124223.png]]]()
+![盔仔桌宠](<Pasted image 20260823124223.png>)
+
 盔仔可爱捏
 
 可以和盔仔对话
-[![[Pasted image 20260823124843.png]]]()
+
+![和盔仔对话](<Pasted image 20260823124843.png>)
 
 已实现功能：
 - [x] 桌面快捷键

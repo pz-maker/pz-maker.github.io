@@ -1,0 +1,1170 @@
+<!DOCTYPE html>
+<html lang="zh-CN" translate="no" class="notranslate is-home has-home-layout" data-search-threshold="0.35">
+<head>
+	<meta name="generator" content="Hugo 0.164.0">
+
+<meta charset="utf-8">
+<meta name="google" content="notranslate"><meta http-equiv="content-language" content="zh-CN">
+<style id="sakura-anti-translate">
+  .goog-te-banner-frame,
+  .goog-te-menu-frame,
+  .goog-te-balloon-frame,
+  #goog-gt-tt,
+  .skiptranslate,
+  body > .skiptranslate,
+  iframe.goog-te-banner-frame,
+  iframe.skiptranslate {
+    display: none !important;
+    visibility: hidden !important;
+    height: 0 !important;
+    width: 0 !important;
+    pointer-events: none !important;
+  }
+  html,
+  body {
+    top: 0 !important;
+    position: static !important;
+  }
+</style>
+<script>
+;(function () {
+  var SELECTOR = 'iframe.goog-te-banner-frame, .skiptranslate, #goog-gt-tt, .goog-te-menu-frame, .goog-te-balloon-frame, .goog-te-spinner-pos'
+
+  function lockLanguage() {
+    var root = document.documentElement
+    root.lang = 'zh-CN'
+    root.setAttribute('translate', 'no')
+    root.classList.add('notranslate')
+    if (document.body) {
+      document.body.setAttribute('translate', 'no')
+      document.body.classList.add('notranslate')
+      document.body.style.top = '0'
+      document.body.style.position = ''
+    }
+  }
+
+  function dismissTranslateUi() {
+    lockLanguage()
+    document.querySelectorAll(SELECTOR).forEach(function (el) {
+      el.remove()
+    })
+  }
+
+  lockLanguage()
+  dismissTranslateUi()
+
+  if (typeof MutationObserver !== 'undefined') {
+    new MutationObserver(dismissTranslateUi).observe(document.documentElement, {
+      childList: true,
+      subtree: true,
+    })
+  }
+
+  window.addEventListener('sakura:page-content-visible', dismissTranslateUi)
+  window.__sakuraDismissTranslateUi = dismissTranslateUi
+})()
+</script>
+<link rel="preconnect" href="https://code.iconify.design" crossorigin>
+<link rel="dns-prefetch" href="https://code.iconify.design">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="icon" href="/hero/avatar.png" type="image/png"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>AI Infra Wiki</title><meta name="description" content="AI 基础设施学习记录 · 战地一训练中"><meta name="sakura-pjax" content="1" data-fade="200" data-mount-delay="120" data-loader="1"><script type="application/json" id="sakura-site-effects-config">{"maxDuration":12,"mobile":false,"randomTypes":["snow","firefly"],"randomize":true,"script":"/vendor/yzhanweather/yzhanweather.min.js","type":"snow","zIndex":5}</script>
+<script>
+(function () {
+  var el = document.getElementById('sakura-site-effects-config')
+  if (!el?.textContent) return
+  try {
+    var raw = JSON.parse(el.textContent)
+    if (typeof raw === 'string') raw = JSON.parse(raw)
+    document.documentElement.dataset.sakuraEffectsMobile = raw.mobile ? '1' : '0'
+  } catch {}
+})()
+</script><link rel="canonical" href="https://pz-maker.github.io/">
+<link rel="sitemap" type="application/xml" title="Sitemap" href="https://pz-maker.github.io/sitemap.xml">
+<link rel="alternate" type="application/rss+xml" title="AI Infra Wiki" href="https://pz-maker.github.io/index.xml"><meta name="sakura-comment-provider" content="twikoo"><meta property="og:locale" content="zh-CN">
+<meta property="og:site_name" content="AI Infra Wiki">
+<meta property="og:title" content="AI Infra Wiki">
+<meta property="og:description" content="AI 基础设施学习记录 · 战地一训练中">
+<meta property="og:image" content="https://pz-maker.github.io/hero/avatar.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://pz-maker.github.io/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="AI Infra Wiki">
+<meta name="twitter:description" content="AI 基础设施学习记录 · 战地一训练中">
+<meta name="twitter:image" content="https://pz-maker.github.io/hero/avatar.png"><style>:root{--va-c-primary:#5bc8d6;--va-c-primary-rgb:91, 200, 214;--va-c-primary-light:#6fcfdb;--va-c-primary-lighter:#84d6e0;--va-c-primary-dark:#3abdce;--va-c-brand:var(--va-c-primary);--va-c-link:var(--va-c-primary-dark)}</style><style>:root{--sakura-hero-placeholder:#fafafa;--sakura-hero-placeholder-from:#f5f5f5;--sakura-hero-placeholder-to:#fff}html.dark{--sakura-hero-placeholder:#e8e8e8;--sakura-hero-placeholder-from:#ececec;--sakura-hero-placeholder-to:#e0e0e0}html.is-home,html.is-home body{background:var(--sakura-hero-placeholder)}html.dark.is-home,html.dark.is-home body{background:#1a1a1a}</style>
+<link rel="stylesheet" href="/fonts/lxgw-wenkai-screen/style.css">
+
+
+<link rel="stylesheet" href="/css/molten.min.9889b509132eb1c41fe4bc7d4c705ad047d1bd102d414e1a84f84f798296d9f7.css" integrity="sha256-mIm1CRMuscQf5Lx9THBa0EfRvRAtQU4ahPhPeYKW2fc=" crossorigin="anonymous">
+<link rel="stylesheet" href="/css/main.min.6813f4c17287362035ac06818cccbc7d91f9ab5841afabc793e91ba3a2be6ea5.css" integrity="sha256-aBP0wXKHNiA1rAaBjMy8fZH5q1hBr6vHk&#43;kbo6K&#43;bqU=" crossorigin="anonymous"><link rel="stylesheet" data-sakura-page-style="site-effects" href="/css/site-effects.min.96d1db7705ac6e4cd751de30cf9b63a6e7d31ddd3f67e18fbd10ce10e5956a37.css" integrity="sha256-ltHbdwWsbkzXUd4wz5tjpufTHd0/Z&#43;GPvRDOEOWVajc=" crossorigin="anonymous"><link rel="stylesheet" data-sakura-page-style="search-modal" href="/css/search.min.f6d2e23c837b66e290778f6aad8ad70973be82a5a399f02fda57f76ce304519d.css" integrity="sha256-9tLiPIN7ZuKQd49qrYrXCXO&#43;gqWjmfAv2lf3bOMEUZ0=" crossorigin="anonymous"><link rel="stylesheet" data-sakura-page-style="pjax" href="/css/pjax.min.bad1bcaa11e67200cf71d5d7d2c0e8c78d0cef8585f511ff5ee5c2e29b73f45b.css" integrity="sha256-utG8qhHmcgDPcdXX0sDox40M74WF9RH/XuXC4ptz9Fs=" crossorigin="anonymous">
+
+<script src="/js/starmap.min.4fa3f16ed6e8e85178ca0356b68034b911a1d51d1b5912c0e4240ea9bc831416.js" integrity="sha256-T6Pxbtbo6FF4ygNWtoA0uRGh1R0bWRLA5CQOqbyDFBY=" crossorigin="anonymous" defer></script>
+
+<script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js" defer></script>
+</head>
+<body class="notranslate" translate="no"><header
+  class="sakura-navbar"
+  id="navbar" data-mobile-collapse="1" data-scroll-threshold="5" data-scroll-delta="10" data-reveal-mode="scrollUp" data-mobile-collapse-home="0" data-desktop-collapse="1" data-desktop-scroll-threshold="5" data-desktop-scroll-delta="5" data-desktop-reveal-mode="scrollUp" data-desktop-collapse-home="0">
+  <div class="navbar-content sakura-safe-padding" id="navbar-content">
+    <div class="sakura-navbar__brand-wrap">
+      <button type="button" class="mobile-btn sakura-navbar__menu-btn" id="sidebar-toggle" aria-label="mobile navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="sakura-navbar-brand">
+        <ruby class="navbar-title relative">
+          <a class="logo-link" href="/" title="AI Infra Wiki-熔炉">
+            
+            <span>AI INFRA </span>
+            
+            <span class="sakura-hvr-rotate" id="navbar-brand-rotate">WIKI</span>
+            
+          </a>
+          <rt class="navbar-subtitle">熔炉</rt>
+        </ruby>
+      </div>
+    </div>
+
+    <nav class="sakura-navbar-link" id="navbar-links" aria-label="主导航">
+      
+      <div class="sakura-dropdown sakura-navbar-link-item">
+        <a class="sakura-nav-link" href="/" data-nav="/">
+          <iconify-icon icon="ant-design:home-filled" class="sakura-nav-link-icon" aria-hidden="true"></iconify-icon>
+          <span class="sakura-nav-link-text">首页</span>
+        </a>
+        
+      </div>
+      
+      <div class="sakura-dropdown sakura-navbar-link-item" aria-haspopup="true" aria-expanded="false">
+        <a class="sakura-nav-link" href="/categories/" data-nav="/categories/" data-nav-group="posts">
+          <iconify-icon icon="ant-design:read-filled" class="sakura-nav-link-icon" aria-hidden="true"></iconify-icon>
+          <span class="sakura-nav-link-text">文章</span>
+        </a>
+        
+        <div class="sakura-dropdown-menu">
+          <div class="sakura-dropdown-list">
+            
+            <a class="sakura-nav-link" href="/categories/" data-nav="/categories/">
+              <iconify-icon icon="ant-design:appstore-filled" class="sakura-nav-link-icon" aria-hidden="true"></iconify-icon>
+              <span class="sakura-nav-link-text">分类</span>
+            </a>
+            
+            <a class="sakura-nav-link" href="/archives/" data-nav="/archives/">
+              <iconify-icon icon="ant-design:container-filled" class="sakura-nav-link-icon" aria-hidden="true"></iconify-icon>
+              <span class="sakura-nav-link-text">归档</span>
+            </a>
+            
+            <a class="sakura-nav-link" href="/tags/" data-nav="/tags/">
+              <iconify-icon icon="ant-design:tags-filled" class="sakura-nav-link-icon" aria-hidden="true"></iconify-icon>
+              <span class="sakura-nav-link-text">标签</span>
+            </a>
+            
+          </div>
+        </div>
+        
+      </div>
+      
+      <div class="sakura-dropdown sakura-navbar-link-item">
+        <a class="sakura-nav-link" href="/moments/" data-nav="/moments/">
+          <iconify-icon icon="ant-design:compass-filled" class="sakura-nav-link-icon" aria-hidden="true"></iconify-icon>
+          <span class="sakura-nav-link-text">动态</span>
+        </a>
+        
+      </div>
+      
+      <div class="sakura-dropdown sakura-navbar-link-item">
+        <a class="sakura-nav-link" href="/links/" data-nav="/links/">
+          <iconify-icon icon="ant-design:global-outlined" class="sakura-nav-link-icon" aria-hidden="true"></iconify-icon>
+          <span class="sakura-nav-link-text">友链</span>
+        </a>
+        
+      </div>
+      
+      <div class="sakura-dropdown sakura-navbar-link-item">
+        <a class="sakura-nav-link" href="/about/" data-nav="/about/">
+          <iconify-icon icon="ant-design:idcard-filled" class="sakura-nav-link-icon" aria-hidden="true"></iconify-icon>
+          <span class="sakura-nav-link-text">关于</span>
+        </a>
+        
+      </div>
+      
+    </nav>
+
+    <div class="sakura-navbar-tools">
+      <button type="button" class="sakura-icon-btn sakura-navbar-tool" id="theme-toggle" aria-label="切换主题">
+        <iconify-icon icon="ri:moon-line"></iconify-icon>
+      </button>
+      <button type="button" class="sakura-icon-btn sakura-navbar-tool sakura-search-btn" id="search-open" aria-label="搜索" aria-expanded="false">
+        <span class="search-toggle-icon" aria-hidden="true">
+          <iconify-icon class="search-toggle-icon__search" icon="ri:search-line"></iconify-icon>
+          <iconify-icon class="search-toggle-icon__close" icon="ri:close-line"></iconify-icon>
+        </span>
+      </button>
+    </div>
+  </div>
+</header>
+<aside class="sakura-sidebar left" id="sidebar" aria-hidden="true">
+  <div class="site-info">
+    <a href="/about/" class="site-author-avatar"><img class="rounded-full"
+  src="/hero/avatar.png"
+  alt="avatar"
+  loading="lazy"
+  decoding="async"><span class="site-author-status" title="训练中 × 战地一">⚙</span>
+    </a>
+    <div class="site-author-name">
+      <a href="/about/">pz-maker</a>
+    </div>
+    <span class="site-name">AI Infra Wiki</span>
+    <h4 class="site-subtitle">熔炉</h4>
+    <div class="site-description">AI 基础设施学习记录 · 战地一训练中</div>
+  </div>
+
+  <div class="links-of-author">
+    
+    <a
+      class="sakura-icon-btn links-of-author-item"
+      href="https://github.com/pz-maker"
+      title="GitHub"
+      target="_blank"
+      rel="noopener"
+      style="color: #6e5494"
+    >
+      <iconify-icon icon="ri:github-line" class="links-of-author-item__icon" aria-hidden="true"></iconify-icon>
+    </a>
+    
+    <a
+      class="sakura-icon-btn links-of-author-item"
+      href="https://www.zhihu.com/people/zhezhe-5-23"
+      title="知乎"
+      target="_blank"
+      rel="noopener"
+      style="color: #0084ff"
+    >
+      <iconify-icon icon="ri:zhihu-line" class="links-of-author-item__icon" aria-hidden="true"></iconify-icon>
+    </a>
+    
+    <a
+      class="sakura-icon-btn links-of-author-item"
+      href="https://www.xiaohongshu.com/user/profile/6795d4e8000000000a03c78a"
+      title="小红书"
+      target="_blank"
+      rel="noopener"
+      style="color: #ff2442"
+    >
+      <iconify-icon icon="simple-icons:xiaohongshu" class="links-of-author-item__icon" aria-hidden="true"></iconify-icon>
+    </a>
+    
+    <a
+      class="sakura-icon-btn links-of-author-item"
+      href="/index.xml"
+      title="RSS"
+      target="_blank"
+      rel="noopener"
+      style="color: orange"
+    >
+      <iconify-icon icon="ri:rss-line" class="links-of-author-item__icon" aria-hidden="true"></iconify-icon>
+    </a>
+    
+  </div>
+
+  <nav class="sakura-sidebar-link" aria-label="侧边栏导航">
+    <ul class="sakura-sidebar-link-items has-groups mx-auto">
+      
+      <li>
+        
+        <a class="sakura-nav-link sakura-sidebar-link-item" href="/" data-nav="/" title="首页">
+          <iconify-icon icon="ant-design:home-filled" class="sakura-nav-link-icon" aria-hidden="true"></iconify-icon>
+          <span class="sakura-nav-link-text">首页</span>
+        </a>
+        
+      </li>
+      
+      <li>
+        
+        <button
+          type="button"
+          class="sakura-sidebar-link-item sidebar-nav-group__toggle"
+          data-nav="/categories/"
+          aria-expanded="false"
+          data-nav-group="posts"
+        >
+          <iconify-icon icon="ant-design:read-filled" class="sakura-nav-link-icon" aria-hidden="true"></iconify-icon>
+          <span class="sidebar-nav-group__label">文章</span>
+          <iconify-icon icon="ant-design:down-outlined" class="sidebar-nav-group__chevron" aria-hidden="true"></iconify-icon>
+        </button>
+        <ul class="sakura-sidebar-link-sub-items" hidden>
+          
+          <li>
+            <a class="sakura-nav-link sakura-sidebar-link-item" href="/categories/" data-nav="/categories/" title="分类">
+              <iconify-icon icon="ant-design:appstore-filled" class="sakura-nav-link-icon" aria-hidden="true"></iconify-icon>
+              <span class="sakura-nav-link-text">分类</span>
+            </a>
+          </li>
+          
+          <li>
+            <a class="sakura-nav-link sakura-sidebar-link-item" href="/archives/" data-nav="/archives/" title="归档">
+              <iconify-icon icon="ant-design:container-filled" class="sakura-nav-link-icon" aria-hidden="true"></iconify-icon>
+              <span class="sakura-nav-link-text">归档</span>
+            </a>
+          </li>
+          
+          <li>
+            <a class="sakura-nav-link sakura-sidebar-link-item" href="/tags/" data-nav="/tags/" title="标签">
+              <iconify-icon icon="ant-design:tags-filled" class="sakura-nav-link-icon" aria-hidden="true"></iconify-icon>
+              <span class="sakura-nav-link-text">标签</span>
+            </a>
+          </li>
+          
+        </ul>
+        
+      </li>
+      
+      <li>
+        
+        <a class="sakura-nav-link sakura-sidebar-link-item" href="/moments/" data-nav="/moments/" title="动态">
+          <iconify-icon icon="ant-design:compass-filled" class="sakura-nav-link-icon" aria-hidden="true"></iconify-icon>
+          <span class="sakura-nav-link-text">动态</span>
+        </a>
+        
+      </li>
+      
+      <li>
+        
+        <a class="sakura-nav-link sakura-sidebar-link-item" href="/links/" data-nav="/links/" title="友链">
+          <iconify-icon icon="ant-design:global-outlined" class="sakura-nav-link-icon" aria-hidden="true"></iconify-icon>
+          <span class="sakura-nav-link-text">友链</span>
+        </a>
+        
+      </li>
+      
+      <li>
+        
+        <a class="sakura-nav-link sakura-sidebar-link-item" href="/about/" data-nav="/about/" title="关于">
+          <iconify-icon icon="ant-design:idcard-filled" class="sakura-nav-link-icon" aria-hidden="true"></iconify-icon>
+          <span class="sakura-nav-link-text">关于</span>
+        </a>
+        
+      </li>
+      
+    </ul>
+  </nav>
+</aside>
+<div class="sakura-sidebar__overlay va-overlay" id="sidebar-overlay"></div>
+
+<div id="content" class="site-content">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+<section class="sakura-home"><section class="sakura-hero" id="hero">
+  <div class="sakura-hero__media hero-style dot">
+    <div class="sakura-hero-background" id="hero-media" data-fixed-img="true">
+      <script type="application/json" id="hero-urls-data">"[\"/hero/hero-bg.jpg\"]"</script>
+      <div class="sakura-hero-background-stage" id="hero-media-stage"></div>
+      <div class="sakura-hero__overlay"></div>
+    </div>
+    <div class="sakura-hero__waves" aria-hidden="true" style="--sakura-wave-front-mask: url('/img/wave1.png'); --sakura-wave-foreground-mask: url('/img/wave2.png');">
+      <div class="sakura-hero__wave-front"></div>
+      <div class="sakura-hero__wave-foreground"></div>
+    </div>
+  </div>
+  <div class="sakura-hero__content info-overlay">
+    <div class="sakura-hero-info-overlay">
+      <h1 class="sakura-hero__title sakura-glitch-text sakura-fade-in-down" data-text="AI INFRA WIKI">AI INFRA WIKI</h1>
+      <div class="sakura-slit-in-horizontal sakura-info-card">
+        <div class="sakura-social-card">
+          <div class="sakura-hitokoto-quote"><iconify-icon icon="fa6-solid:quote-left" class="sakura-hitokoto-quote-icon" aria-hidden="true"></iconify-icon>
+            <span class="sakura-hitokoto-text" id="hero-hitokoto" data-fallback="算力由 SM 决定，带宽由 HBM 决定" data-enable-hitokoto="false" data-typewriter="true" data-speed="80"></span>
+            <script type="application/json" id="hero-mottos-data">"[\"算力由 SM 决定，带宽由 HBM 决定\",\"先让模型跑起来，再让它跑得快\",\"记录每一次显存溢出的心跳\",\"所谓无底深渊，下去，也是前程万里\",\"学习如春起之苗，不见其增，日有所长\",\"每一个不曾起舞的日子，都是对生命的辜负\",\"魔鬼挡不住我最深邃的光辉——王以太《燕南飞》\",\"燕子，我会向南飞，我不会败北——王以太《燕南飞》\",\"现实不会辜负滋润它的汗水——王以太《燕南飞》\"]"</script>
+            <iconify-icon icon="fa6-solid:quote-right" class="sakura-hitokoto-quote-icon" aria-hidden="true"></iconify-icon>
+          </div>
+          <div class="sakura-hero-social-row">
+            <img class="sakura-icon sakura-hero-media-arrow is-prev" id="hero-media-prev" src="/img/hero-media-arrow.svg" alt="Previous media" width="22" height="22" role="button" tabindex="0">
+            
+            <a href="https://github.com/pz-maker" aria-label="icon" target="_blank" rel="noopener" title="GitHub" style="--sakura-color-icon: #6e5494; color: #6e5494;">
+              <iconify-icon icon="ri:github-line" class="sakura-icon"></iconify-icon>
+            </a>
+            
+            <a href="https://www.zhihu.com/people/zhezhe-5-23" aria-label="icon" target="_blank" rel="noopener" title="知乎" style="--sakura-color-icon: #0084ff; color: #0084ff;">
+              <iconify-icon icon="ri:zhihu-line" class="sakura-icon"></iconify-icon>
+            </a>
+            
+            <a href="https://www.xiaohongshu.com/user/profile/6795d4e8000000000a03c78a" aria-label="icon" target="_blank" rel="noopener" title="小红书" style="--sakura-color-icon: #ff2442; color: #ff2442;">
+              <iconify-icon icon="simple-icons:xiaohongshu" class="sakura-icon"></iconify-icon>
+            </a>
+            
+            <a href="/index.xml" aria-label="icon" target="_blank" rel="noopener" title="RSS" style="--sakura-color-icon: orange; color: orange;">
+              <iconify-icon icon="ri:rss-line" class="sakura-icon"></iconify-icon>
+            </a>
+            
+            <img class="sakura-icon sakura-hero-media-arrow" id="hero-media-next" src="/img/hero-media-arrow.svg" alt="Next media" width="22" height="22" role="button" tabindex="0">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="sakura-hero__scroll">
+    <button type="button" class="sakura-scroll-down" id="hero-scroll-down" aria-label="向下滚动">
+      <iconify-icon icon="fa6-solid:angle-down" class="sakura-scroll-down-icon sakura-loop-float"></iconify-icon>
+    </button>
+  </div></section>
+<section class="star-map" id="star-map" data-map='{&#34;links&#34;:[{&#34;source&#34;:&#34;/posts/publish-flow&#34;,&#34;target&#34;:&#34;/posts/howto&#34;},{&#34;source&#34;:&#34;/posts/publish-flow&#34;,&#34;target&#34;:&#34;/posts/knowledge-map&#34;},{&#34;source&#34;:&#34;/posts/obsidian-workflow-retrospective&#34;,&#34;target&#34;:&#34;/posts/publish-flow&#34;},{&#34;source&#34;:&#34;/posts/%E6%88%98%E5%9C%B0%E4%B8%80%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95&#34;,&#34;target&#34;:&#34;/posts/nand-to-tetris&#34;},{&#34;source&#34;:&#34;/posts/knowledge-map&#34;,&#34;target&#34;:&#34;/posts/learn-for-money&#34;},{&#34;source&#34;:&#34;/posts/knowledge-map&#34;,&#34;target&#34;:&#34;/posts/km-phase-1&#34;},{&#34;source&#34;:&#34;/posts/knowledge-map&#34;,&#34;target&#34;:&#34;/posts/km-phase-2&#34;},{&#34;source&#34;:&#34;/posts/knowledge-map&#34;,&#34;target&#34;:&#34;/posts/km-phase-3&#34;},{&#34;source&#34;:&#34;/posts/knowledge-map&#34;,&#34;target&#34;:&#34;/posts/km-phase-4&#34;},{&#34;source&#34;:&#34;/posts/knowledge-map&#34;,&#34;target&#34;:&#34;/posts/nand-to-tetris&#34;},{&#34;source&#34;:&#34;/posts/knowledge-map&#34;,&#34;target&#34;:&#34;/posts/python-notes&#34;},{&#34;source&#34;:&#34;/posts/km-phase-2&#34;,&#34;target&#34;:&#34;/posts/km-phase-1&#34;},{&#34;source&#34;:&#34;/posts/km-phase-2&#34;,&#34;target&#34;:&#34;/posts/km-phase-3&#34;},{&#34;source&#34;:&#34;/posts/km-phase-3&#34;,&#34;target&#34;:&#34;/posts/km-phase-4&#34;},{&#34;source&#34;:&#34;/posts/km-phase-1&#34;,&#34;target&#34;:&#34;/posts/python-notes&#34;},{&#34;source&#34;:&#34;/posts/highlight-demo&#34;,&#34;target&#34;:&#34;/posts/howto&#34;},{&#34;source&#34;:&#34;/posts/weekly/2026-w33&#34;,&#34;target&#34;:&#34;/posts/km-phase-1&#34;},{&#34;source&#34;:&#34;/posts/weekly/2026-w33&#34;,&#34;target&#34;:&#34;/posts/publish-flow&#34;},{&#34;source&#34;:&#34;/posts/pragmatic-programmer&#34;,&#34;target&#34;:&#34;/posts/km-phase-1&#34;}],&#34;nodes&#34;:[{&#34;date&#34;:&#34;2026-08-21&#34;,&#34;id&#34;:&#34;/posts/ai%E6%A1%8C%E5%AE%A0&#34;,&#34;section&#34;:&#34;技术文章&#34;,&#34;title&#34;:&#34;AI桌宠&#34;,&#34;url&#34;:&#34;/posts/ai%E6%A1%8C%E5%AE%A0/&#34;},{&#34;date&#34;:&#34;2026-08-13&#34;,&#34;id&#34;:&#34;/posts/publish-flow&#34;,&#34;section&#34;:&#34;零碎想法&#34;,&#34;title&#34;:&#34;文章常态化发布流程&#34;,&#34;url&#34;:&#34;/posts/publish-flow/&#34;},{&#34;date&#34;:&#34;2026-08-13&#34;,&#34;id&#34;:&#34;/posts/obsidian-workflow-retrospective&#34;,&#34;section&#34;:&#34;零碎想法&#34;,&#34;title&#34;:&#34;我把 Obsidian 变成了个人网站：从笔记到上线，只隔一个快捷键&#34;,&#34;url&#34;:&#34;/posts/obsidian-workflow-retrospective/&#34;},{&#34;date&#34;:&#34;2026-08-13&#34;,&#34;id&#34;:&#34;/posts/%E6%88%98%E5%9C%B0%E4%B8%80%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95&#34;,&#34;section&#34;:&#34;精读&#34;,&#34;title&#34;:&#34;战地一学习记录&#34;,&#34;url&#34;:&#34;/posts/%E6%88%98%E5%9C%B0%E4%B8%80%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/&#34;},{&#34;date&#34;:&#34;2026-08-12&#34;,&#34;id&#34;:&#34;/posts/knowledge-map&#34;,&#34;section&#34;:&#34;知识地图&#34;,&#34;title&#34;:&#34;AI Infra 学习路线总览&#34;,&#34;url&#34;:&#34;/posts/knowledge-map/&#34;},{&#34;date&#34;:&#34;2026-08-12&#34;,&#34;id&#34;:&#34;/posts/km-phase-2&#34;,&#34;section&#34;:&#34;知识地图&#34;,&#34;title&#34;:&#34;阶段二 · AI 工程入门（3~6 个月）&#34;,&#34;url&#34;:&#34;/posts/km-phase-2/&#34;},{&#34;date&#34;:&#34;2026-08-12&#34;,&#34;id&#34;:&#34;/posts/km-phase-3&#34;,&#34;section&#34;:&#34;知识地图&#34;,&#34;title&#34;:&#34;阶段三 · 系统能力进阶（6~12 个月）&#34;,&#34;url&#34;:&#34;/posts/km-phase-3/&#34;},{&#34;date&#34;:&#34;2026-08-12&#34;,&#34;id&#34;:&#34;/posts/km-phase-4&#34;,&#34;section&#34;:&#34;知识地图&#34;,&#34;title&#34;:&#34;阶段四 · 平台架构与前沿（12~18 个月）&#34;,&#34;url&#34;:&#34;/posts/km-phase-4/&#34;},{&#34;date&#34;:&#34;2026-08-12&#34;,&#34;id&#34;:&#34;/posts/km-phase-1&#34;,&#34;section&#34;:&#34;知识地图&#34;,&#34;title&#34;:&#34;阶段一 · 基础工程筑基（0~3 个月）&#34;,&#34;url&#34;:&#34;/posts/km-phase-1/&#34;},{&#34;date&#34;:&#34;2026-08-10&#34;,&#34;id&#34;:&#34;/posts/highlight-demo&#34;,&#34;section&#34;:&#34;零碎想法&#34;,&#34;title&#34;:&#34;文字高亮演示&#34;,&#34;url&#34;:&#34;/posts/highlight-demo/&#34;},{&#34;date&#34;:&#34;2026-08-10&#34;,&#34;id&#34;:&#34;/posts/howto&#34;,&#34;section&#34;:&#34;零碎想法&#34;,&#34;title&#34;:&#34;增删文章指南&#34;,&#34;url&#34;:&#34;/posts/howto/&#34;},{&#34;date&#34;:&#34;2026-08-09&#34;,&#34;id&#34;:&#34;/posts/weekly/2026-w33&#34;,&#34;section&#34;:&#34;周记&#34;,&#34;title&#34;:&#34;2026-W33 周总结&#34;,&#34;url&#34;:&#34;/posts/weekly/2026-w33/&#34;},{&#34;date&#34;:&#34;2026-08-03&#34;,&#34;id&#34;:&#34;/posts/pragmatic-programmer&#34;,&#34;section&#34;:&#34;精读&#34;,&#34;title&#34;:&#34;《程序员修炼之道》英语笔记&#34;,&#34;url&#34;:&#34;/posts/pragmatic-programmer/&#34;},{&#34;date&#34;:&#34;2026-08-03&#34;,&#34;id&#34;:&#34;/posts/learn-for-money&#34;,&#34;section&#34;:&#34;精读&#34;,&#34;title&#34;:&#34;《学习变现》读书笔记&#34;,&#34;url&#34;:&#34;/posts/learn-for-money/&#34;},{&#34;date&#34;:&#34;2026-08-03&#34;,&#34;id&#34;:&#34;/posts/nand-to-tetris&#34;,&#34;section&#34;:&#34;技术文章&#34;,&#34;title&#34;:&#34;From Nand to Tetris 学习笔记&#34;,&#34;url&#34;:&#34;/posts/nand-to-tetris/&#34;},{&#34;date&#34;:&#34;2026-08-03&#34;,&#34;id&#34;:&#34;/posts/python-notes&#34;,&#34;section&#34;:&#34;技术文章&#34;,&#34;title&#34;:&#34;Python 学习笔记&#34;,&#34;url&#34;:&#34;/posts/python-notes/&#34;}]}'>
+  <svg class="star-map__svg" viewBox="0 0 920 560" role="img" aria-label="知识星图：节点为文章，连线为互相引用"></svg>
+  <p class="star-map__hint">// hover 牵引邻近星 · 熔橙 = 当前阅读 · 青蓝 = 相关</p>
+</section><div
+    class="sakura-home-layout is-layout-list is-desktop-list-item-cards is-mobile-cards-list"
+    id="home-posts"
+    data-home-layout="list"
+    data-layout-primary="list"
+    data-list-columns-primary="single"
+    data-desktop-list-item-style="cards"
+    data-layout-random="false"
+    data-mobile-cards-layout="list"
+    data-cards-paging="pagination"
+    data-cards-batch-size="10"
+    data-home-paginator-page="2"
+  ><div
+  class="home-layout-variant"
+  data-layout="list"
+  data-list-columns="single"
+  data-mobile-cards-list="true">
+  <div class="home-list-layout has-sidebar"><aside class="home-list-sidebar" aria-label="首页侧边栏"><div class="home-list-sidebar-card home-list-sidebar-site-info">
+  <a href="/about/" class="home-list-sidebar-site-info__avatar"><img
+  src="/hero/avatar.png"
+  alt="pz-maker" width="96" height="96"
+  loading="lazy"
+  decoding="async"></a>
+  <p class="home-list-sidebar-site-info__name">
+    <a href="/about/">pz-maker</a>
+  </p>
+  <p class="home-list-sidebar-site-info__subtitle">AI Infra Wiki</p>
+  <p class="home-list-sidebar-site-info__desc">AI 基础设施学习记录 · 战地一训练中</p>
+  <div class="home-list-sidebar-site-info__stats">
+    <a class="home-list-sidebar-site-info__stat" href="/archives/">
+      <span class="home-list-sidebar-site-info__stat-value">16</span>
+      <span class="home-list-sidebar-site-info__stat-label">文章</span>
+    </a>
+    <a class="home-list-sidebar-site-info__stat" href="/categories/">
+      <span class="home-list-sidebar-site-info__stat-value">5</span>
+      <span class="home-list-sidebar-site-info__stat-label">分类</span>
+    </a>
+    <a class="home-list-sidebar-site-info__stat" href="/tags/"><span class="home-list-sidebar-site-info__stat-value">31</span>
+      <span class="home-list-sidebar-site-info__stat-label">标签</span>
+    </a>
+  </div><div class="home-list-sidebar-site-info__socials links-of-author"><a
+      class="home-list-sidebar-site-info__social links-of-author-item"
+      href="https://github.com/pz-maker"
+      title="GitHub"
+      target="_blank"
+      rel="noopener"
+      style="color: #6e5494;"
+    ><iconify-icon icon="ri:github-line" class="links-of-author-item__icon" aria-hidden="true"></iconify-icon></a><a
+      class="home-list-sidebar-site-info__social links-of-author-item"
+      href="https://www.zhihu.com/people/zhezhe-5-23"
+      title="知乎"
+      target="_blank"
+      rel="noopener"
+      style="color: #0084ff;"
+    ><iconify-icon icon="ri:zhihu-line" class="links-of-author-item__icon" aria-hidden="true"></iconify-icon></a><a
+      class="home-list-sidebar-site-info__social links-of-author-item"
+      href="https://www.xiaohongshu.com/user/profile/6795d4e8000000000a03c78a"
+      title="小红书"
+      target="_blank"
+      rel="noopener"
+      style="color: #ff2442;"
+    ><iconify-icon icon="simple-icons:xiaohongshu" class="links-of-author-item__icon" aria-hidden="true"></iconify-icon></a><a
+      class="home-list-sidebar-site-info__social links-of-author-item"
+      href="/index.xml"
+      title="RSS"
+      target="_blank"
+      rel="noopener"
+      style="color: orange;"
+    ><iconify-icon icon="ri:rss-line" class="links-of-author-item__icon" aria-hidden="true"></iconify-icon></a></div></div>
+<div class="home-list-sidebar-sticky"><div class="home-list-sidebar-card home-list-sidebar-notice">
+  <h3 class="notice-board__title">公告栏</h3><div class="notice-board__section">
+    <p class="notice-board__label">--- 站点 ---</p>
+    <ul><li class="notice-board__md">Obsidian 写作 → GitHub Pages 发布</li><li class="notice-board__md">每周学习记录固定更新</li></ul>
+  </div><div class="notice-board__section">
+    <p class="notice-board__label">--- 近期 ---</p>
+    <ul><li class="notice-board__md">从零到一搭建 AI 训练知识体系</li></ul>
+  </div><div class="notice-board__section">
+    <p class="notice-board__label">--- 找到我 ---</p>
+    <ul><li class="notice-board__md"><a href="https://www.zhihu.com/people/zhezhe-5-23" target="_blank" rel="noopener">知乎</a></li><li class="notice-board__md"><a href="https://www.xiaohongshu.com/user/profile/6795d4e8000000000a03c78a" target="_blank" rel="noopener">小红书</a></li></ul>
+  </div></div><div class="home-list-sidebar-card home-list-sidebar-tags">
+  <h3 class="home-list-sidebar-tags__title">标签</h3>
+  <div class="home-list-sidebar-tags__body">
+    <div class="home-list-sidebar-tags__cloud"><a class="home-list-sidebar-tags__tag" href="/tags/?tag=Roadmap">Roadmap</a><a class="home-list-sidebar-tags__tag" href="/tags/?tag=Workflow">Workflow</a><a class="home-list-sidebar-tags__tag" href="/tags/?tag=Obsidian">Obsidian</a><a class="home-list-sidebar-tags__tag" href="/tags/?tag=Ai-Infra">Ai-Infra</a><a class="home-list-sidebar-tags__tag" href="/tags/?tag=Guide">Guide</a><a class="home-list-sidebar-tags__tag" href="/tags/?tag=Kubernetes">Kubernetes</a><a class="home-list-sidebar-tags__tag" href="/tags/?tag=Learning">Learning</a><a class="home-list-sidebar-tags__tag" href="/tags/?tag=Paper">Paper</a><a class="home-list-sidebar-tags__tag" href="/tags/?tag=Reading">Reading</a><a class="home-list-sidebar-tags__tag" href="/tags/?tag=Architecture">Architecture</a><a class="home-list-sidebar-tags__tag" href="/tags/?tag=Computer-Architecture">Computer-Architecture</a><a class="home-list-sidebar-tags__tag" href="/tags/?tag=Csapp">Csapp</a><a class="home-list-sidebar-tags__tag" href="/tags/?tag=Cuda">Cuda</a><a class="home-list-sidebar-tags__tag" href="/tags/?tag=Ddia">Ddia</a><a class="home-list-sidebar-tags__tag" href="/tags/?tag=Distributed">Distributed</a><a class="home-list-sidebar-tags__tag" href="/tags/?tag=English">English</a><a class="home-list-sidebar-tags__tag" href="/tags/?tag=Hugo">Hugo</a><a class="home-list-sidebar-tags__tag" href="/tags/?tag=Inference">Inference</a><a class="home-list-sidebar-tags__tag" href="/tags/?tag=Linux">Linux</a><a class="home-list-sidebar-tags__tag" href="/tags/?tag=Llm">Llm</a><a class="home-list-sidebar-tags__tag" href="/tags/?tag=Mlops">Mlops</a><a class="home-list-sidebar-tags__tag" href="/tags/?tag=Nand2tetris">Nand2tetris</a><a class="home-list-sidebar-tags__tag" href="/tags/?tag=Performance">Performance</a><a class="home-list-sidebar-tags__tag" href="/tags/?tag=Phase-1">Phase-1</a><a class="home-list-sidebar-tags__tag" href="/tags/?tag=Phase-2">Phase-2</a><a class="home-list-sidebar-tags__tag" href="/tags/?tag=Phase-3">Phase-3</a><a class="home-list-sidebar-tags__tag" href="/tags/?tag=Phase-4">Phase-4</a><a class="home-list-sidebar-tags__tag" href="/tags/?tag=Python">Python</a><a class="home-list-sidebar-tags__tag" href="/tags/?tag=Pytorch">Pytorch</a><a class="home-list-sidebar-tags__tag" href="/tags/?tag=Typography">Typography</a></div>
+  </div>
+</div></div>
+</aside>
+<div class="home-list-main">
+      <div class="sakura-post-list home-post-list" id="home-post-list"><div class="home-mobile-notice-ticker" role="region" aria-label="公告栏">
+  <div class="home-mobile-notice-ticker__viewport">
+    <div class="home-mobile-notice-ticker__track"><div class="home-mobile-notice-ticker__group"><span class="home-mobile-notice-ticker__item">Obsidian 写作 → GitHub Pages 发布</span><span class="home-mobile-notice-ticker__sep" aria-hidden="true">·</span><span class="home-mobile-notice-ticker__item">每周学习记录固定更新</span><span class="home-mobile-notice-ticker__sep" aria-hidden="true">·</span><span class="home-mobile-notice-ticker__item">从零到一搭建 AI 训练知识体系</span><span class="home-mobile-notice-ticker__sep" aria-hidden="true">·</span><span class="home-mobile-notice-ticker__item"><a href="https://www.zhihu.com/people/zhezhe-5-23" target="_blank" rel="noopener">知乎</a></span><span class="home-mobile-notice-ticker__sep" aria-hidden="true">·</span><span class="home-mobile-notice-ticker__item"><a href="https://www.xiaohongshu.com/user/profile/6795d4e8000000000a03c78a" target="_blank" rel="noopener">小红书</a></span></div><div class="home-mobile-notice-ticker__group"><span class="home-mobile-notice-ticker__item">Obsidian 写作 → GitHub Pages 发布</span><span class="home-mobile-notice-ticker__sep" aria-hidden="true">·</span><span class="home-mobile-notice-ticker__item">每周学习记录固定更新</span><span class="home-mobile-notice-ticker__sep" aria-hidden="true">·</span><span class="home-mobile-notice-ticker__item">从零到一搭建 AI 训练知识体系</span><span class="home-mobile-notice-ticker__sep" aria-hidden="true">·</span><span class="home-mobile-notice-ticker__item"><a href="https://www.zhihu.com/people/zhezhe-5-23" target="_blank" rel="noopener">知乎</a></span><span class="home-mobile-notice-ticker__sep" aria-hidden="true">·</span><span class="home-mobile-notice-ticker__item"><a href="https://www.xiaohongshu.com/user/profile/6795d4e8000000000a03c78a" target="_blank" rel="noopener">小红书</a></span></div></div>
+  </div>
+</div><section class="home-list-featured" aria-label="推荐文章" style="--home-list-featured-visible-desktop: 4; --home-list-featured-visible-mobile: 2;">
+  <div class="home-list-featured__inner">
+    <div class="home-list-featured__header">
+      <h2 class="home-list-featured__heading">
+        <iconify-icon icon="mdi:star-outline" class="sakura-icon home-list-featured__heading-icon" aria-hidden="true"></iconify-icon>
+        要去这些文章看看吗
+      </h2>
+      <div class="home-list-featured__navs">
+        <button type="button" class="home-list-featured__nav home-list-featured__nav--prev" aria-label="上一组文章">
+          <iconify-icon icon="mdi:chevron-left" class="sakura-icon" aria-hidden="true"></iconify-icon>
+        </button>
+        <button type="button" class="home-list-featured__nav home-list-featured__nav--next" aria-label="下一组文章">
+          <iconify-icon icon="mdi:chevron-right" class="sakura-icon" aria-hidden="true"></iconify-icon>
+        </button>
+      </div>
+    </div>
+    <div class="home-list-featured__viewport">
+      <div class="home-list-featured__track home-list-featured-track"><a class="home-list-featured-card" href="/posts/ai%E6%A1%8C%E5%AE%A0/" aria-label="阅读全文：AI桌宠">
+  <div class="home-list-featured-card__cover"></div>
+  <div class="home-list-featured-card__body">
+    <h3 class="home-list-featured-card__title">AI桌宠</h3>
+    <p class="home-list-featured-card__excerpt">AI桌宠开发学习</p>
+  </div>
+</a>
+<a class="home-list-featured-card" href="/posts/publish-flow/" aria-label="阅读全文：文章常态化发布流程">
+  <div class="home-list-featured-card__cover"></div>
+  <div class="home-list-featured-card__body">
+    <h3 class="home-list-featured-card__title">文章常态化发布流程</h3>
+    <p class="home-list-featured-card__excerpt"> 一句话记忆：在 posts/ 下新建 → 写 → Ctrl+Shift+S，其余全自动。这篇是随手可翻的速查卡。
+一图流 textObsidian 写文章 ──▶ Ctrl+Shift+S ──▶ GitHub Actions 自动构建 ──▶ 上线 （唯一要做的） （一键推送） （不用管） （约 1 分钟）三种 …</p>
+  </div>
+</a>
+<a class="home-list-featured-card" href="/posts/obsidian-workflow-retrospective/" aria-label="阅读全文：我把 Obsidian 变成了个人网站：从笔记到上线，只隔一个快捷键">
+  <div class="home-list-featured-card__cover"></div>
+  <div class="home-list-featured-card__body">
+    <h3 class="home-list-featured-card__title">我把 Obsidian 变成了个人网站：从笔记到上线，只隔一个快捷键</h3>
+    <p class="home-list-featured-card__excerpt">复盘 Obsidian → Hugo → GitHub Pages 全自动发布流水线的搭建过程：为什么做、怎么选、踩了哪些坑。</p>
+  </div>
+</a>
+<a class="home-list-featured-card" href="/posts/%E6%88%98%E5%9C%B0%E4%B8%80%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/" aria-label="阅读全文：战地一学习记录">
+  <div class="home-list-featured-card__cover"></div>
+  <div class="home-list-featured-card__body">
+    <h3 class="home-list-featured-card__title">战地一学习记录</h3>
+    <p class="home-list-featured-card__excerpt">这是一篇不知所云的文章</p>
+  </div>
+</a>
+<a class="home-list-featured-card" href="/posts/knowledge-map/" aria-label="阅读全文：AI Infra 学习路线总览">
+  <div class="home-list-featured-card__cover"></div>
+  <div class="home-list-featured-card__body">
+    <h3 class="home-list-featured-card__title">AI Infra 学习路线总览</h3>
+    <p class="home-list-featured-card__excerpt">四阶段 18 个月：基础工程筑基 → AI 工程入门 → 系统能力进阶 → 平台架构与前沿。每阶段有 Deadline、教材书单与验收标准。</p>
+  </div>
+</a>
+<a class="home-list-featured-card" href="/posts/km-phase-2/" aria-label="阅读全文：阶段二 · AI 工程入门（3~6 个月）">
+  <div class="home-list-featured-card__cover"></div>
+  <div class="home-list-featured-card__body">
+    <h3 class="home-list-featured-card__title">阶段二 · AI 工程入门（3~6 个月）</h3>
+    <p class="home-list-featured-card__excerpt">3~6 个月｜Deadline 2027-02-12：PyTorch、大语言模型、MLOps、云原生。</p>
+  </div>
+</a>
+<a class="home-list-featured-card" href="/posts/km-phase-3/" aria-label="阅读全文：阶段三 · 系统能力进阶（6~12 个月）">
+  <div class="home-list-featured-card__cover"></div>
+  <div class="home-list-featured-card__body">
+    <h3 class="home-list-featured-card__title">阶段三 · 系统能力进阶（6~12 个月）</h3>
+    <p class="home-list-featured-card__excerpt">6~12 个月｜Deadline 2027-08-12：分布式训练系统、CUDA、系统性能优化、推理优化、AI 编译器。</p>
+  </div>
+</a>
+<a class="home-list-featured-card" href="/posts/km-phase-4/" aria-label="阅读全文：阶段四 · 平台架构与前沿（12~18 个月）">
+  <div class="home-list-featured-card__cover"></div>
+  <div class="home-list-featured-card__body">
+    <h3 class="home-list-featured-card__title">阶段四 · 平台架构与前沿（12~18 个月）</h3>
+    <p class="home-list-featured-card__excerpt">12~18 个月｜Deadline 2028-02-12：K8s 云原生平台、系统架构设计、前沿论文、国产芯片。</p>
+  </div>
+</a>
+<a class="home-list-featured-card" href="/posts/km-phase-1/" aria-label="阅读全文：阶段一 · 基础工程筑基（0~3 个月）">
+  <div class="home-list-featured-card__cover"></div>
+  <div class="home-list-featured-card__body">
+    <h3 class="home-list-featured-card__title">阶段一 · 基础工程筑基（0~3 个月）</h3>
+    <p class="home-list-featured-card__excerpt">0~3 个月｜Deadline 2026-11-12：CS:APP、Linux、APUE、数据结构与算法、DDIA。</p>
+  </div>
+</a>
+<a class="home-list-featured-card" href="/posts/highlight-demo/" aria-label="阅读全文：文字高亮演示">
+  <div class="home-list-featured-card__cover"></div>
+  <div class="home-list-featured-card__body">
+    <h3 class="home-list-featured-card__title">文字高亮演示</h3>
+    <p class="home-list-featured-card__excerpt">引用的作用：本文档是 排版演示，语法说明见 [增删文章指南](/posts/howto/)。</p>
+  </div>
+</a>
+<a class="home-list-featured-card" href="/posts/howto/" aria-label="阅读全文：增删文章指南">
+  <div class="home-list-featured-card__cover"></div>
+  <div class="home-list-featured-card__body">
+    <h3 class="home-list-featured-card__title">增删文章指南</h3>
+    <p class="home-list-featured-card__excerpt">新增三步（Ctrl+N 自动模板 → 填 frontmatter → Ctrl+Shift+S 发布），删除两步（删文件夹 → 清理站内引用），全站 Hugo 静态站，文章即文件。</p>
+  </div>
+</a>
+<a class="home-list-featured-card" href="/posts/weekly/2026-w33/" aria-label="阅读全文：2026-W33 周总结">
+  <div class="home-list-featured-card__cover"></div>
+  <div class="home-list-featured-card__body">
+    <h3 class="home-list-featured-card__title">2026-W33 周总结</h3>
+    <p class="home-list-featured-card__excerpt">W33 · 周总结 本周只做了一件事：把 Obsidian 写笔记 → Wiki 上线 这条工作流搭通。工具链理顺之后，以后所有沉淀都能低成本发出来。
+本周完成 打通发布链路：Obsidian 写作 → Ctrl+Shift+S 一键推送 → GitHub Actions 自动构建 → 约 1 分钟上线 …</p>
+  </div>
+</a>
+</div>
+    </div>
+  </div>
+</section>
+<div class="post-list-container post-list-container--cards post-list-container--desktop-list post-list-container--mobile-list home-cards-list">
+
+
+
+
+
+
+<article class="sakura-post-card left"><a class="sakura-post-card__cover aspect-video" href="/posts/howto/"></a>
+  <div class="sakura-post-card__content has-cover">
+    <div class="sakura-post-card-info">
+      <div class="sakura-post-date post-date">
+        <span class="sakura-post-date__inner" title="编辑于2026-08-12">
+          <iconify-icon icon="mdi:clock-outline" class="sakura-icon sakura-post-date__icon" aria-hidden="true"></iconify-icon>
+          <span class="sakura-post-date__label">编辑于</span>
+          <time datetime="2026-08-12" data-date-only="true" itemprop="dateModified">2026-08-12</time>
+        </span>
+      </div>
+      <h2 class="sakura-post-title sakura-post-card__title">
+        <a href="/posts/howto/" aria-label="阅读全文：增删文章指南">增删文章指南</a>
+      </h2>
+      <div class="sakura-post-meta">
+        
+        <div class="sakura-post-categories">
+          
+          <a class="sakura-post-categories__link" href="/categories/%E9%9B%B6%E7%A2%8E%E6%83%B3%E6%B3%95/">
+            
+            <iconify-icon icon="mdi:folder-open-outline" class="sakura-icon sakura-post-categories__icon" aria-hidden="true"></iconify-icon>
+            
+            <span>零碎想法</span>
+          </a>
+          
+        </div>
+        
+        
+        <div class="sakura-post-tags">
+          
+          <a class="sakura-post-tags__link" href="/tags/?tag=guide">
+            
+            <iconify-icon icon="mdi:tag-multiple" class="sakura-icon sakura-post-tags__icon" aria-hidden="true"></iconify-icon>
+            
+            <span>guide</span>
+          </a>
+          
+        </div>
+        
+      </div>
+      <div class="sakura-post-excerpt sakura-post-card__excerpt">新增三步（Ctrl+N 自动模板 → 填 frontmatter → Ctrl+Shift+S 发布），删除两步（删文件夹 → 清理站内引用），全站 Hugo 静态站，文章即文件。</div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+<article class="sakura-post-card right"><a class="sakura-post-card__cover aspect-video" href="/posts/weekly/2026-w33/"></a>
+  <div class="sakura-post-card__content has-cover">
+    <div class="sakura-post-card-info">
+      <div class="sakura-post-date post-date">
+        <span class="sakura-post-date__inner" title="编辑于2026-08-13">
+          <iconify-icon icon="mdi:clock-outline" class="sakura-icon sakura-post-date__icon" aria-hidden="true"></iconify-icon>
+          <span class="sakura-post-date__label">编辑于</span>
+          <time datetime="2026-08-13" data-date-only="true" itemprop="dateModified">2026-08-13</time>
+        </span>
+      </div>
+      <h2 class="sakura-post-title sakura-post-card__title">
+        <a href="/posts/weekly/2026-w33/" aria-label="阅读全文：2026-W33 周总结">2026-W33 周总结</a>
+      </h2>
+      <div class="sakura-post-meta">
+        
+        <div class="sakura-post-categories">
+          
+          <a class="sakura-post-categories__link" href="/categories/%E5%91%A8%E8%AE%B0/">
+            
+            <iconify-icon icon="mdi:folder-open-outline" class="sakura-icon sakura-post-categories__icon" aria-hidden="true"></iconify-icon>
+            
+            <span>周记</span>
+          </a>
+          
+        </div>
+        
+        
+        <div class="sakura-post-tags">
+          
+          <a class="sakura-post-tags__link" href="/tags/?tag=weekly">
+            
+            <iconify-icon icon="mdi:tag-multiple" class="sakura-icon sakura-post-tags__icon" aria-hidden="true"></iconify-icon>
+            
+            <span>weekly</span>
+          </a>
+          
+          <a class="sakura-post-tags__link" href="/tags/?tag=obsidian">
+            
+            <span class="sakura-post-tags__sep">·</span>
+            
+            <span>obsidian</span>
+          </a>
+          
+          <a class="sakura-post-tags__link" href="/tags/?tag=workflow">
+            
+            <span class="sakura-post-tags__sep">·</span>
+            
+            <span>workflow</span>
+          </a>
+          
+        </div>
+        
+      </div>
+      <div class="sakura-post-excerpt sakura-post-card__excerpt">W33 · 周总结 本周只做了一件事：把 Obsidian 写笔记 → Wiki 上线 这条工作流搭通。工具链理顺之后，以后所有沉淀都能低成本发出来。
+本周完成 打通发布链路：Obsidian 写作 → Ctrl+Shift+S 一键推送 → GitHub Actions 自动构建 → 约 1 分钟上线 …</div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+<article class="sakura-post-card left"><a class="sakura-post-card__cover aspect-video" href="/posts/pragmatic-programmer/"></a>
+  <div class="sakura-post-card__content has-cover">
+    <div class="sakura-post-card-info">
+      <div class="sakura-post-date post-date">
+        <span class="sakura-post-date__inner" title="编辑于2026-08-12">
+          <iconify-icon icon="mdi:clock-outline" class="sakura-icon sakura-post-date__icon" aria-hidden="true"></iconify-icon>
+          <span class="sakura-post-date__label">编辑于</span>
+          <time datetime="2026-08-12" data-date-only="true" itemprop="dateModified">2026-08-12</time>
+        </span>
+      </div>
+      <h2 class="sakura-post-title sakura-post-card__title">
+        <a href="/posts/pragmatic-programmer/" aria-label="阅读全文：《程序员修炼之道》英语笔记">《程序员修炼之道》英语笔记</a>
+      </h2>
+      <div class="sakura-post-meta">
+        
+        <div class="sakura-post-categories">
+          
+          <a class="sakura-post-categories__link" href="/categories/%E7%B2%BE%E8%AF%BB/">
+            
+            <iconify-icon icon="mdi:folder-open-outline" class="sakura-icon sakura-post-categories__icon" aria-hidden="true"></iconify-icon>
+            
+            <span>精读</span>
+          </a>
+          
+        </div>
+        
+        
+        <div class="sakura-post-tags">
+          
+          <a class="sakura-post-tags__link" href="/tags/?tag=reading">
+            
+            <iconify-icon icon="mdi:tag-multiple" class="sakura-icon sakura-post-tags__icon" aria-hidden="true"></iconify-icon>
+            
+            <span>reading</span>
+          </a>
+          
+          <a class="sakura-post-tags__link" href="/tags/?tag=english">
+            
+            <span class="sakura-post-tags__sep">·</span>
+            
+            <span>english</span>
+          </a>
+          
+        </div>
+        
+      </div>
+      <div class="sakura-post-excerpt sakura-post-card__excerpt">读英文原版顺便学英语：生词积累 + 每周建议清单（每年学一门新语言、每月读一本技术书……）。</div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+<article class="sakura-post-card right"><a class="sakura-post-card__cover aspect-video" href="/posts/learn-for-money/"></a>
+  <div class="sakura-post-card__content has-cover">
+    <div class="sakura-post-card-info">
+      <div class="sakura-post-date post-date">
+        <span class="sakura-post-date__inner" title="编辑于2026-08-12">
+          <iconify-icon icon="mdi:clock-outline" class="sakura-icon sakura-post-date__icon" aria-hidden="true"></iconify-icon>
+          <span class="sakura-post-date__label">编辑于</span>
+          <time datetime="2026-08-12" data-date-only="true" itemprop="dateModified">2026-08-12</time>
+        </span>
+      </div>
+      <h2 class="sakura-post-title sakura-post-card__title">
+        <a href="/posts/learn-for-money/" aria-label="阅读全文：《学习变现》读书笔记">《学习变现》读书笔记</a>
+      </h2>
+      <div class="sakura-post-meta">
+        
+        <div class="sakura-post-categories">
+          
+          <a class="sakura-post-categories__link" href="/categories/%E7%B2%BE%E8%AF%BB/">
+            
+            <iconify-icon icon="mdi:folder-open-outline" class="sakura-icon sakura-post-categories__icon" aria-hidden="true"></iconify-icon>
+            
+            <span>精读</span>
+          </a>
+          
+        </div>
+        
+        
+        <div class="sakura-post-tags">
+          
+          <a class="sakura-post-tags__link" href="/tags/?tag=reading">
+            
+            <iconify-icon icon="mdi:tag-multiple" class="sakura-icon sakura-post-tags__icon" aria-hidden="true"></iconify-icon>
+            
+            <span>reading</span>
+          </a>
+          
+          <a class="sakura-post-tags__link" href="/tags/?tag=learning">
+            
+            <span class="sakura-post-tags__sep">·</span>
+            
+            <span>learning</span>
+          </a>
+          
+        </div>
+        
+      </div>
+      <div class="sakura-post-excerpt sakura-post-card__excerpt">知识地图 → 学习路线图 → 关键词便签 → 学习日志：把输入转化为输出，把知识转化为能力，才是变现的起点。</div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+<article class="sakura-post-card left"><a class="sakura-post-card__cover aspect-video" href="/posts/nand-to-tetris/"></a>
+  <div class="sakura-post-card__content has-cover">
+    <div class="sakura-post-card-info">
+      <div class="sakura-post-date post-date">
+        <span class="sakura-post-date__inner" title="编辑于2026-08-12">
+          <iconify-icon icon="mdi:clock-outline" class="sakura-icon sakura-post-date__icon" aria-hidden="true"></iconify-icon>
+          <span class="sakura-post-date__label">编辑于</span>
+          <time datetime="2026-08-12" data-date-only="true" itemprop="dateModified">2026-08-12</time>
+        </span>
+      </div>
+      <h2 class="sakura-post-title sakura-post-card__title">
+        <a href="/posts/nand-to-tetris/" aria-label="阅读全文：From Nand to Tetris 学习笔记">From Nand to Tetris 学习笔记</a>
+      </h2>
+      <div class="sakura-post-meta">
+        
+        <div class="sakura-post-categories">
+          
+          <a class="sakura-post-categories__link" href="/categories/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/">
+            
+            <iconify-icon icon="mdi:folder-open-outline" class="sakura-icon sakura-post-categories__icon" aria-hidden="true"></iconify-icon>
+            
+            <span>技术文章</span>
+          </a>
+          
+        </div>
+        
+        
+        <div class="sakura-post-tags">
+          
+          <a class="sakura-post-tags__link" href="/tags/?tag=nand2tetris">
+            
+            <iconify-icon icon="mdi:tag-multiple" class="sakura-icon sakura-post-tags__icon" aria-hidden="true"></iconify-icon>
+            
+            <span>nand2tetris</span>
+          </a>
+          
+          <a class="sakura-post-tags__link" href="/tags/?tag=computer-architecture">
+            
+            <span class="sakura-post-tags__sep">·</span>
+            
+            <span>computer-architecture</span>
+          </a>
+          
+        </div>
+        
+      </div>
+      <div class="sakura-post-excerpt sakura-post-card__excerpt">计算机系统要素课程笔记：从 NAND 推导全部基础逻辑门，到多路选择器、ALU 与行波加法器。配套代码练习在 my_python_computer/my_cpu 项目。</div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+<article class="sakura-post-card right"><a class="sakura-post-card__cover aspect-video" href="/posts/python-notes/"></a>
+  <div class="sakura-post-card__content has-cover">
+    <div class="sakura-post-card-info">
+      <div class="sakura-post-date post-date">
+        <span class="sakura-post-date__inner" title="编辑于2026-08-12">
+          <iconify-icon icon="mdi:clock-outline" class="sakura-icon sakura-post-date__icon" aria-hidden="true"></iconify-icon>
+          <span class="sakura-post-date__label">编辑于</span>
+          <time datetime="2026-08-12" data-date-only="true" itemprop="dateModified">2026-08-12</time>
+        </span>
+      </div>
+      <h2 class="sakura-post-title sakura-post-card__title">
+        <a href="/posts/python-notes/" aria-label="阅读全文：Python 学习笔记">Python 学习笔记</a>
+      </h2>
+      <div class="sakura-post-meta">
+        
+        <div class="sakura-post-categories">
+          
+          <a class="sakura-post-categories__link" href="/categories/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/">
+            
+            <iconify-icon icon="mdi:folder-open-outline" class="sakura-icon sakura-post-categories__icon" aria-hidden="true"></iconify-icon>
+            
+            <span>技术文章</span>
+          </a>
+          
+        </div>
+        
+        
+        <div class="sakura-post-tags">
+          
+          <a class="sakura-post-tags__link" href="/tags/?tag=python">
+            
+            <iconify-icon icon="mdi:tag-multiple" class="sakura-icon sakura-post-tags__icon" aria-hidden="true"></iconify-icon>
+            
+            <span>python</span>
+          </a>
+          
+        </div>
+        
+      </div>
+      <div class="sakura-post-excerpt sakura-post-card__excerpt">名字与对象引用、函数参数传递、深浅拷贝、闭包与高阶函数——Python 对象模型的核心概念，配代码示例逐条验证。</div>
+    </div>
+  </div>
+</article>
+</div>
+  
+  
+  
+  
+  <nav class="sakura-pagination-standard" aria-label="分页">
+    <div class="pagination">
+      
+      <a class="page-number" href="/#home-post-list" aria-label="上一页">
+        <iconify-icon icon="ri:arrow-left-s-line" aria-hidden="true"></iconify-icon>
+      </a>
+      
+      
+        
+        
+          
+          <a class="page-number" href="/#home-post-list">1</a>
+          
+        
+      
+        
+        
+          
+          <span class="page-number active" aria-current="page">2</span>
+          
+        
+      
+      
+    </div>
+  </nav>
+
+</div>
+    </div><aside class="home-list-random-sidebar" aria-label="右侧边栏" data-random-count="7"><div class="home-list-random-sidebar__archives">
+  <h3 class="home-list-random-sidebar__archives-title">
+    <iconify-icon icon="ri:archive-line" class="home-list-random-sidebar__archives-icon" aria-hidden="true"></iconify-icon>
+    <span>归档</span>
+  </h3>
+  <div
+    class="home-list-archive-heatmap"
+    aria-label="文章发布热力图"
+    data-archives-url="/archives/"
+    data-columns="13"
+    data-rows="4"
+    style="--home-list-archive-columns: 13; --home-list-archive-rows: 4;"
+  ></div>
+  <script type="application/json" class="home-list-archive-heatmap-data">"[\"2026-08-21\",\"2026-08-13\",\"2026-08-13\",\"2026-08-13\",\"2026-08-12\",\"2026-08-12\",\"2026-08-12\",\"2026-08-12\",\"2026-08-12\",\"2026-08-10\",\"2026-08-10\",\"2026-08-09\",\"2026-08-03\",\"2026-08-03\",\"2026-08-03\",\"2026-08-03\"]"</script>
+</div>
+<div class="home-list-random-sidebar__paper">
+    <h3 class="home-list-random-sidebar__title">
+      <iconify-icon icon="mdi:shuffle-variant" class="home-list-random-sidebar__title-icon" aria-hidden="true"></iconify-icon>
+      <span>随机文章</span>
+    </h3>
+    <ul class="home-list-random-sidebar__list home-list-random-posts-list"><li class="home-list-random-sidebar__item">
+        <a class="home-list-random-sidebar__link" href="/posts/ai%E6%A1%8C%E5%AE%A0/">
+          <span class="home-list-random-sidebar__post-title">AI桌宠</span>
+          <time class="home-list-random-sidebar__date" datetime="2026-08-21T00:00:00&#43;00:00">2026-08-21</time>
+        </a>
+      </li><li class="home-list-random-sidebar__item">
+        <a class="home-list-random-sidebar__link" href="/posts/publish-flow/">
+          <span class="home-list-random-sidebar__post-title">文章常态化发布流程</span>
+          <time class="home-list-random-sidebar__date" datetime="2026-08-13T00:00:00&#43;00:00">2026-08-13</time>
+        </a>
+      </li><li class="home-list-random-sidebar__item">
+        <a class="home-list-random-sidebar__link" href="/posts/obsidian-workflow-retrospective/">
+          <span class="home-list-random-sidebar__post-title">我把 Obsidian 变成了个人网站：从笔记到上线，只隔一个快捷键</span>
+          <time class="home-list-random-sidebar__date" datetime="2026-08-13T00:00:00&#43;00:00">2026-08-13</time>
+        </a>
+      </li><li class="home-list-random-sidebar__item">
+        <a class="home-list-random-sidebar__link" href="/posts/%E6%88%98%E5%9C%B0%E4%B8%80%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/">
+          <span class="home-list-random-sidebar__post-title">战地一学习记录</span>
+          <time class="home-list-random-sidebar__date" datetime="2026-08-13T00:00:00&#43;00:00">2026-08-13</time>
+        </a>
+      </li><li class="home-list-random-sidebar__item">
+        <a class="home-list-random-sidebar__link" href="/posts/knowledge-map/">
+          <span class="home-list-random-sidebar__post-title">AI Infra 学习路线总览</span>
+          <time class="home-list-random-sidebar__date" datetime="2026-08-12T00:00:00&#43;00:00">2026-08-12</time>
+        </a>
+      </li><li class="home-list-random-sidebar__item">
+        <a class="home-list-random-sidebar__link" href="/posts/km-phase-2/">
+          <span class="home-list-random-sidebar__post-title">阶段二 · AI 工程入门（3~6 个月）</span>
+          <time class="home-list-random-sidebar__date" datetime="2026-08-12T00:00:00&#43;00:00">2026-08-12</time>
+        </a>
+      </li><li class="home-list-random-sidebar__item">
+        <a class="home-list-random-sidebar__link" href="/posts/km-phase-3/">
+          <span class="home-list-random-sidebar__post-title">阶段三 · 系统能力进阶（6~12 个月）</span>
+          <time class="home-list-random-sidebar__date" datetime="2026-08-12T00:00:00&#43;00:00">2026-08-12</time>
+        </a>
+      </li></ul>
+  </div>
+  <script type="application/json" class="home-list-random-posts-data">"[{\"date\":\"2026-08-21\",\"dateTime\":\"2026-08-21T00:00:00+00:00\",\"title\":\"AI桌宠\",\"url\":\"/posts/ai%E6%A1%8C%E5%AE%A0/\"},{\"date\":\"2026-08-13\",\"dateTime\":\"2026-08-13T00:00:00+00:00\",\"title\":\"文章常态化发布流程\",\"url\":\"/posts/publish-flow/\"},{\"date\":\"2026-08-13\",\"dateTime\":\"2026-08-13T00:00:00+00:00\",\"title\":\"我把 Obsidian 变成了个人网站：从笔记到上线，只隔一个快捷键\",\"url\":\"/posts/obsidian-workflow-retrospective/\"},{\"date\":\"2026-08-13\",\"dateTime\":\"2026-08-13T00:00:00+00:00\",\"title\":\"战地一学习记录\",\"url\":\"/posts/%E6%88%98%E5%9C%B0%E4%B8%80%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/\"},{\"date\":\"2026-08-12\",\"dateTime\":\"2026-08-12T00:00:00+00:00\",\"title\":\"AI Infra 学习路线总览\",\"url\":\"/posts/knowledge-map/\"},{\"date\":\"2026-08-12\",\"dateTime\":\"2026-08-12T00:00:00+00:00\",\"title\":\"阶段二 · AI 工程入门（3~6 个月）\",\"url\":\"/posts/km-phase-2/\"},{\"date\":\"2026-08-12\",\"dateTime\":\"2026-08-12T00:00:00+00:00\",\"title\":\"阶段三 · 系统能力进阶（6~12 个月）\",\"url\":\"/posts/km-phase-3/\"},{\"date\":\"2026-08-12\",\"dateTime\":\"2026-08-12T00:00:00+00:00\",\"title\":\"阶段四 · 平台架构与前沿（12~18 个月）\",\"url\":\"/posts/km-phase-4/\"},{\"date\":\"2026-08-12\",\"dateTime\":\"2026-08-12T00:00:00+00:00\",\"title\":\"阶段一 · 基础工程筑基（0~3 个月）\",\"url\":\"/posts/km-phase-1/\"},{\"date\":\"2026-08-10\",\"dateTime\":\"2026-08-10T00:00:00+00:00\",\"title\":\"文字高亮演示\",\"url\":\"/posts/highlight-demo/\"},{\"date\":\"2026-08-10\",\"dateTime\":\"2026-08-10T00:00:00+00:00\",\"title\":\"增删文章指南\",\"url\":\"/posts/howto/\"},{\"date\":\"2026-08-09\",\"dateTime\":\"2026-08-09T00:00:00+00:00\",\"title\":\"2026-W33 周总结\",\"url\":\"/posts/weekly/2026-w33/\"},{\"date\":\"2026-08-03\",\"dateTime\":\"2026-08-03T00:00:00+00:00\",\"title\":\"《程序员修炼之道》英语笔记\",\"url\":\"/posts/pragmatic-programmer/\"},{\"date\":\"2026-08-03\",\"dateTime\":\"2026-08-03T00:00:00+00:00\",\"title\":\"《学习变现》读书笔记\",\"url\":\"/posts/learn-for-money/\"},{\"date\":\"2026-08-03\",\"dateTime\":\"2026-08-03T00:00:00+00:00\",\"title\":\"From Nand to Tetris 学习笔记\",\"url\":\"/posts/nand-to-tetris/\"},{\"date\":\"2026-08-03\",\"dateTime\":\"2026-08-03T00:00:00+00:00\",\"title\":\"Python 学习笔记\",\"url\":\"/posts/python-notes/\"}]"</script>
+</aside>
+</div>
+</div>
+</div>
+</section>
+
+  </div><footer class="sakura-footer"><div class="sakura-footer__inner">
+
+  
+
+  <div class="sakura-footer-meta">
+    <p class="sakura-footer-powered">
+      Powered by <a href="https://github.com/gohugoio/hugo" target="_blank" class="sakura-footer-powered__link">hugo</a> & theme <a href="https://github.com/AIOVTUE/hugo-theme-aiovtue" target="_blank" class="sakura-footer-powered__link">AIOVTUE</a>
+    </p>
+
+    <p class="sakura-footer-busuanzi">
+      <span class="sakura-footer-busuanzi__row">
+        <span>今日访客：<span id="busuanzi_today_uv">加载中...</span></span>
+        <span class="sakura-footer-busuanzi__sep">|</span>
+        <span>今日访问：<span id="busuanzi_today_pv">加载中...</span></span>
+      </span>
+      <span class="sakura-footer-busuanzi__sep sakura-footer-busuanzi__sep--desktop">|</span>
+      <span class="sakura-footer-busuanzi__row">
+        <span>本站访客：<span id="busuanzi_site_uv">加载中...</span></span>
+        <span class="sakura-footer-busuanzi__sep">|</span>
+        <span>本站访问：<span id="busuanzi_site_pv">加载中...</span></span>
+      </span>
+    </p>
+  </div>
+
+  
+
+  <p class="sakura-footer-runtime" id="site-runtime" data-since="2026-08-01">
+
+    本站已经流畅运行
+
+    <span class="sakura-footer-runtime__num" data-unit="days">0</span>天
+
+    <span class="sakura-footer-runtime__num" data-unit="hours">0</span>小时
+
+    <span class="sakura-footer-runtime__num" data-unit="minutes">0</span>分钟
+
+    <span class="sakura-footer-runtime__num" data-unit="seconds">0</span>秒
+
+  </p>
+
+  
+
+  <div class="sakura-copyright">
+
+    <span>
+
+      Copyright &copy;
+
+      <span itemprop="copyrightYear">
+
+        2026
+
+      </span>
+
+    </span>
+
+    <span>by</span>
+
+    <span itemprop="copyrightHolder"><span class="sakura-copyright-author">pz-maker</span></span>
+
+  </div></div>
+
+</footer>
+<div id="sakura-pjax-loader" class="is-hidden" hidden role="status" aria-hidden="true" aria-live="polite" aria-label="页面加载中" style="--sakura-pjax-ecg-duration: 1350ms">
+  <div class="sakura-pjax-loader__panel">
+    <div class="sakura-pjax-loader__ecg-viewport">
+      <svg class="sakura-pjax-loader__ecg" viewBox="0 0 80 56" preserveAspectRatio="xMidYMid meet" focusable="false" aria-hidden="true">
+        <defs>
+          <clipPath id="sakura-pjax-ecg-clip">
+            <rect x="0" y="0" width="80" height="56" />
+          </clipPath>
+          <linearGradient id="sakura-pjax-ecg-fade" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="80" y2="0">
+            <stop offset="0%" stop-color="#fff" stop-opacity="0" />
+            <stop offset="20%" stop-color="#fff" stop-opacity="0.3" />
+            <stop offset="45%" stop-color="#fff" stop-opacity="1" />
+            <stop offset="100%" stop-color="#fff" stop-opacity="1" />
+          </linearGradient>
+          <mask id="sakura-pjax-ecg-mask">
+            <rect x="0" y="0" width="80" height="56" fill="url(#sakura-pjax-ecg-fade)" />
+          </mask><path id="sakura-pjax-ecg-beat" pathLength="80" d="M0,28 H30 L31,24 L33,28 H36 L37,33 L38,5 L42,45 L45,28 H47 L48,24 L50,28 H80" />
+        </defs>
+        <g clip-path="url(#sakura-pjax-ecg-clip)">
+          <g class="sakura-pjax-loader__ecg-grid" aria-hidden="true">
+            <line x1="0" y1="12" x2="80" y2="12" />
+            <line x1="0" y1="28" x2="80" y2="28" />
+            <line x1="0" y1="44" x2="80" y2="44" />
+          </g>
+          <g class="sakura-pjax-loader__ecg-trace" mask="url(#sakura-pjax-ecg-mask)">
+            <use href="#sakura-pjax-ecg-beat" class="sakura-pjax-loader__ecg-glow" />
+            <use href="#sakura-pjax-ecg-beat" class="sakura-pjax-loader__ecg-line" />
+          </g>
+        </g>
+      </svg>
+    </div>
+  </div>
+</div><div class="mashiro-search" id="search-modal" hidden>
+  <div class="mashiro-search-container">
+    <div class="mashiro-search-input-wrap">
+      <iconify-icon icon="fa6-solid:magnifying-glass" class="mashiro-search-input-icon" aria-hidden="true"></iconify-icon>
+      <input id="search-modal-input" class="mashiro-search-input" type="search" placeholder="输入关键词后回车搜索..." autocomplete="off">
+    </div>
+  </div>
+</div>
+<script src="//cdn.busuanzi.cc/busuanzi/3.6.9/busuanzi.min.js" defer></script>
+
+<script src="/js/main.min.13cad50bcf5a52a7168d23d35414f1abccf70fff27884cc3eb2d63225cc30b42.js" integrity="sha256-E8rVC89aUqcWjSPTVBTxq8z3D/8niEzD6y1jIlzDC0I=" crossorigin="anonymous" defer></script>
+</body>
+</html>

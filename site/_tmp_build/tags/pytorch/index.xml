@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Pytorch on AI Infra Wiki</title>
+		<link>https://pz-maker.github.io/tags/pytorch/</link>
+		<description>Recent content in Pytorch on AI Infra Wiki</description>
+		<generator>Hugo</generator>
+		<language>zh-cn</language>
+		
+		
+		
+		
+			<lastBuildDate>Wed, 12 Aug 2026 00:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="https://pz-maker.github.io/tags/pytorch/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>阶段二 · AI 工程入门（3~6 个月）</title>
+				<link>https://pz-maker.github.io/posts/km-phase-2/</link>
+				<pubDate>Wed, 12 Aug 2026 00:00:00 +0000</pubDate>
+				<guid>https://pz-maker.github.io/posts/km-phase-2/</guid>
+				<description>&lt;h1 id=&#34;阶段二--ai-工程入门&#34;&gt;阶段二 · AI 工程入门&lt;/h1&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;&lt;strong&gt;时间&lt;/strong&gt;：3 ~ 6 个月　&lt;strong&gt;Deadline&lt;/strong&gt;：&lt;mark class=&#34;va-hl&#34;&gt;2027-02-12&lt;/mark&gt;　&lt;strong&gt;状态&lt;/strong&gt;：⏳ 未开始&#xA;&lt;strong&gt;输出&lt;/strong&gt;：每章学完在 &lt;a href=&#34;https://pz-maker.github.io/posts/knowledge-map/&#34;&gt;知识地图&lt;/a&gt; 下更新进度，训练/部署实验存档本站。&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;h2 id=&#34;21-深度学习框架&#34;&gt;2.1 深度学习框架&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;教材&lt;/strong&gt;：《Deep Learning with PyTorch》，Eli Stevens 等&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

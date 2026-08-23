@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Guide on AI Infra Wiki</title>
+		<link>https://pz-maker.github.io/tags/guide/</link>
+		<description>Recent content in Guide on AI Infra Wiki</description>
+		<generator>Hugo</generator>
+		<language>zh-cn</language>
+		
+		
+		
+		
+			<lastBuildDate>Wed, 12 Aug 2026 00:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="https://pz-maker.github.io/tags/guide/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>文字高亮演示</title>
+				<link>https://pz-maker.github.io/posts/highlight-demo/</link>
+				<pubDate>Mon, 10 Aug 2026 00:00:00 +0000</pubDate>
+				<guid>https://pz-maker.github.io/posts/highlight-demo/</guid>
+				<description>&lt;h1 id=&#34;文字高亮演示&#34;&gt;文字高亮演示&lt;/h1&gt;&#xA;&lt;p&gt;本站支持 &lt;code&gt;&amp;lt;mark class=&amp;quot;va-hl&amp;quot;&amp;gt;文字&amp;lt;/mark&amp;gt;&lt;/code&gt; 霓虹荧光高亮，起排版装饰作用（Obsidian 里直接写 HTML 标签即可，网站渲染为青蓝荧光）。&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>增删文章指南</title>
+				<link>https://pz-maker.github.io/posts/howto/</link>
+				<pubDate>Mon, 10 Aug 2026 00:00:00 +0000</pubDate>
+				<guid>https://pz-maker.github.io/posts/howto/</guid>
+				<description>&lt;h1 id=&#34;增删文章指南&#34;&gt;增删文章指南&lt;/h1&gt;&#xA;&lt;p&gt;本站是 Hugo 静态站，所有文章都是 &lt;code&gt;site/content/posts/&lt;/code&gt; 下的 Markdown 文件。增删一篇文章只需动文件，&lt;mark class=&#34;va-hl&#34;&gt;不需要懂代码&lt;/mark&gt;。&lt;/p&gt;&#xA;&lt;h2 id=&#34;一新增文章三步&#34;&gt;一、新增文章（&lt;mark class=&#34;va-hl&#34;&gt;三步&lt;/mark&gt;）&lt;/h2&gt;&#xA;&lt;h3 id=&#34;1-新建笔记自动套模板&#34;&gt;1. 新建笔记（自动套模板）&lt;/h3&gt;&#xA;&lt;p&gt;在 Obsidian 中进入 &lt;code&gt;site/content/posts/&lt;/code&gt; 目录，&lt;code&gt;Ctrl+N&lt;/code&gt; 新建笔记，输入标题回车：&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

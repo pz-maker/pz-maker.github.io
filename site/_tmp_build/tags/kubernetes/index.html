@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="zh-CN" translate="no" class="notranslate" data-search-threshold="0.35">
+<head>
+
+<meta charset="utf-8">
+<meta name="google" content="notranslate"><meta http-equiv="content-language" content="zh-CN">
+<style id="sakura-anti-translate">
+  .goog-te-banner-frame,
+  .goog-te-menu-frame,
+  .goog-te-balloon-frame,
+  #goog-gt-tt,
+  .skiptranslate,
+  body > .skiptranslate,
+  iframe.goog-te-banner-frame,
+  iframe.skiptranslate {
+    display: none !important;
+    visibility: hidden !important;
+    height: 0 !important;
+    width: 0 !important;
+    pointer-events: none !important;
+  }
+  html,
+  body {
+    top: 0 !important;
+    position: static !important;
+  }
+</style>
+<script>
+;(function () {
+  var SELECTOR = 'iframe.goog-te-banner-frame, .skiptranslate, #goog-gt-tt, .goog-te-menu-frame, .goog-te-balloon-frame, .goog-te-spinner-pos'
+
+  function lockLanguage() {
+    var root = document.documentElement
+    root.lang = 'zh-CN'
+    root.setAttribute('translate', 'no')
+    root.classList.add('notranslate')
+    if (document.body) {
+      document.body.setAttribute('translate', 'no')
+      document.body.classList.add('notranslate')
+      document.body.style.top = '0'
+      document.body.style.position = ''
+    }
+  }
+
+  function dismissTranslateUi() {
+    lockLanguage()
+    document.querySelectorAll(SELECTOR).forEach(function (el) {
+      el.remove()
+    })
+  }
+
+  lockLanguage()
+  dismissTranslateUi()
+
+  if (typeof MutationObserver !== 'undefined') {
+    new MutationObserver(dismissTranslateUi).observe(document.documentElement, {
+      childList: true,
+      subtree: true,
+    })
+  }
+
+  window.addEventListener('sakura:page-content-visible', dismissTranslateUi)
+  window.__sakuraDismissTranslateUi = dismissTranslateUi
+})()
+</script>
+<link rel="preconnect" href="https://code.iconify.design" crossorigin>
+<link rel="dns-prefetch" href="https://code.iconify.design">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="icon" href="/hero/avatar.png" type="image/png"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Kubernetes | AI Infra Wiki</title><meta name="description" content="AI 基础设施学习记录 · 战地一训练中"><meta name="sakura-pjax" content="1" data-fade="200" data-mount-delay="120" data-loader="1"><script type="application/json" id="sakura-site-effects-config">{"maxDuration":12,"mobile":false,"randomTypes":["snow","firefly"],"randomize":true,"script":"/vendor/yzhanweather/yzhanweather.min.js","type":"snow","zIndex":5}</script>
+<script>
+(function () {
+  var el = document.getElementById('sakura-site-effects-config')
+  if (!el?.textContent) return
+  try {
+    var raw = JSON.parse(el.textContent)
+    if (typeof raw === 'string') raw = JSON.parse(raw)
+    document.documentElement.dataset.sakuraEffectsMobile = raw.mobile ? '1' : '0'
+  } catch {}
+})()
+</script><link rel="canonical" href="https://pz-maker.github.io/tags/kubernetes/">
+<link rel="sitemap" type="application/xml" title="Sitemap" href="https://pz-maker.github.io/sitemap.xml">
+<link rel="alternate" type="application/rss+xml" title="AI Infra Wiki" href="https://pz-maker.github.io/index.xml"><meta name="sakura-comment-provider" content="twikoo"><meta property="og:locale" content="zh-CN">
+<meta property="og:site_name" content="AI Infra Wiki">
+<meta property="og:title" content="Kubernetes">
+<meta property="og:description" content="AI 基础设施学习记录 · 战地一训练中">
+<meta property="og:image" content="https://pz-maker.github.io/hero/avatar.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://pz-maker.github.io/tags/kubernetes/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Kubernetes">
+<meta name="twitter:description" content="AI 基础设施学习记录 · 战地一训练中">
+<meta name="twitter:image" content="https://pz-maker.github.io/hero/avatar.png"><style>:root{--va-c-primary:#5bc8d6;--va-c-primary-rgb:91, 200, 214;--va-c-primary-light:#6fcfdb;--va-c-primary-lighter:#84d6e0;--va-c-primary-dark:#3abdce;--va-c-brand:var(--va-c-primary);--va-c-link:var(--va-c-primary-dark)}</style>
+<link rel="stylesheet" href="/fonts/lxgw-wenkai-screen/style.css">
+
+
+<link rel="stylesheet" href="/css/molten.min.9889b509132eb1c41fe4bc7d4c705ad047d1bd102d414e1a84f84f798296d9f7.css" integrity="sha256-mIm1CRMuscQf5Lx9THBa0EfRvRAtQU4ahPhPeYKW2fc=" crossorigin="anonymous">
+<link rel="stylesheet" href="/css/main.min.6813f4c17287362035ac06818cccbc7d91f9ab5841afabc793e91ba3a2be6ea5.css" integrity="sha256-aBP0wXKHNiA1rAaBjMy8fZH5q1hBr6vHk&#43;kbo6K&#43;bqU=" crossorigin="anonymous"><link rel="stylesheet" data-sakura-page-style="site-effects" href="/css/site-effects.min.96d1db7705ac6e4cd751de30cf9b63a6e7d31ddd3f67e18fbd10ce10e5956a37.css" integrity="sha256-ltHbdwWsbkzXUd4wz5tjpufTHd0/Z&#43;GPvRDOEOWVajc=" crossorigin="anonymous"><link rel="stylesheet" data-sakura-page-style="search-modal" href="/css/search.min.f6d2e23c837b66e290778f6aad8ad70973be82a5a399f02fda57f76ce304519d.css" integrity="sha256-9tLiPIN7ZuKQd49qrYrXCXO&#43;gqWjmfAv2lf3bOMEUZ0=" crossorigin="anonymous"><link rel="stylesheet" data-sakura-page-style="pjax" href="/css/pjax.min.bad1bcaa11e67200cf71d5d7d2c0e8c78d0cef8585f511ff5ee5c2e29b73f45b.css" integrity="sha256-utG8qhHmcgDPcdXX0sDox40M74WF9RH/XuXC4ptz9Fs=" crossorigin="anonymous">
+<script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js" defer></script>
+</head>
+<body class="notranslate" translate="no"><header
+  class="sakura-navbar"
+  id="navbar" data-mobile-collapse="1" data-scroll-threshold="5" data-scroll-delta="10" data-reveal-mode="scrollUp" data-mobile-collapse-home="0" data-desktop-collapse="1" data-desktop-scroll-threshold="5" data-desktop-scroll-delta="5" data-desktop-reveal-mode="scrollUp" data-desktop-collapse-home="0">
+  <div class="navbar-content sakura-safe-padding" id="navbar-content">
+    <div class="sakura-navbar__brand-wrap">
+      <button type="button" class="mobile-btn sakura-navbar__menu-btn" id="sidebar-toggle" aria-label="mobile navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="sakura-navbar-brand">
+        <ruby class="navbar-title relative">
+          <a class="logo-link" href="/" title="AI Infra Wiki-熔炉">
+            
+            <span>AI INFRA </span>
+            
+            <span class="sakura-hvr-rotate" id="navbar-brand-rotate">WIKI</span>
+            
+          </a>
+          <rt class="navbar-subtitle">熔炉</rt>
+        </ruby>
+      </div>
+    </div>
+
+    <nav class="sakura-navbar-link" id="navbar-links" aria-label="主导航">
+      
+      <div class="sakura-dropdown sakura-navbar-link-item">
+        <a class="sakura-nav-link" href="/" data-nav="/">
+          <iconify-icon icon="ant-design:home-filled" class="sakura-nav-link-icon" aria-hidden="true"></iconify-icon>
+          <span class="sakura-nav-link-text">首页</span>
+        </a>
+        
+      </div>
+      
+      <div class="sakura-dropdown sakura-navbar-link-item" aria-haspopup="true" aria-expanded="false">
+        <a class="sakura-nav-link" href="/categories/" data-nav="/categories/" data-nav-group="posts">
+          <iconify-icon icon="ant-design:read-filled" class="sakura-nav-link-icon" aria-hidden="true"></iconify-icon>
+          <span class="sakura-nav-link-text">文章</span>
+        </a>
+        
+        <div class="sakura-dropdown-menu">
+          <div class="sakura-dropdown-list">
+            
+            <a class="sakura-nav-link" href="/categories/" data-nav="/categories/">
+              <iconify-icon icon="ant-design:appstore-filled" class="sakura-nav-link-icon" aria-hidden="true"></iconify-icon>
+              <span class="sakura-nav-link-text">分类</span>
+            </a>
+            
+            <a class="sakura-nav-link" href="/archives/" data-nav="/archives/">
+              <iconify-icon icon="ant-design:container-filled" class="sakura-nav-link-icon" aria-hidden="true"></iconify-icon>
+              <span class="sakura-nav-link-text">归档</span>
+            </a>
+            
+            <a class="sakura-nav-link" href="/tags/" data-nav="/tags/">
+              <iconify-icon icon="ant-design:tags-filled" class="sakura-nav-link-icon" aria-hidden="true"></iconify-icon>
+              <span class="sakura-nav-link-text">标签</span>
+            </a>
+            
+          </div>
+        </div>
+        
+      </div>
+      
+      <div class="sakura-dropdown sakura-navbar-link-item">
+        <a class="sakura-nav-link" href="/moments/" data-nav="/moments/">
+          <iconify-icon icon="ant-design:compass-filled" class="sakura-nav-link-icon" aria-hidden="true"></iconify-icon>
+          <span class="sakura-nav-link-text">动态</span>
+        </a>
+        
+      </div>
+      
+      <div class="sakura-dropdown sakura-navbar-link-item">
+        <a class="sakura-nav-link" href="/links/" data-nav="/links/">
+          <iconify-icon icon="ant-design:global-outlined" class="sakura-nav-link-icon" aria-hidden="true"></iconify-icon>
+          <span class="sakura-nav-link-text">友链</span>
+        </a>
+        
+      </div>
+      
+      <div class="sakura-dropdown sakura-navbar-link-item">
+        <a class="sakura-nav-link" href="/about/" data-nav="/about/">
+          <iconify-icon icon="ant-design:idcard-filled" class="sakura-nav-link-icon" aria-hidden="true"></iconify-icon>
+          <span class="sakura-nav-link-text">关于</span>
+        </a>
+        
+      </div>
+      
+    </nav>
+
+    <div class="sakura-navbar-tools">
+      <button type="button" class="sakura-icon-btn sakura-navbar-tool" id="theme-toggle" aria-label="切换主题">
+        <iconify-icon icon="ri:moon-line"></iconify-icon>
+      </button>
+      <button type="button" class="sakura-icon-btn sakura-navbar-tool sakura-search-btn" id="search-open" aria-label="搜索" aria-expanded="false">
+        <span class="search-toggle-icon" aria-hidden="true">
+          <iconify-icon class="search-toggle-icon__search" icon="ri:search-line"></iconify-icon>
+          <iconify-icon class="search-toggle-icon__close" icon="ri:close-line"></iconify-icon>
+        </span>
+      </button>
+    </div>
+  </div>
+</header>
+<aside class="sakura-sidebar left" id="sidebar" aria-hidden="true">
+  <div class="site-info">
+    <a href="/about/" class="site-author-avatar"><img class="rounded-full"
+  src="/hero/avatar.png"
+  alt="avatar"
+  loading="lazy"
+  decoding="async"><span class="site-author-status" title="训练中 × 战地一">⚙</span>
+    </a>
+    <div class="site-author-name">
+      <a href="/about/">pz-maker</a>
+    </div>
+    <span class="site-name">AI Infra Wiki</span>
+    <h4 class="site-subtitle">熔炉</h4>
+    <div class="site-description">AI 基础设施学习记录 · 战地一训练中</div>
+  </div>
+
+  <div class="links-of-author">
+    
+    <a
+      class="sakura-icon-btn links-of-author-item"
+      href="https://github.com/pz-maker"
+      title="GitHub"
+      target="_blank"
+      rel="noopener"
+      style="color: #6e5494"
+    >
+      <iconify-icon icon="ri:github-line" class="links-of-author-item__icon" aria-hidden="true"></iconify-icon>
+    </a>
+    
+    <a
+      class="sakura-icon-btn links-of-author-item"
+      href="https://www.zhihu.com/people/zhezhe-5-23"
+      title="知乎"
+      target="_blank"
+      rel="noopener"
+      style="color: #0084ff"
+    >
+      <iconify-icon icon="ri:zhihu-line" class="links-of-author-item__icon" aria-hidden="true"></iconify-icon>
+    </a>
+    
+    <a
+      class="sakura-icon-btn links-of-author-item"
+      href="https://www.xiaohongshu.com/user/profile/6795d4e8000000000a03c78a"
+      title="小红书"
+      target="_blank"
+      rel="noopener"
+      style="color: #ff2442"
+    >
+      <iconify-icon icon="simple-icons:xiaohongshu" class="links-of-author-item__icon" aria-hidden="true"></iconify-icon>
+    </a>
+    
+    <a
+      class="sakura-icon-btn links-of-author-item"
+      href="/index.xml"
+      title="RSS"
+      target="_blank"
+      rel="noopener"
+      style="color: orange"
+    >
+      <iconify-icon icon="ri:rss-line" class="links-of-author-item__icon" aria-hidden="true"></iconify-icon>
+    </a>
+    
+  </div>
+
+  <nav class="sakura-sidebar-link" aria-label="侧边栏导航">
+    <ul class="sakura-sidebar-link-items has-groups mx-auto">
+      
+      <li>
+        
+        <a class="sakura-nav-link sakura-sidebar-link-item" href="/" data-nav="/" title="首页">
+          <iconify-icon icon="ant-design:home-filled" class="sakura-nav-link-icon" aria-hidden="true"></iconify-icon>
+          <span class="sakura-nav-link-text">首页</span>
+        </a>
+        
+      </li>
+      
+      <li>
+        
+        <button
+          type="button"
+          class="sakura-sidebar-link-item sidebar-nav-group__toggle"
+          data-nav="/categories/"
+          aria-expanded="false"
+          data-nav-group="posts"
+        >
+          <iconify-icon icon="ant-design:read-filled" class="sakura-nav-link-icon" aria-hidden="true"></iconify-icon>
+          <span class="sidebar-nav-group__label">文章</span>
+          <iconify-icon icon="ant-design:down-outlined" class="sidebar-nav-group__chevron" aria-hidden="true"></iconify-icon>
+        </button>
+        <ul class="sakura-sidebar-link-sub-items" hidden>
+          
+          <li>
+            <a class="sakura-nav-link sakura-sidebar-link-item" href="/categories/" data-nav="/categories/" title="分类">
+              <iconify-icon icon="ant-design:appstore-filled" class="sakura-nav-link-icon" aria-hidden="true"></iconify-icon>
+              <span class="sakura-nav-link-text">分类</span>
+            </a>
+          </li>
+          
+          <li>
+            <a class="sakura-nav-link sakura-sidebar-link-item" href="/archives/" data-nav="/archives/" title="归档">
+              <iconify-icon icon="ant-design:container-filled" class="sakura-nav-link-icon" aria-hidden="true"></iconify-icon>
+              <span class="sakura-nav-link-text">归档</span>
+            </a>
+          </li>
+          
+          <li>
+            <a class="sakura-nav-link sakura-sidebar-link-item" href="/tags/" data-nav="/tags/" title="标签">
+              <iconify-icon icon="ant-design:tags-filled" class="sakura-nav-link-icon" aria-hidden="true"></iconify-icon>
+              <span class="sakura-nav-link-text">标签</span>
+            </a>
+          </li>
+          
+        </ul>
+        
+      </li>
+      
+      <li>
+        
+        <a class="sakura-nav-link sakura-sidebar-link-item" href="/moments/" data-nav="/moments/" title="动态">
+          <iconify-icon icon="ant-design:compass-filled" class="sakura-nav-link-icon" aria-hidden="true"></iconify-icon>
+          <span class="sakura-nav-link-text">动态</span>
+        </a>
+        
+      </li>
+      
+      <li>
+        
+        <a class="sakura-nav-link sakura-sidebar-link-item" href="/links/" data-nav="/links/" title="友链">
+          <iconify-icon icon="ant-design:global-outlined" class="sakura-nav-link-icon" aria-hidden="true"></iconify-icon>
+          <span class="sakura-nav-link-text">友链</span>
+        </a>
+        
+      </li>
+      
+      <li>
+        
+        <a class="sakura-nav-link sakura-sidebar-link-item" href="/about/" data-nav="/about/" title="关于">
+          <iconify-icon icon="ant-design:idcard-filled" class="sakura-nav-link-icon" aria-hidden="true"></iconify-icon>
+          <span class="sakura-nav-link-text">关于</span>
+        </a>
+        
+      </li>
+      
+    </ul>
+  </nav>
+</aside>
+<div class="sakura-sidebar__overlay va-overlay" id="sidebar-overlay"></div>
+
+<div id="content" class="site-content">
+<article class="sakura-page sakura-taxonomy-page"><header class="sakura-page-header" data-page="tags"><div class="sakura-page-header__inner">
+    <h1 class="sakura-page-header__title">
+      <span class="sakura-header-title"><iconify-icon icon="ri:price-tag-3-line" class="sakura-page-header__icon" aria-hidden="true"></iconify-icon><span class="sakura-page-header__text">Kubernetes</span>
+      </span>
+    </h1>
+    
+  </div>
+</header>
+<div class="sakura-page-content">
+    <p class="sakura-taxonomy-count">正在跳转到标签筛选…</p>
+  </div>
+</article>
+
+  </div><footer class="sakura-footer"><div class="sakura-footer__inner">
+
+  
+
+  <div class="sakura-footer-meta">
+    <p class="sakura-footer-powered">
+      Powered by <a href="https://github.com/gohugoio/hugo" target="_blank" class="sakura-footer-powered__link">hugo</a> & theme <a href="https://github.com/AIOVTUE/hugo-theme-aiovtue" target="_blank" class="sakura-footer-powered__link">AIOVTUE</a>
+    </p>
+
+    <p class="sakura-footer-busuanzi">
+      <span class="sakura-footer-busuanzi__row">
+        <span>今日访客：<span id="busuanzi_today_uv">加载中...</span></span>
+        <span class="sakura-footer-busuanzi__sep">|</span>
+        <span>今日访问：<span id="busuanzi_today_pv">加载中...</span></span>
+      </span>
+      <span class="sakura-footer-busuanzi__sep sakura-footer-busuanzi__sep--desktop">|</span>
+      <span class="sakura-footer-busuanzi__row">
+        <span>本站访客：<span id="busuanzi_site_uv">加载中...</span></span>
+        <span class="sakura-footer-busuanzi__sep">|</span>
+        <span>本站访问：<span id="busuanzi_site_pv">加载中...</span></span>
+      </span>
+    </p>
+  </div>
+
+  
+
+  <p class="sakura-footer-runtime" id="site-runtime" data-since="2026-08-01">
+
+    本站已经流畅运行
+
+    <span class="sakura-footer-runtime__num" data-unit="days">0</span>天
+
+    <span class="sakura-footer-runtime__num" data-unit="hours">0</span>小时
+
+    <span class="sakura-footer-runtime__num" data-unit="minutes">0</span>分钟
+
+    <span class="sakura-footer-runtime__num" data-unit="seconds">0</span>秒
+
+  </p>
+
+  
+
+  <div class="sakura-copyright">
+
+    <span>
+
+      Copyright &copy;
+
+      <span itemprop="copyrightYear">
+
+        2026
+
+      </span>
+
+    </span>
+
+    <span>by</span>
+
+    <span itemprop="copyrightHolder"><span class="sakura-copyright-author">pz-maker</span></span>
+
+  </div></div>
+
+</footer>
+<div id="sakura-pjax-loader" class="is-hidden" hidden role="status" aria-hidden="true" aria-live="polite" aria-label="页面加载中" style="--sakura-pjax-ecg-duration: 1350ms">
+  <div class="sakura-pjax-loader__panel">
+    <div class="sakura-pjax-loader__ecg-viewport">
+      <svg class="sakura-pjax-loader__ecg" viewBox="0 0 80 56" preserveAspectRatio="xMidYMid meet" focusable="false" aria-hidden="true">
+        <defs>
+          <clipPath id="sakura-pjax-ecg-clip">
+            <rect x="0" y="0" width="80" height="56" />
+          </clipPath>
+          <linearGradient id="sakura-pjax-ecg-fade" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="80" y2="0">
+            <stop offset="0%" stop-color="#fff" stop-opacity="0" />
+            <stop offset="20%" stop-color="#fff" stop-opacity="0.3" />
+            <stop offset="45%" stop-color="#fff" stop-opacity="1" />
+            <stop offset="100%" stop-color="#fff" stop-opacity="1" />
+          </linearGradient>
+          <mask id="sakura-pjax-ecg-mask">
+            <rect x="0" y="0" width="80" height="56" fill="url(#sakura-pjax-ecg-fade)" />
+          </mask><path id="sakura-pjax-ecg-beat" pathLength="80" d="M0,28 H30 L31,24 L33,28 H36 L37,33 L38,5 L42,45 L45,28 H47 L48,24 L50,28 H80" />
+        </defs>
+        <g clip-path="url(#sakura-pjax-ecg-clip)">
+          <g class="sakura-pjax-loader__ecg-grid" aria-hidden="true">
+            <line x1="0" y1="12" x2="80" y2="12" />
+            <line x1="0" y1="28" x2="80" y2="28" />
+            <line x1="0" y1="44" x2="80" y2="44" />
+          </g>
+          <g class="sakura-pjax-loader__ecg-trace" mask="url(#sakura-pjax-ecg-mask)">
+            <use href="#sakura-pjax-ecg-beat" class="sakura-pjax-loader__ecg-glow" />
+            <use href="#sakura-pjax-ecg-beat" class="sakura-pjax-loader__ecg-line" />
+          </g>
+        </g>
+      </svg>
+    </div>
+  </div>
+</div><div class="mashiro-search" id="search-modal" hidden>
+  <div class="mashiro-search-container">
+    <div class="mashiro-search-input-wrap">
+      <iconify-icon icon="fa6-solid:magnifying-glass" class="mashiro-search-input-icon" aria-hidden="true"></iconify-icon>
+      <input id="search-modal-input" class="mashiro-search-input" type="search" placeholder="输入关键词后回车搜索..." autocomplete="off">
+    </div>
+  </div>
+</div>
+<script src="//cdn.busuanzi.cc/busuanzi/3.6.9/busuanzi.min.js" defer></script>
+
+<script src="/js/main.min.13cad50bcf5a52a7168d23d35414f1abccf70fff27884cc3eb2d63225cc30b42.js" integrity="sha256-E8rVC89aUqcWjSPTVBTxq8z3D/8niEzD6y1jIlzDC0I=" crossorigin="anonymous" defer></script>
+</body>
+</html>

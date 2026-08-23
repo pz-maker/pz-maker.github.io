@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="zh-CN" translate="no" class="notranslate" data-search-threshold="0.35">
+<head>
+
+<meta charset="utf-8">
+<meta name="google" content="notranslate"><meta http-equiv="content-language" content="zh-CN">
+<style id="sakura-anti-translate">
+  .goog-te-banner-frame,
+  .goog-te-menu-frame,
+  .goog-te-balloon-frame,
+  #goog-gt-tt,
+  .skiptranslate,
+  body > .skiptranslate,
+  iframe.goog-te-banner-frame,
+  iframe.skiptranslate {
+    display: none !important;
+    visibility: hidden !important;
+    height: 0 !important;
+    width: 0 !important;
+    pointer-events: none !important;
+  }
+  html,
+  body {
+    top: 0 !important;
+    position: static !important;
+  }
+</style>
+<script>
+;(function () {
+  var SELECTOR = 'iframe.goog-te-banner-frame, .skiptranslate, #goog-gt-tt, .goog-te-menu-frame, .goog-te-balloon-frame, .goog-te-spinner-pos'
+
+  function lockLanguage() {
+    var root = document.documentElement
+    root.lang = 'zh-CN'
+    root.setAttribute('translate', 'no')
+    root.classList.add('notranslate')
+    if (document.body) {
+      document.body.setAttribute('translate', 'no')
+      document.body.classList.add('notranslate')
+      document.body.style.top = '0'
+      document.body.style.position = ''
+    }
+  }
+
+  function dismissTranslateUi() {
+    lockLanguage()
+    document.querySelectorAll(SELECTOR).forEach(function (el) {
+      el.remove()
+    })
+  }
+
+  lockLanguage()
+  dismissTranslateUi()
+
+  if (typeof MutationObserver !== 'undefined') {
+    new MutationObserver(dismissTranslateUi).observe(document.documentElement, {
+      childList: true,
+      subtree: true,
+    })
+  }
+
+  window.addEventListener('sakura:page-content-visible', dismissTranslateUi)
+  window.__sakuraDismissTranslateUi = dismissTranslateUi
+})()
+</script>
+<link rel="preconnect" href="https://code.iconify.design" crossorigin>
+<link rel="dns-prefetch" href="https://code.iconify.design">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="icon" href="/hero/avatar.png" type="image/png"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>《学习变现》读书笔记 | AI Infra Wiki</title><meta name="description" content="知识地图 → 学习路线图 → 关键词便签 → 学习日志：把输入转化为输出，把知识转化为能力，才是变现的起点。"><meta name="sakura-pjax" content="1" data-fade="200" data-mount-delay="120" data-loader="1"><script type="application/json" id="sakura-site-effects-config">{"maxDuration":12,"mobile":false,"randomTypes":["snow","firefly"],"randomize":true,"script":"/vendor/yzhanweather/yzhanweather.min.js","type":"snow","zIndex":5}</script>
+<script>
+(function () {
+  var el = document.getElementById('sakura-site-effects-config')
+  if (!el?.textContent) return
+  try {
+    var raw = JSON.parse(el.textContent)
+    if (typeof raw === 'string') raw = JSON.parse(raw)
+    document.documentElement.dataset.sakuraEffectsMobile = raw.mobile ? '1' : '0'
+  } catch {}
+})()
+</script><link rel="canonical" href="https://pz-maker.github.io/posts/learn-for-money/">
+<link rel="sitemap" type="application/xml" title="Sitemap" href="https://pz-maker.github.io/sitemap.xml">
+<link rel="alternate" type="application/rss+xml" title="AI Infra Wiki" href="https://pz-maker.github.io/index.xml"><meta name="sakura-comment-provider" content="twikoo"><meta property="og:locale" content="zh-CN">
+<meta property="og:site_name" content="AI Infra Wiki">
+<meta property="og:title" content="《学习变现》读书笔记">
+<meta property="og:description" content="知识地图 → 学习路线图 → 关键词便签 → 学习日志：把输入转化为输出，把知识转化为能力，才是变现的起点。">
+<meta property="og:image" content="https://pz-maker.github.io/hero/avatar.png">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://pz-maker.github.io/posts/learn-for-money/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="《学习变现》读书笔记">
+<meta name="twitter:description" content="知识地图 → 学习路线图 → 关键词便签 → 学习日志：把输入转化为输出，把知识转化为能力，才是变现的起点。">
+<meta name="twitter:image" content="https://pz-maker.github.io/hero/avatar.png"><style>:root{--va-c-primary:#5bc8d6;--va-c-primary-rgb:91, 200, 214;--va-c-primary-light:#6fcfdb;--va-c-primary-lighter:#84d6e0;--va-c-primary-dark:#3abdce;--va-c-brand:var(--va-c-primary);--va-c-link:var(--va-c-primary-dark)}</style><style>:root{--sakura-post-font-size:1.05rem;}</style>
+<link rel="stylesheet" href="/fonts/lxgw-wenkai-screen/style.css">
+
+
+<link rel="stylesheet" href="/css/molten.min.9889b509132eb1c41fe4bc7d4c705ad047d1bd102d414e1a84f84f798296d9f7.css" integrity="sha256-mIm1CRMuscQf5Lx9THBa0EfRvRAtQU4ahPhPeYKW2fc=" crossorigin="anonymous">
+<link rel="stylesheet" href="/css/main.min.6813f4c17287362035ac06818cccbc7d91f9ab5841afabc793e91ba3a2be6ea5.css" integrity="sha256-aBP0wXKHNiA1rAaBjMy8fZH5q1hBr6vHk&#43;kbo6K&#43;bqU=" crossorigin="anonymous"><link rel="stylesheet" data-sakura-page-style="comment" href="/css/twikoo-comment.min.9dc20aca7a0a5f01d3512f92cec836ddc000c55bf26ba016a58859629b8c79c0.css" integrity="sha256-ncIKynoKXwHTUS&#43;Szsg23cAAxVvya6AWpYhZYpuMecA=" crossorigin="anonymous"><link rel="stylesheet" data-sakura-page-style="site-effects" href="/css/site-effects.min.96d1db7705ac6e4cd751de30cf9b63a6e7d31ddd3f67e18fbd10ce10e5956a37.css" integrity="sha256-ltHbdwWsbkzXUd4wz5tjpufTHd0/Z&#43;GPvRDOEOWVajc=" crossorigin="anonymous"><link rel="stylesheet" data-sakura-page-style="search-modal" href="/css/search.min.f6d2e23c837b66e290778f6aad8ad70973be82a5a399f02fda57f76ce304519d.css" integrity="sha256-9tLiPIN7ZuKQd49qrYrXCXO&#43;gqWjmfAv2lf3bOMEUZ0=" crossorigin="anonymous"><link rel="stylesheet" data-sakura-page-style="lightbox" href="/css/lightbox.min.ea6548ebdb8c9da82814cabdedc7b3ac57847fa9352705341b3b7a7423223749.css" integrity="sha256-6mVI69uMnagoFMq97cezrFeEf6k1JwU0Gzt6dCMiN0k=" crossorigin="anonymous"><link rel="stylesheet" data-sakura-page-style="pjax" href="/css/pjax.min.bad1bcaa11e67200cf71d5d7d2c0e8c78d0cef8585f511ff5ee5c2e29b73f45b.css" integrity="sha256-utG8qhHmcgDPcdXX0sDox40M74WF9RH/XuXC4ptz9Fs=" crossorigin="anonymous">
+<script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js" defer></script>
+</head>
+<body class="notranslate" translate="no"><header
+  class="sakura-navbar"
+  id="navbar" data-mobile-collapse="1" data-scroll-threshold="5" data-scroll-delta="10" data-reveal-mode="scrollUp" data-mobile-collapse-home="0" data-desktop-collapse="1" data-desktop-scroll-threshold="5" data-desktop-scroll-delta="5" data-desktop-reveal-mode="scrollUp" data-desktop-collapse-home="0">
+  <div class="navbar-content sakura-safe-padding" id="navbar-content">
+    <div class="sakura-navbar__brand-wrap">
+      <button type="button" class="mobile-btn sakura-navbar__menu-btn" id="sidebar-toggle" aria-label="mobile navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="sakura-navbar-brand">
+        <ruby class="navbar-title relative">
+          <a class="logo-link" href="/" title="AI Infra Wiki-熔炉">
+            
+            <span>AI INFRA </span>
+            
+            <span class="sakura-hvr-rotate" id="navbar-brand-rotate">WIKI</span>
+            
+          </a>
+          <rt class="navbar-subtitle">熔炉</rt>
+        </ruby>
+      </div>
+    </div>
+
+    <nav class="sakura-navbar-link" id="navbar-links" aria-label="主导航">
+      
+      <div class="sakura-dropdown sakura-navbar-link-item">
+        <a class="sakura-nav-link" href="/" data-nav="/">
+          <iconify-icon icon="ant-design:home-filled" class="sakura-nav-link-icon" aria-hidden="true"></iconify-icon>
+          <span class="sakura-nav-link-text">首页</span>
+        </a>
+        
+      </div>
+      
+      <div class="sakura-dropdown sakura-navbar-link-item" aria-haspopup="true" aria-expanded="false">
+        <a class="sakura-nav-link" href="/categories/" data-nav="/categories/" data-nav-group="posts">
+          <iconify-icon icon="ant-design:read-filled" class="sakura-nav-link-icon" aria-hidden="true"></iconify-icon>
+          <span class="sakura-nav-link-text">文章</span>
+        </a>
+        
+        <div class="sakura-dropdown-menu">
+          <div class="sakura-dropdown-list">
+            
+            <a class="sakura-nav-link" href="/categories/" data-nav="/categories/">
+              <iconify-icon icon="ant-design:appstore-filled" class="sakura-nav-link-icon" aria-hidden="true"></iconify-icon>
+              <span class="sakura-nav-link-text">分类</span>
+            </a>
+            
+            <a class="sakura-nav-link" href="/archives/" data-nav="/archives/">
+              <iconify-icon icon="ant-design:container-filled" class="sakura-nav-link-icon" aria-hidden="true"></iconify-icon>
+              <span class="sakura-nav-link-text">归档</span>
+            </a>
+            
+            <a class="sakura-nav-link" href="/tags/" data-nav="/tags/">
+              <iconify-icon icon="ant-design:tags-filled" class="sakura-nav-link-icon" aria-hidden="true"></iconify-icon>
+              <span class="sakura-nav-link-text">标签</span>
+            </a>
+            
+          </div>
+        </div>
+        
+      </div>
+      
+      <div class="sakura-dropdown sakura-navbar-link-item">
+        <a class="sakura-nav-link" href="/moments/" data-nav="/moments/">
+          <iconify-icon icon="ant-design:compass-filled" class="sakura-nav-link-icon" aria-hidden="true"></iconify-icon>
+          <span class="sakura-nav-link-text">动态</span>
+        </a>
+        
+      </div>
+      
+      <div class="sakura-dropdown sakura-navbar-link-item">
+        <a class="sakura-nav-link" href="/links/" data-nav="/links/">
+          <iconify-icon icon="ant-design:global-outlined" class="sakura-nav-link-icon" aria-hidden="true"></iconify-icon>
+          <span class="sakura-nav-link-text">友链</span>
+        </a>
+        
+      </div>
+      
+      <div class="sakura-dropdown sakura-navbar-link-item">
+        <a class="sakura-nav-link" href="/about/" data-nav="/about/">
+          <iconify-icon icon="ant-design:idcard-filled" class="sakura-nav-link-icon" aria-hidden="true"></iconify-icon>
+          <span class="sakura-nav-link-text">关于</span>
+        </a>
+        
+      </div>
+      
+    </nav>
+
+    <div class="sakura-navbar-tools">
+      <button type="button" class="sakura-icon-btn sakura-navbar-tool" id="theme-toggle" aria-label="切换主题">
+        <iconify-icon icon="ri:moon-line"></iconify-icon>
+      </button>
+      <button type="button" class="sakura-icon-btn sakura-navbar-tool sakura-search-btn" id="search-open" aria-label="搜索" aria-expanded="false">
+        <span class="search-toggle-icon" aria-hidden="true">
+          <iconify-icon class="search-toggle-icon__search" icon="ri:search-line"></iconify-icon>
+          <iconify-icon class="search-toggle-icon__close" icon="ri:close-line"></iconify-icon>
+        </span>
+      </button>
+    </div>
+  </div>
+</header>
+<aside class="sakura-sidebar left" id="sidebar" aria-hidden="true">
+  <div class="site-info">
+    <a href="/about/" class="site-author-avatar"><img class="rounded-full"
+  src="/hero/avatar.png"
+  alt="avatar"
+  loading="lazy"
+  decoding="async"><span class="site-author-status" title="训练中 × 战地一">⚙</span>
+    </a>
+    <div class="site-author-name">
+      <a href="/about/">pz-maker</a>
+    </div>
+    <span class="site-name">AI Infra Wiki</span>
+    <h4 class="site-subtitle">熔炉</h4>
+    <div class="site-description">AI 基础设施学习记录 · 战地一训练中</div>
+  </div>
+
+  <div class="links-of-author">
+    
+    <a
+      class="sakura-icon-btn links-of-author-item"
+      href="https://github.com/pz-maker"
+      title="GitHub"
+      target="_blank"
+      rel="noopener"
+      style="color: #6e5494"
+    >
+      <iconify-icon icon="ri:github-line" class="links-of-author-item__icon" aria-hidden="true"></iconify-icon>
+    </a>
+    
+    <a
+      class="sakura-icon-btn links-of-author-item"
+      href="https://www.zhihu.com/people/zhezhe-5-23"
+      title="知乎"
+      target="_blank"
+      rel="noopener"
+      style="color: #0084ff"
+    >
+      <iconify-icon icon="ri:zhihu-line" class="links-of-author-item__icon" aria-hidden="true"></iconify-icon>
+    </a>
+    
+    <a
+      class="sakura-icon-btn links-of-author-item"
+      href="https://www.xiaohongshu.com/user/profile/6795d4e8000000000a03c78a"
+      title="小红书"
+      target="_blank"
+      rel="noopener"
+      style="color: #ff2442"
+    >
+      <iconify-icon icon="simple-icons:xiaohongshu" class="links-of-author-item__icon" aria-hidden="true"></iconify-icon>
+    </a>
+    
+    <a
+      class="sakura-icon-btn links-of-author-item"
+      href="/index.xml"
+      title="RSS"
+      target="_blank"
+      rel="noopener"
+      style="color: orange"
+    >
+      <iconify-icon icon="ri:rss-line" class="links-of-author-item__icon" aria-hidden="true"></iconify-icon>
+    </a>
+    
+  </div>
+
+  <nav class="sakura-sidebar-link" aria-label="侧边栏导航">
+    <ul class="sakura-sidebar-link-items has-groups mx-auto">
+      
+      <li>
+        
+        <a class="sakura-nav-link sakura-sidebar-link-item" href="/" data-nav="/" title="首页">
+          <iconify-icon icon="ant-design:home-filled" class="sakura-nav-link-icon" aria-hidden="true"></iconify-icon>
+          <span class="sakura-nav-link-text">首页</span>
+        </a>
+        
+      </li>
+      
+      <li>
+        
+        <button
+          type="button"
+          class="sakura-sidebar-link-item sidebar-nav-group__toggle"
+          data-nav="/categories/"
+          aria-expanded="false"
+          data-nav-group="posts"
+        >
+          <iconify-icon icon="ant-design:read-filled" class="sakura-nav-link-icon" aria-hidden="true"></iconify-icon>
+          <span class="sidebar-nav-group__label">文章</span>
+          <iconify-icon icon="ant-design:down-outlined" class="sidebar-nav-group__chevron" aria-hidden="true"></iconify-icon>
+        </button>
+        <ul class="sakura-sidebar-link-sub-items" hidden>
+          
+          <li>
+            <a class="sakura-nav-link sakura-sidebar-link-item" href="/categories/" data-nav="/categories/" title="分类">
+              <iconify-icon icon="ant-design:appstore-filled" class="sakura-nav-link-icon" aria-hidden="true"></iconify-icon>
+              <span class="sakura-nav-link-text">分类</span>
+            </a>
+          </li>
+          
+          <li>
+            <a class="sakura-nav-link sakura-sidebar-link-item" href="/archives/" data-nav="/archives/" title="归档">
+              <iconify-icon icon="ant-design:container-filled" class="sakura-nav-link-icon" aria-hidden="true"></iconify-icon>
+              <span class="sakura-nav-link-text">归档</span>
+            </a>
+          </li>
+          
+          <li>
+            <a class="sakura-nav-link sakura-sidebar-link-item" href="/tags/" data-nav="/tags/" title="标签">
+              <iconify-icon icon="ant-design:tags-filled" class="sakura-nav-link-icon" aria-hidden="true"></iconify-icon>
+              <span class="sakura-nav-link-text">标签</span>
+            </a>
+          </li>
+          
+        </ul>
+        
+      </li>
+      
+      <li>
+        
+        <a class="sakura-nav-link sakura-sidebar-link-item" href="/moments/" data-nav="/moments/" title="动态">
+          <iconify-icon icon="ant-design:compass-filled" class="sakura-nav-link-icon" aria-hidden="true"></iconify-icon>
+          <span class="sakura-nav-link-text">动态</span>
+        </a>
+        
+      </li>
+      
+      <li>
+        
+        <a class="sakura-nav-link sakura-sidebar-link-item" href="/links/" data-nav="/links/" title="友链">
+          <iconify-icon icon="ant-design:global-outlined" class="sakura-nav-link-icon" aria-hidden="true"></iconify-icon>
+          <span class="sakura-nav-link-text">友链</span>
+        </a>
+        
+      </li>
+      
+      <li>
+        
+        <a class="sakura-nav-link sakura-sidebar-link-item" href="/about/" data-nav="/about/" title="关于">
+          <iconify-icon icon="ant-design:idcard-filled" class="sakura-nav-link-icon" aria-hidden="true"></iconify-icon>
+          <span class="sakura-nav-link-text">关于</span>
+        </a>
+        
+      </li>
+      
+    </ul>
+  </nav>
+</aside>
+<div class="sakura-sidebar__overlay va-overlay" id="sidebar-overlay"></div>
+
+<div id="content" class="site-content"><article class="sakura-page sakura-post sakura-post-page"><header class="sakura-page-header sakura-post-header" data-page="posts"><div class="sakura-page-header__inner sakura-header-container">
+    <h1 class="sakura-page-header__title">
+      <span class="sakura-header-title">
+        <span class="sakura-page-header__text sakura-title">《学习变现》读书笔记</span>
+      </span>
+    </h1>
+    <div class="sakura-post-header-meta sakura-post-meta">
+      <div class="sakura-post-header-meta__row sakura-post-header-meta__row--date">
+        <span class="sakura-post-date posted-time post-time">
+          <span class="sakura-post-date__inner" title="发表于2026-08-03">
+            <iconify-icon icon="mdi:clock-outline" class="sakura-post-date__icon" aria-hidden="true"></iconify-icon>
+            <span class="sakura-post-date__label">发表于</span>
+            <time datetime="2026-08-03" itemprop="datePublished">2026-08-03</time>
+          </span>
+        </span>
+      </div><div class="sakura-post-header-meta__row sakura-post-header-meta__row--taxonomy"><span class="sakura-post-header-meta__item">分类：<a href="/categories/%E7%B2%BE%E8%AF%BB/">精读</a></span><span class="sakura-post-header-meta__sep"> · </span><span class="sakura-post-header-meta__item">标签：<a href="/tags/?tag=reading">reading</a>, <a href="/tags/?tag=learning">learning</a></span></div></div><p class="sakura-post-header-reading">本文字数：1805&nbsp;&nbsp;阅读时长：4分钟</p><p class="sakura-post-header-busuanzi">
+  <span>访客数：<span id="busuanzi_page_uv">加载中...</span></span>
+  <span class="sakura-post-header-busuanzi__sep">|</span>
+  <span>阅读量：<span id="busuanzi_page_pv">加载中...</span></span>
+</p></div>
+</header>
+<div class="sakura-triple-columns-base sakura-triple-columns">
+    <aside class="sakura-post-aside-left" aria-hidden="true"></aside>
+    <div class="sakura-post-main">
+      <div class="sakura-page-content sakura-post-body"><div class="markdown-body prose sakura-post-content sakura-text-indent">
+  <h1 id="学习变现学习笔记">《学习变现》学习笔记</h1>
+<blockquote>
+<p>书籍：《学习变现》
+笔记来源：手写笔记整理
+整理方式：提炼关键词 + 结构化重组</p>
+</blockquote>
+<hr>
+<h2 id="一核心关键词">一、核心关键词</h2>
+<div class="sakura-table-wrap">
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">关键词</th>
+          <th style="text-align: left">含义</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><strong>知识地图</strong></td>
+          <td style="text-align: left">以书单或课程为节点，可视化地展示学习领域的全貌</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>学习路线图</strong></td>
+          <td style="text-align: left">带有截止时间、学习顺序和输出目标的计划表</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>因式分解</strong></td>
+          <td style="text-align: left">将他人的长处拆解为可学习的模块，再组合利用</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>学习状态库</strong></td>
+          <td style="text-align: left">记录能让自己进入高效心流状态的环境与工具组合</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>应用与原创</strong></td>
+          <td style="text-align: left">将输入转化为输出，是专业人区别于普通学习者的核心价值</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>学习环境</strong></td>
+          <td style="text-align: left">沉浸式的氛围比刻意学习更有效，&ldquo;只是待在那里就很好了&rdquo;</td>
+      </tr>
+  </tbody>
+</table>
+</div>
+<hr>
+<h2 id="二学习体系搭建">二、学习体系搭建</h2>
+<h3 id="21-制作知识地图">2.1 制作知识地图</h3>
+<p><strong>核心问题：</strong> 读哪个部分？读到何种程度？</p>
+<ul>
+<li>将当前需要学习的领域以<strong>书单或课程</strong>的形式罗列出来</li>
+<li>明确每个知识节点的<strong>阅读范围</strong>和<strong>深度要求</strong></li>
+<li>将信息地图写在可视化的载体上（思维导图、表格等）</li>
+<li><strong>定期更新</strong>：建议每周更新一次，随着学习深入不断补充和修正</li>
+</ul>
+<h3 id="22-制作学习路线图">2.2 制作学习路线图</h3>
+<p>知识地图回答&quot;学什么&quot;，学习路线图回答&quot;怎么学&quot;：</p>
+<ul>
+<li><strong>有截止时间</strong>：为每个学习阶段设定明确的 Deadline</li>
+<li><strong>有学习顺序</strong>：确定先修与后修的关系，避免盲目跳跃</li>
+<li><strong>有意识输出</strong>：通过写学习日志、做项目、教会别人等方式强制输出</li>
+</ul>
+<h3 id="23-从知识地图到学习路线图">2.3 从知识地图到学习路线图</h3>
+<div class="language-text" data-line-count="2">
+  <button type="button" title="Copy code" class="copy" aria-label="复制代码"></button>
+  <span class="lang">text</span>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">知识地图 → 学习路线图 → 摘出关键词写在便签上 → 输出学习日志
+</span></span><span class="line"><span class="cl">   (输入)        (规划)          (提炼)              (输出)</span></span></code></pre></div>
+  <button type="button" class="code-block-unfold-btn" aria-label="展开代码" hidden></button>
+</div>
+<p><strong>流程说明：</strong></p>
+<ol>
+<li>先绘制<strong>知识地图</strong>，建立全局视野</li>
+<li>再制定<strong>学习路线图</strong>，明确路径和节奏</li>
+<li>从每个知识点中<strong>摘出关键词</strong>，写在便签上，便于快速回顾</li>
+<li>积累一定数量的关键词后，<strong>输出学习日志</strong>，将碎片知识串联成体系</li>
+</ol>
+<hr>
+<h2 id="三高效学习策略">三、高效学习策略</h2>
+<h3 id="31-广泛阅读是输入的基础">3.1 广泛阅读是输入的基础</h3>
+<ul>
+<li>标准：每次学习投入 <strong>20~30 分钟</strong> 的广泛阅读</li>
+<li>通过多源输入建立知识之间的连接，避免信息茧房</li>
+<li>广泛阅读不追求深度，而是扩大认知边界</li>
+</ul>
+<h3 id="32-早期阶段保持高密度">3.2 早期阶段保持高密度</h3>
+<ul>
+<li>学习初期需要<strong>高密度的输入和练习</strong>来快速建立基础</li>
+<li>高密度 = 短时间内的多知识点覆盖 + 高频输出</li>
+<li>参考&quot;梦言&quot;的学习方法：前期猛灌，后期精细化</li>
+</ul>
+<h3 id="33-用因式分解偷学他人的长处">3.3 用&quot;因式分解&quot;偷学他人的长处</h3>
+<p><strong>核心理念：</strong> 不是模仿，而是拆解。</p>
+<ul>
+<li>观察他人的长处，将其<strong>拆解为独立的技能模块</strong>（因式分解）</li>
+<li>分析每个模块的可复制性</li>
+<li>挑选自己需要的模块，<strong>组合应用到自己的学习中</strong></li>
+<li>这是一种&quot;偷学&quot;策略——不复制整体，只提取可用的因子</li>
+</ul>
+<h3 id="34-提问方式没询问而非询问">3.4 提问方式：没询问，而非询问</h3>
+<ul>
+<li><strong>没询问</strong>：通过观察、体验、试错来&quot;不通过提问而获得答案&quot;</li>
+<li>培养自主发现问题的能力，比直接提问收获更深</li>
+<li>先自己探索，带着思考再去请教，效率更高</li>
+</ul>
+<hr>
+<h2 id="四从学习到变现">四、从学习到变现</h2>
+<h3 id="41-应用能力与原创性是专业人的价值">4.1 应用能力与原创性是专业人的价值</h3>
+<blockquote>
+<p>&ldquo;应用能力与原创性是专业人的价值。&rdquo;</p>
+</blockquote>
+<ul>
+<li>单纯的输入（读书、听课）不等于能力</li>
+<li><strong>应用能力</strong>：将知识转化为解决实际问题的能力</li>
+<li><strong>原创性</strong>：在应用基础上形成自己的方法和见解</li>
+<li>两者结合，才是你区别于他人的<strong>专业壁垒</strong></li>
+</ul>
+<h3 id="42-复盘将成败因素整理归纳">4.2 复盘：将成败因素整理归纳</h3>
+<blockquote>
+<p>&ldquo;每完成一项工作，就将成功和失败的因素整理归纳到图表上。&rdquo;</p>
+</blockquote>
+<ul>
+<li>每完成一个项目或学习任务，做一次<strong>结构化复盘</strong></li>
+<li>成功因素：哪些做法有效？可以复用吗？</li>
+<li>失败因素：哪些环节出了问题？如何避免？</li>
+<li>将复盘结果整理成<strong>图表</strong>，便于直观对比和长期追踪</li>
+</ul>
+<h3 id="43-沉浸式学习环境">4.3 沉浸式学习环境</h3>
+<blockquote>
+<p>&ldquo;处在学习环境，去接触才更重要（如外语的学习）。&lsquo;只是待在那里就很好了&rsquo;。&rdquo;</p>
+</blockquote>
+<ul>
+<li>把自己放在<strong>学习密集的环境</strong>中，潜移默化地吸收</li>
+<li>外语学习是最典型的例子：不需要刻意背诵，每天浸泡在语言环境中就能进步</li>
+<li>寻找或营造这样的环境：学习社群、共读小组、图书馆等</li>
+<li><strong>环境的力量 &gt; 意志力的力量</strong></li>
+</ul>
+<hr>
+<h2 id="五灵感卡片">五、灵感卡片</h2>
+<h3 id="学习状态库">学习状态库</h3>
+<p>记录能让自己进入高效心流状态的条件组合，例如：</p>
+<blockquote>
+<p>iPad + 纸笔 + 降噪耳机 + ASMR + 凉夜 = <strong>高效心流</strong></p>
+</blockquote>
+<p>每次学习前检查状态库，快速搭建最佳学习场景。</p>
+<h3 id="关键词便签法">关键词便签法</h3>
+<ul>
+<li>从每个知识点中提炼 <strong>1~3 个关键词</strong></li>
+<li>写在便签上，贴在显眼处或收纳到卡片盒中</li>
+<li>定期回顾，将分散的关键词串联成知识网络</li>
+</ul>
+<hr>
+<h2 id="六行动清单">六、行动清单</h2>
+<div class="sakura-table-wrap">
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">序号</th>
+          <th style="text-align: left">行动项</th>
+          <th style="text-align: left">频率</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">1</td>
+          <td style="text-align: left">绘制当前学习领域的知识地图</td>
+          <td style="text-align: left">一次性 + 每周更新</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">2</td>
+          <td style="text-align: left">制定学习路线图（含截止时间和输出目标）</td>
+          <td style="text-align: left">每轮学习前</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">3</td>
+          <td style="text-align: left">广泛阅读 20~30 分钟</td>
+          <td style="text-align: left">每日</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">4</td>
+          <td style="text-align: left">摘关键词写便签</td>
+          <td style="text-align: left">每学完一个知识点</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">5</td>
+          <td style="text-align: left">输出学习日志</td>
+          <td style="text-align: left">每周</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">6</td>
+          <td style="text-align: left">因式分解他人长处并应用</td>
+          <td style="text-align: left">每月</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">7</td>
+          <td style="text-align: left">项目复盘，整理成败因素图表</td>
+          <td style="text-align: left">每完成一项工作</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">8</td>
+          <td style="text-align: left">进入学习环境沉浸</td>
+          <td style="text-align: left">每日</td>
+      </tr>
+  </tbody>
+</table>
+</div>
+<hr>
+<blockquote>
+<p>学习不是&quot;看&quot;出来的，是&quot;做&quot;出来的。把输入转化为输出，把知识转化为能力，才是变现的起点。
+本笔记的方法与本站 <a href="/posts/knowledge-map/">AI Infra 学习路线</a> 的规划思路互为印证。</p>
+</blockquote>
+
+</div>
+<div class="post-copyright-wrap">
+  <ul class="post-copyright">
+    <li class="post-copyright-author">
+      <strong>本文作者：</strong><span class="post-copyright-author-name"> pz-maker</span></li>
+    <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://pz-maker.github.io/posts/learn-for-money/" target="_blank" rel="noopener" title="本文链接">https://pz-maker.github.io/posts/learn-for-money/</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong>版权声明：</strong>
+      <span>本站所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="noopener" title="CC BY-NC-SA 4.0">CC BY-NC-SA</a> 许可协议。</span>
+    </li>
+  </ul>
+</div><div class="sakura-post-nav-before-comment"><nav class="sakura-post-nav is-merge" aria-label="文章导航"><a class="sakura-image-card card-prev has-sibling" href="/posts/nand-to-tetris/"><div class="sakura-post-nav-content">
+      <span class="sakura-post-nav-label">Previous Post</span>
+      <span class="sakura-post-nav-title">From Nand to Tetris 学习笔记</span>
+    </div>
+  </a><a class="sakura-image-card card-next has-sibling" href="/posts/pragmatic-programmer/"><div class="sakura-post-nav-content">
+      <span class="sakura-post-nav-label">Next Post</span>
+      <span class="sakura-post-nav-title">《程序员修炼之道》英语笔记</span>
+    </div>
+  </a></nav></div>
+        <section id="page-comment-section" class="sakura-comment sakura-page-comment" data-comment-provider="twikoo"><div class="sakura-twikoo">
+    <div id="tcomment" class="sakura-comment-root"></div>
+  </div></section>
+
+      </div>
+    </div>
+    
+    <aside class="sakura-aside sakura-post-toc"><div class="sakura-toc">
+  <div class="sakura-toc__inner">
+    <div class="outline-title">文章目录</div>
+    <div class="outline-marker" aria-hidden="true"></div>
+    <div class="sakura-toc__nav">
+      <span id="doc-outline-aria-label" class="visually-hidden">Table of Contents for current page</span>
+      <nav id="TableOfContents">
+        <ul><li><a href="#21-%e5%88%b6%e4%bd%9c%e7%9f%a5%e8%af%86%e5%9c%b0%e5%9b%be" class="toc-link toc-link--3">2.1 制作知识地图</a></li><li><a href="#22-%e5%88%b6%e4%bd%9c%e5%ad%a6%e4%b9%a0%e8%b7%af%e7%ba%bf%e5%9b%be" class="toc-link toc-link--3">2.2 制作学习路线图</a></li><li><a href="#23-%e4%bb%8e%e7%9f%a5%e8%af%86%e5%9c%b0%e5%9b%be%e5%88%b0%e5%ad%a6%e4%b9%a0%e8%b7%af%e7%ba%bf%e5%9b%be" class="toc-link toc-link--3">2.3 从知识地图到学习路线图</a></li><li><a href="#31-%e5%b9%bf%e6%b3%9b%e9%98%85%e8%af%bb%e6%98%af%e8%be%93%e5%85%a5%e7%9a%84%e5%9f%ba%e7%a1%80" class="toc-link toc-link--3">3.1 广泛阅读是输入的基础</a></li><li><a href="#32-%e6%97%a9%e6%9c%9f%e9%98%b6%e6%ae%b5%e4%bf%9d%e6%8c%81%e9%ab%98%e5%af%86%e5%ba%a6" class="toc-link toc-link--3">3.2 早期阶段保持高密度</a></li><li><a href="#33-%e7%94%a8%e5%9b%a0%e5%bc%8f%e5%88%86%e8%a7%a3%e5%81%b7%e5%ad%a6%e4%bb%96%e4%ba%ba%e7%9a%84%e9%95%bf%e5%a4%84" class="toc-link toc-link--3">3.3 用&amp;quot;因式分解&amp;quot;偷学他人的长处</a></li><li><a href="#34-%e6%8f%90%e9%97%ae%e6%96%b9%e5%bc%8f%e6%b2%a1%e8%af%a2%e9%97%ae%e8%80%8c%e9%9d%9e%e8%af%a2%e9%97%ae" class="toc-link toc-link--3">3.4 提问方式：没询问，而非询问</a></li><li><a href="#41-%e5%ba%94%e7%94%a8%e8%83%bd%e5%8a%9b%e4%b8%8e%e5%8e%9f%e5%88%9b%e6%80%a7%e6%98%af%e4%b8%93%e4%b8%9a%e4%ba%ba%e7%9a%84%e4%bb%b7%e5%80%bc" class="toc-link toc-link--3">4.1 应用能力与原创性是专业人的价值</a></li><li><a href="#42-%e5%a4%8d%e7%9b%98%e5%b0%86%e6%88%90%e8%b4%a5%e5%9b%a0%e7%b4%a0%e6%95%b4%e7%90%86%e5%bd%92%e7%ba%b3" class="toc-link toc-link--3">4.2 复盘：将成败因素整理归纳</a></li><li><a href="#43-%e6%b2%89%e6%b5%b8%e5%bc%8f%e5%ad%a6%e4%b9%a0%e7%8e%af%e5%a2%83" class="toc-link toc-link--3">4.3 沉浸式学习环境</a></li><li><a href="#%e5%ad%a6%e4%b9%a0%e7%8a%b6%e6%80%81%e5%ba%93" class="toc-link toc-link--3">学习状态库</a></li><li><a href="#%e5%85%b3%e9%94%ae%e8%af%8d%e4%be%bf%e7%ad%be%e6%b3%95" class="toc-link toc-link--3">关键词便签法</a></li></ul>
+      </nav>
+    </div>
+  </div>
+</div></aside>
+    
+  </div>
+</article>
+
+  </div><footer class="sakura-footer"><div class="sakura-footer__inner">
+
+  
+
+  <div class="sakura-footer-meta">
+    <p class="sakura-footer-powered">
+      Powered by <a href="https://github.com/gohugoio/hugo" target="_blank" class="sakura-footer-powered__link">hugo</a> & theme <a href="https://github.com/AIOVTUE/hugo-theme-aiovtue" target="_blank" class="sakura-footer-powered__link">AIOVTUE</a>
+    </p>
+
+    <p class="sakura-footer-busuanzi">
+      <span class="sakura-footer-busuanzi__row">
+        <span>今日访客：<span id="busuanzi_today_uv">加载中...</span></span>
+        <span class="sakura-footer-busuanzi__sep">|</span>
+        <span>今日访问：<span id="busuanzi_today_pv">加载中...</span></span>
+      </span>
+      <span class="sakura-footer-busuanzi__sep sakura-footer-busuanzi__sep--desktop">|</span>
+      <span class="sakura-footer-busuanzi__row">
+        <span>本站访客：<span id="busuanzi_site_uv">加载中...</span></span>
+        <span class="sakura-footer-busuanzi__sep">|</span>
+        <span>本站访问：<span id="busuanzi_site_pv">加载中...</span></span>
+      </span>
+    </p>
+  </div>
+
+  
+
+  <p class="sakura-footer-runtime" id="site-runtime" data-since="2026-08-01">
+
+    本站已经流畅运行
+
+    <span class="sakura-footer-runtime__num" data-unit="days">0</span>天
+
+    <span class="sakura-footer-runtime__num" data-unit="hours">0</span>小时
+
+    <span class="sakura-footer-runtime__num" data-unit="minutes">0</span>分钟
+
+    <span class="sakura-footer-runtime__num" data-unit="seconds">0</span>秒
+
+  </p>
+
+  
+
+  <div class="sakura-copyright">
+
+    <span>
+
+      Copyright &copy;
+
+      <span itemprop="copyrightYear">
+
+        2026
+
+      </span>
+
+    </span>
+
+    <span>by</span>
+
+    <span itemprop="copyrightHolder"><span class="sakura-copyright-author">pz-maker</span></span>
+
+  </div></div>
+
+</footer>
+<div id="sakura-pjax-loader" class="is-hidden" hidden role="status" aria-hidden="true" aria-live="polite" aria-label="页面加载中" style="--sakura-pjax-ecg-duration: 1350ms">
+  <div class="sakura-pjax-loader__panel">
+    <div class="sakura-pjax-loader__ecg-viewport">
+      <svg class="sakura-pjax-loader__ecg" viewBox="0 0 80 56" preserveAspectRatio="xMidYMid meet" focusable="false" aria-hidden="true">
+        <defs>
+          <clipPath id="sakura-pjax-ecg-clip">
+            <rect x="0" y="0" width="80" height="56" />
+          </clipPath>
+          <linearGradient id="sakura-pjax-ecg-fade" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="80" y2="0">
+            <stop offset="0%" stop-color="#fff" stop-opacity="0" />
+            <stop offset="20%" stop-color="#fff" stop-opacity="0.3" />
+            <stop offset="45%" stop-color="#fff" stop-opacity="1" />
+            <stop offset="100%" stop-color="#fff" stop-opacity="1" />
+          </linearGradient>
+          <mask id="sakura-pjax-ecg-mask">
+            <rect x="0" y="0" width="80" height="56" fill="url(#sakura-pjax-ecg-fade)" />
+          </mask><path id="sakura-pjax-ecg-beat" pathLength="80" d="M0,28 H30 L31,24 L33,28 H36 L37,33 L38,5 L42,45 L45,28 H47 L48,24 L50,28 H80" />
+        </defs>
+        <g clip-path="url(#sakura-pjax-ecg-clip)">
+          <g class="sakura-pjax-loader__ecg-grid" aria-hidden="true">
+            <line x1="0" y1="12" x2="80" y2="12" />
+            <line x1="0" y1="28" x2="80" y2="28" />
+            <line x1="0" y1="44" x2="80" y2="44" />
+          </g>
+          <g class="sakura-pjax-loader__ecg-trace" mask="url(#sakura-pjax-ecg-mask)">
+            <use href="#sakura-pjax-ecg-beat" class="sakura-pjax-loader__ecg-glow" />
+            <use href="#sakura-pjax-ecg-beat" class="sakura-pjax-loader__ecg-line" />
+          </g>
+        </g>
+      </svg>
+    </div>
+  </div>
+</div><div class="mashiro-search" id="search-modal" hidden>
+  <div class="mashiro-search-container">
+    <div class="mashiro-search-input-wrap">
+      <iconify-icon icon="fa6-solid:magnifying-glass" class="mashiro-search-input-icon" aria-hidden="true"></iconify-icon>
+      <input id="search-modal-input" class="mashiro-search-input" type="search" placeholder="输入关键词后回车搜索..." autocomplete="off">
+    </div>
+  </div>
+</div>
+<script src="//cdn.busuanzi.cc/busuanzi/3.6.9/busuanzi.min.js" defer></script>
+
+<script src="/js/main.min.13cad50bcf5a52a7168d23d35414f1abccf70fff27884cc3eb2d63225cc30b42.js" integrity="sha256-E8rVC89aUqcWjSPTVBTxq8z3D/8niEzD6y1jIlzDC0I=" crossorigin="anonymous" defer></script>
+</body>
+</html>

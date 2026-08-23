@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="zh-CN" translate="no" class="notranslate" data-search-threshold="0.35">
+<head>
+
+<meta charset="utf-8">
+<meta name="google" content="notranslate"><meta http-equiv="content-language" content="zh-CN">
+<style id="sakura-anti-translate">
+  .goog-te-banner-frame,
+  .goog-te-menu-frame,
+  .goog-te-balloon-frame,
+  #goog-gt-tt,
+  .skiptranslate,
+  body > .skiptranslate,
+  iframe.goog-te-banner-frame,
+  iframe.skiptranslate {
+    display: none !important;
+    visibility: hidden !important;
+    height: 0 !important;
+    width: 0 !important;
+    pointer-events: none !important;
+  }
+  html,
+  body {
+    top: 0 !important;
+    position: static !important;
+  }
+</style>
+<script>
+;(function () {
+  var SELECTOR = 'iframe.goog-te-banner-frame, .skiptranslate, #goog-gt-tt, .goog-te-menu-frame, .goog-te-balloon-frame, .goog-te-spinner-pos'
+
+  function lockLanguage() {
+    var root = document.documentElement
+    root.lang = 'zh-CN'
+    root.setAttribute('translate', 'no')
+    root.classList.add('notranslate')
+    if (document.body) {
+      document.body.setAttribute('translate', 'no')
+      document.body.classList.add('notranslate')
+      document.body.style.top = '0'
+      document.body.style.position = ''
+    }
+  }
+
+  function dismissTranslateUi() {
+    lockLanguage()
+    document.querySelectorAll(SELECTOR).forEach(function (el) {
+      el.remove()
+    })
+  }
+
+  lockLanguage()
+  dismissTranslateUi()
+
+  if (typeof MutationObserver !== 'undefined') {
+    new MutationObserver(dismissTranslateUi).observe(document.documentElement, {
+      childList: true,
+      subtree: true,
+    })
+  }
+
+  window.addEventListener('sakura:page-content-visible', dismissTranslateUi)
+  window.__sakuraDismissTranslateUi = dismissTranslateUi
+})()
+</script>
+<link rel="preconnect" href="https://code.iconify.design" crossorigin>
+<link rel="dns-prefetch" href="https://code.iconify.design">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="icon" href="/hero/avatar.png" type="image/png"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>我把 Obsidian 变成了个人网站：从笔记到上线，只隔一个快捷键 | AI Infra Wiki</title><meta name="description" content="复盘 Obsidian → Hugo → GitHub Pages 全自动发布流水线的搭建过程：为什么做、怎么选、踩了哪些坑。"><meta name="sakura-pjax" content="1" data-fade="200" data-mount-delay="120" data-loader="1"><script type="application/json" id="sakura-site-effects-config">{"maxDuration":12,"mobile":false,"randomTypes":["snow","firefly"],"randomize":true,"script":"/vendor/yzhanweather/yzhanweather.min.js","type":"snow","zIndex":5}</script>
+<script>
+(function () {
+  var el = document.getElementById('sakura-site-effects-config')
+  if (!el?.textContent) return
+  try {
+    var raw = JSON.parse(el.textContent)
+    if (typeof raw === 'string') raw = JSON.parse(raw)
+    document.documentElement.dataset.sakuraEffectsMobile = raw.mobile ? '1' : '0'
+  } catch {}
+})()
+</script><link rel="canonical" href="https://pz-maker.github.io/posts/obsidian-workflow-retrospective/">
+<link rel="sitemap" type="application/xml" title="Sitemap" href="https://pz-maker.github.io/sitemap.xml">
+<link rel="alternate" type="application/rss+xml" title="AI Infra Wiki" href="https://pz-maker.github.io/index.xml"><meta name="sakura-comment-provider" content="twikoo"><meta property="og:locale" content="zh-CN">
+<meta property="og:site_name" content="AI Infra Wiki">
+<meta property="og:title" content="我把 Obsidian 变成了个人网站：从笔记到上线，只隔一个快捷键">
+<meta property="og:description" content="复盘 Obsidian → Hugo → GitHub Pages 全自动发布流水线的搭建过程：为什么做、怎么选、踩了哪些坑。">
+<meta property="og:image" content="https://pz-maker.github.io/hero/avatar.png">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://pz-maker.github.io/posts/obsidian-workflow-retrospective/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="我把 Obsidian 变成了个人网站：从笔记到上线，只隔一个快捷键">
+<meta name="twitter:description" content="复盘 Obsidian → Hugo → GitHub Pages 全自动发布流水线的搭建过程：为什么做、怎么选、踩了哪些坑。">
+<meta name="twitter:image" content="https://pz-maker.github.io/hero/avatar.png"><style>:root{--va-c-primary:#5bc8d6;--va-c-primary-rgb:91, 200, 214;--va-c-primary-light:#6fcfdb;--va-c-primary-lighter:#84d6e0;--va-c-primary-dark:#3abdce;--va-c-brand:var(--va-c-primary);--va-c-link:var(--va-c-primary-dark)}</style><style>:root{--sakura-post-font-size:1.05rem;}</style>
+<link rel="stylesheet" href="/fonts/lxgw-wenkai-screen/style.css">
+
+
+<link rel="stylesheet" href="/css/molten.min.9889b509132eb1c41fe4bc7d4c705ad047d1bd102d414e1a84f84f798296d9f7.css" integrity="sha256-mIm1CRMuscQf5Lx9THBa0EfRvRAtQU4ahPhPeYKW2fc=" crossorigin="anonymous">
+<link rel="stylesheet" href="/css/main.min.6813f4c17287362035ac06818cccbc7d91f9ab5841afabc793e91ba3a2be6ea5.css" integrity="sha256-aBP0wXKHNiA1rAaBjMy8fZH5q1hBr6vHk&#43;kbo6K&#43;bqU=" crossorigin="anonymous"><link rel="stylesheet" data-sakura-page-style="comment" href="/css/twikoo-comment.min.9dc20aca7a0a5f01d3512f92cec836ddc000c55bf26ba016a58859629b8c79c0.css" integrity="sha256-ncIKynoKXwHTUS&#43;Szsg23cAAxVvya6AWpYhZYpuMecA=" crossorigin="anonymous"><link rel="stylesheet" data-sakura-page-style="site-effects" href="/css/site-effects.min.96d1db7705ac6e4cd751de30cf9b63a6e7d31ddd3f67e18fbd10ce10e5956a37.css" integrity="sha256-ltHbdwWsbkzXUd4wz5tjpufTHd0/Z&#43;GPvRDOEOWVajc=" crossorigin="anonymous"><link rel="stylesheet" data-sakura-page-style="search-modal" href="/css/search.min.f6d2e23c837b66e290778f6aad8ad70973be82a5a399f02fda57f76ce304519d.css" integrity="sha256-9tLiPIN7ZuKQd49qrYrXCXO&#43;gqWjmfAv2lf3bOMEUZ0=" crossorigin="anonymous"><link rel="stylesheet" data-sakura-page-style="lightbox" href="/css/lightbox.min.ea6548ebdb8c9da82814cabdedc7b3ac57847fa9352705341b3b7a7423223749.css" integrity="sha256-6mVI69uMnagoFMq97cezrFeEf6k1JwU0Gzt6dCMiN0k=" crossorigin="anonymous"><link rel="stylesheet" data-sakura-page-style="pjax" href="/css/pjax.min.bad1bcaa11e67200cf71d5d7d2c0e8c78d0cef8585f511ff5ee5c2e29b73f45b.css" integrity="sha256-utG8qhHmcgDPcdXX0sDox40M74WF9RH/XuXC4ptz9Fs=" crossorigin="anonymous">
+<script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js" defer></script>
+</head>
+<body class="notranslate" translate="no"><header
+  class="sakura-navbar"
+  id="navbar" data-mobile-collapse="1" data-scroll-threshold="5" data-scroll-delta="10" data-reveal-mode="scrollUp" data-mobile-collapse-home="0" data-desktop-collapse="1" data-desktop-scroll-threshold="5" data-desktop-scroll-delta="5" data-desktop-reveal-mode="scrollUp" data-desktop-collapse-home="0">
+  <div class="navbar-content sakura-safe-padding" id="navbar-content">
+    <div class="sakura-navbar__brand-wrap">
+      <button type="button" class="mobile-btn sakura-navbar__menu-btn" id="sidebar-toggle" aria-label="mobile navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="sakura-navbar-brand">
+        <ruby class="navbar-title relative">
+          <a class="logo-link" href="/" title="AI Infra Wiki-熔炉">
+            
+            <span>AI INFRA </span>
+            
+            <span class="sakura-hvr-rotate" id="navbar-brand-rotate">WIKI</span>
+            
+          </a>
+          <rt class="navbar-subtitle">熔炉</rt>
+        </ruby>
+      </div>
+    </div>
+
+    <nav class="sakura-navbar-link" id="navbar-links" aria-label="主导航">
+      
+      <div class="sakura-dropdown sakura-navbar-link-item">
+        <a class="sakura-nav-link" href="/" data-nav="/">
+          <iconify-icon icon="ant-design:home-filled" class="sakura-nav-link-icon" aria-hidden="true"></iconify-icon>
+          <span class="sakura-nav-link-text">首页</span>
+        </a>
+        
+      </div>
+      
+      <div class="sakura-dropdown sakura-navbar-link-item" aria-haspopup="true" aria-expanded="false">
+        <a class="sakura-nav-link" href="/categories/" data-nav="/categories/" data-nav-group="posts">
+          <iconify-icon icon="ant-design:read-filled" class="sakura-nav-link-icon" aria-hidden="true"></iconify-icon>
+          <span class="sakura-nav-link-text">文章</span>
+        </a>
+        
+        <div class="sakura-dropdown-menu">
+          <div class="sakura-dropdown-list">
+            
+            <a class="sakura-nav-link" href="/categories/" data-nav="/categories/">
+              <iconify-icon icon="ant-design:appstore-filled" class="sakura-nav-link-icon" aria-hidden="true"></iconify-icon>
+              <span class="sakura-nav-link-text">分类</span>
+            </a>
+            
+            <a class="sakura-nav-link" href="/archives/" data-nav="/archives/">
+              <iconify-icon icon="ant-design:container-filled" class="sakura-nav-link-icon" aria-hidden="true"></iconify-icon>
+              <span class="sakura-nav-link-text">归档</span>
+            </a>
+            
+            <a class="sakura-nav-link" href="/tags/" data-nav="/tags/">
+              <iconify-icon icon="ant-design:tags-filled" class="sakura-nav-link-icon" aria-hidden="true"></iconify-icon>
+              <span class="sakura-nav-link-text">标签</span>
+            </a>
+            
+          </div>
+        </div>
+        
+      </div>
+      
+      <div class="sakura-dropdown sakura-navbar-link-item">
+        <a class="sakura-nav-link" href="/moments/" data-nav="/moments/">
+          <iconify-icon icon="ant-design:compass-filled" class="sakura-nav-link-icon" aria-hidden="true"></iconify-icon>
+          <span class="sakura-nav-link-text">动态</span>
+        </a>
+        
+      </div>
+      
+      <div class="sakura-dropdown sakura-navbar-link-item">
+        <a class="sakura-nav-link" href="/links/" data-nav="/links/">
+          <iconify-icon icon="ant-design:global-outlined" class="sakura-nav-link-icon" aria-hidden="true"></iconify-icon>
+          <span class="sakura-nav-link-text">友链</span>
+        </a>
+        
+      </div>
+      
+      <div class="sakura-dropdown sakura-navbar-link-item">
+        <a class="sakura-nav-link" href="/about/" data-nav="/about/">
+          <iconify-icon icon="ant-design:idcard-filled" class="sakura-nav-link-icon" aria-hidden="true"></iconify-icon>
+          <span class="sakura-nav-link-text">关于</span>
+        </a>
+        
+      </div>
+      
+    </nav>
+
+    <div class="sakura-navbar-tools">
+      <button type="button" class="sakura-icon-btn sakura-navbar-tool" id="theme-toggle" aria-label="切换主题">
+        <iconify-icon icon="ri:moon-line"></iconify-icon>
+      </button>
+      <button type="button" class="sakura-icon-btn sakura-navbar-tool sakura-search-btn" id="search-open" aria-label="搜索" aria-expanded="false">
+        <span class="search-toggle-icon" aria-hidden="true">
+          <iconify-icon class="search-toggle-icon__search" icon="ri:search-line"></iconify-icon>
+          <iconify-icon class="search-toggle-icon__close" icon="ri:close-line"></iconify-icon>
+        </span>
+      </button>
+    </div>
+  </div>
+</header>
+<aside class="sakura-sidebar left" id="sidebar" aria-hidden="true">
+  <div class="site-info">
+    <a href="/about/" class="site-author-avatar"><img class="rounded-full"
+  src="/hero/avatar.png"
+  alt="avatar"
+  loading="lazy"
+  decoding="async"><span class="site-author-status" title="训练中 × 战地一">⚙</span>
+    </a>
+    <div class="site-author-name">
+      <a href="/about/">pz-maker</a>
+    </div>
+    <span class="site-name">AI Infra Wiki</span>
+    <h4 class="site-subtitle">熔炉</h4>
+    <div class="site-description">AI 基础设施学习记录 · 战地一训练中</div>
+  </div>
+
+  <div class="links-of-author">
+    
+    <a
+      class="sakura-icon-btn links-of-author-item"
+      href="https://github.com/pz-maker"
+      title="GitHub"
+      target="_blank"
+      rel="noopener"
+      style="color: #6e5494"
+    >
+      <iconify-icon icon="ri:github-line" class="links-of-author-item__icon" aria-hidden="true"></iconify-icon>
+    </a>
+    
+    <a
+      class="sakura-icon-btn links-of-author-item"
+      href="https://www.zhihu.com/people/zhezhe-5-23"
+      title="知乎"
+      target="_blank"
+      rel="noopener"
+      style="color: #0084ff"
+    >
+      <iconify-icon icon="ri:zhihu-line" class="links-of-author-item__icon" aria-hidden="true"></iconify-icon>
+    </a>
+    
+    <a
+      class="sakura-icon-btn links-of-author-item"
+      href="https://www.xiaohongshu.com/user/profile/6795d4e8000000000a03c78a"
+      title="小红书"
+      target="_blank"
+      rel="noopener"
+      style="color: #ff2442"
+    >
+      <iconify-icon icon="simple-icons:xiaohongshu" class="links-of-author-item__icon" aria-hidden="true"></iconify-icon>
+    </a>
+    
+    <a
+      class="sakura-icon-btn links-of-author-item"
+      href="/index.xml"
+      title="RSS"
+      target="_blank"
+      rel="noopener"
+      style="color: orange"
+    >
+      <iconify-icon icon="ri:rss-line" class="links-of-author-item__icon" aria-hidden="true"></iconify-icon>
+    </a>
+    
+  </div>
+
+  <nav class="sakura-sidebar-link" aria-label="侧边栏导航">
+    <ul class="sakura-sidebar-link-items has-groups mx-auto">
+      
+      <li>
+        
+        <a class="sakura-nav-link sakura-sidebar-link-item" href="/" data-nav="/" title="首页">
+          <iconify-icon icon="ant-design:home-filled" class="sakura-nav-link-icon" aria-hidden="true"></iconify-icon>
+          <span class="sakura-nav-link-text">首页</span>
+        </a>
+        
+      </li>
+      
+      <li>
+        
+        <button
+          type="button"
+          class="sakura-sidebar-link-item sidebar-nav-group__toggle"
+          data-nav="/categories/"
+          aria-expanded="false"
+          data-nav-group="posts"
+        >
+          <iconify-icon icon="ant-design:read-filled" class="sakura-nav-link-icon" aria-hidden="true"></iconify-icon>
+          <span class="sidebar-nav-group__label">文章</span>
+          <iconify-icon icon="ant-design:down-outlined" class="sidebar-nav-group__chevron" aria-hidden="true"></iconify-icon>
+        </button>
+        <ul class="sakura-sidebar-link-sub-items" hidden>
+          
+          <li>
+            <a class="sakura-nav-link sakura-sidebar-link-item" href="/categories/" data-nav="/categories/" title="分类">
+              <iconify-icon icon="ant-design:appstore-filled" class="sakura-nav-link-icon" aria-hidden="true"></iconify-icon>
+              <span class="sakura-nav-link-text">分类</span>
+            </a>
+          </li>
+          
+          <li>
+            <a class="sakura-nav-link sakura-sidebar-link-item" href="/archives/" data-nav="/archives/" title="归档">
+              <iconify-icon icon="ant-design:container-filled" class="sakura-nav-link-icon" aria-hidden="true"></iconify-icon>
+              <span class="sakura-nav-link-text">归档</span>
+            </a>
+          </li>
+          
+          <li>
+            <a class="sakura-nav-link sakura-sidebar-link-item" href="/tags/" data-nav="/tags/" title="标签">
+              <iconify-icon icon="ant-design:tags-filled" class="sakura-nav-link-icon" aria-hidden="true"></iconify-icon>
+              <span class="sakura-nav-link-text">标签</span>
+            </a>
+          </li>
+          
+        </ul>
+        
+      </li>
+      
+      <li>
+        
+        <a class="sakura-nav-link sakura-sidebar-link-item" href="/moments/" data-nav="/moments/" title="动态">
+          <iconify-icon icon="ant-design:compass-filled" class="sakura-nav-link-icon" aria-hidden="true"></iconify-icon>
+          <span class="sakura-nav-link-text">动态</span>
+        </a>
+        
+      </li>
+      
+      <li>
+        
+        <a class="sakura-nav-link sakura-sidebar-link-item" href="/links/" data-nav="/links/" title="友链">
+          <iconify-icon icon="ant-design:global-outlined" class="sakura-nav-link-icon" aria-hidden="true"></iconify-icon>
+          <span class="sakura-nav-link-text">友链</span>
+        </a>
+        
+      </li>
+      
+      <li>
+        
+        <a class="sakura-nav-link sakura-sidebar-link-item" href="/about/" data-nav="/about/" title="关于">
+          <iconify-icon icon="ant-design:idcard-filled" class="sakura-nav-link-icon" aria-hidden="true"></iconify-icon>
+          <span class="sakura-nav-link-text">关于</span>
+        </a>
+        
+      </li>
+      
+    </ul>
+  </nav>
+</aside>
+<div class="sakura-sidebar__overlay va-overlay" id="sidebar-overlay"></div>
+
+<div id="content" class="site-content"><article class="sakura-page sakura-post sakura-post-page"><header class="sakura-page-header sakura-post-header" data-page="posts"><div class="sakura-page-header__inner sakura-header-container">
+    <h1 class="sakura-page-header__title">
+      <span class="sakura-header-title">
+        <span class="sakura-page-header__text sakura-title">我把 Obsidian 变成了个人网站：从笔记到上线，只隔一个快捷键</span>
+      </span>
+    </h1>
+    <div class="sakura-post-header-meta sakura-post-meta">
+      <div class="sakura-post-header-meta__row sakura-post-header-meta__row--date">
+        <span class="sakura-post-date posted-time post-time">
+          <span class="sakura-post-date__inner" title="发表于2026-08-13">
+            <iconify-icon icon="mdi:clock-outline" class="sakura-post-date__icon" aria-hidden="true"></iconify-icon>
+            <span class="sakura-post-date__label">发表于</span>
+            <time datetime="2026-08-13" itemprop="datePublished">2026-08-13</time>
+          </span>
+        </span>
+      </div><div class="sakura-post-header-meta__row sakura-post-header-meta__row--taxonomy"><span class="sakura-post-header-meta__item">分类：<a href="/categories/%E9%9B%B6%E7%A2%8E%E6%83%B3%E6%B3%95/">零碎想法</a></span><span class="sakura-post-header-meta__sep"> · </span><span class="sakura-post-header-meta__item">标签：<a href="/tags/?tag=workflow">workflow</a>, <a href="/tags/?tag=obsidian">obsidian</a>, <a href="/tags/?tag=hugo">hugo</a></span></div></div><p class="sakura-post-header-reading">本文字数：2496&nbsp;&nbsp;阅读时长：5分钟</p><p class="sakura-post-header-busuanzi">
+  <span>访客数：<span id="busuanzi_page_uv">加载中...</span></span>
+  <span class="sakura-post-header-busuanzi__sep">|</span>
+  <span>阅读量：<span id="busuanzi_page_pv">加载中...</span></span>
+</p></div>
+</header>
+<div class="sakura-triple-columns-base sakura-triple-columns sakura-triple-columns--no-toc">
+    <aside class="sakura-post-aside-left" aria-hidden="true"></aside>
+    <div class="sakura-post-main">
+      <div class="sakura-page-content sakura-post-body"><div class="markdown-body prose sakura-post-content sakura-text-indent">
+  <h1 id="我把-obsidian-变成了个人网站从笔记到上线只隔一个快捷键">我把 Obsidian 变成了个人网站：从笔记到上线，只隔一个快捷键</h1>
+<blockquote>
+<p>写作工具与发布工具共用同一套文件，「发布」就不再是负担。这篇文章复盘我从零搭起这条 Obsidian → 个人网站全自动流水线的全过程：为什么做、怎么选、踩了哪些坑、最后想明白了什么。</p>
+</blockquote>
+<h2 id="一起因写完的笔记都去了哪里">一、起因：写完的笔记，都去了哪里？</h2>
+<p>我日常用 Obsidian 记笔记。学一个知识点、读一篇论文、攒一周的零碎想法，都会敲进去。但时间一长，问题慢慢浮出来：</p>
+<ol>
+<li><strong>输出没有反馈</strong>。写给自己看的东西，永远发现不了表达上的漏洞，也得不到任何外部视角。</li>
+<li><strong>知识连不成网</strong>。笔记越攒越多，却是一座座孤岛，翻旧笔记全靠搜索框碰运气。</li>
+<li><strong>没有积累感</strong>。学了一整年，想回顾、想展示的时候，拿不出一份像样的东西。</li>
+</ol>
+<p>于是冒出一个念头：<strong>能不能让笔记直接长在网站上？写笔记这个动作本身，就是发布。</strong></p>
+<p>我的个人网站最终长这样：<a href="https://pz-maker.github.io/" target="_blank" rel="noopener">pz-maker.github.io</a>——一个 AI 基础设施方向的学习 Wiki，有文章、周记、知识地图，还有一张会自动给互链文章连线的「知识星图」。而它的全部源码，就是我的 Obsidian 笔记库。</p>
+<h2 id="二核心思路让笔记库--网站仓库">二、核心思路：让笔记库 = 网站仓库</h2>
+<p>网上大部分教程的做法是「Obsidian 写作 → 导出 → 转换 → 再发布」，中间隔着一层搬运。我反着来：<strong>直接把 Obsidian 的 vault 变成网站的源码仓库</strong>。</p>
+<ul>
+<li>网站的内容目录就住在 vault 里，写笔记 = 改网站源码；</li>
+<li>Git 仓库直接初始化在 vault 根目录；</li>
+<li>在 Obsidian 里按一个快捷键，自动完成 commit + push；</li>
+<li>GitHub Actions 监听到推送，自动构建、自动部署到 GitHub Pages。</li>
+</ul>
+<p>整条链路上没有「导出」，没有「格式转换」，没有「复制粘贴」。这是整个方案里最重要的一个决定——一旦写作和发布共用同一套文件，发布的心智成本就趋近于零。</p>
+<p>顺带解决了一个隐私问题：<strong>私人笔记和公开文章共存于同一个库</strong>。用一份白名单式的 .gitignore，只放行网站相关的目录，其余私人笔记永远不会被推送到网上。写作时不用在「可公开」和「不可公开」之间做心理切换，这在长期体验上非常关键。</p>
+<h2 id="三选型复盘我从-vitepress-掉头去了-hugo">三、选型复盘：我从 VitePress 掉头去了 Hugo</h2>
+<p>第一版站点我是用 VitePress（Vue 系的静态站点生成器）搭的，组件化、TypeScript，写着很顺手。但用了一段时间后，我把整站迁移到了 Hugo + 一款开源主题。复盘下来，理由有三：</p>
+<ol>
+<li><strong>我要的布局，别人已经写好了</strong>。我想要周记、动态、归档这类分区，Hugo 的主题开箱就有；在 VitePress 里每一个都得自己开发。</li>
+<li><strong>环境轻</strong>。Hugo 是单个可执行程序，不需要 node_modules，构建毫秒级；主题也直接复制进仓库，不依赖子模块。</li>
+<li><strong>frontmatter 零转换</strong>。Hugo 认的 title / date / categories / tags 字段，和 Obsidian 的 Properties 完全同构，模板自动生成，两边都认。</li>
+</ol>
+<p>一条教训：<strong>技术选型的标准不是「什么火」，而是「我要的东西它自带多少」</strong>。自带的越多，你后期维护的就越少。</p>
+<h2 id="四流水线的最终形态">四、流水线的最终形态</h2>
+<p>现在我的发布流程是这样的：</p>
+<div class="language-text" data-line-count="2">
+  <button type="button" title="Copy code" class="copy" aria-label="复制代码"></button>
+  <span class="lang">text</span>
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">Obsidian 写文章 ──▶ Ctrl+Shift+S ──▶ GitHub Actions 自动构建 ──▶ 上线
+</span></span><span class="line"><span class="cl"> （唯一要做的）      （一键推送）         （完全不用管）        （约 1 分钟）</span></span></code></pre></div>
+  <button type="button" class="code-block-unfold-btn" aria-label="展开代码" hidden></button>
+</div>
+<p>真正让我坚持用下来的，是三个把摩擦降到最低的细节：</p>
+<ul>
+<li><strong>新建文章零手工</strong>：配了 Templater 模板，在 Obsidian 里 Ctrl+N 输入标题，文件夹结构、日期、分类默认值全部自动生成，我只管写正文。</li>
+<li><strong>图片即插即用</strong>：图片一律放文章同名文件夹，正文写相对路径。本地预览和线上渲染显示一致，从未出现「本地能看到、上线就 404」。</li>
+<li><strong>先预览再推送</strong>：本地跑一个 Hugo 预览服务，改完立刻看到渲染效果，确认没问题再按快捷键。所见即所得，上线零惊吓。</li>
+</ul>
+<p>另外加了两个小彩蛋，让网站不至于只是「文章列表」：一个是霓虹高亮语法，写笔记时随手一个标签，渲染成青蓝色的发光文字；一个是知识星图——每篇文章是一颗星，正文里互相链接的文章自动连线，笔记攒得越多，星空越亮。这种「看得见的积累感」，正是我最初想要的东西。</p>
+<h2 id="五踩坑实录精华部分">五、踩坑实录（精华部分）</h2>
+<p>这部分是全文最值钱的地方，每一个都是真金白银的时间：</p>
+<ol>
+<li><strong>Obsidian 的 <code>[[双链]]</code> 网站不认</strong>。Hugo 的 Markdown 解析器默认不支持 wiki 链接语法，直接推上去就是死链。约定：站内引用一律用标准 Markdown 链接。这是迁移时批量转换的头号对象。</li>
+<li><strong>图片必须和文章同目录</strong>（所谓 page bundle）。放到别的目录里，本地预览正常、线上全部 404，非常隐蔽。</li>
+<li><strong>一个开关忘了开，所有高亮标签变成纯文本</strong>。Hugo 出于安全默认转义内嵌 HTML，允许自定义标签需要显式配置。症状是「代码没报错，样式全没了」，排查了我半天。</li>
+<li><strong>frontmatter 忘了写 date，文章排序全乱</strong>。缺省时 Hugo 会拿文件修改时间顶替，后果是文章列表顺序莫名其妙。解法是让模板强制生成日期，不给手滑留机会。</li>
+<li><strong>写完推送，网站上死活看不到文章</strong>。这是我写这篇文章的当天刚踩的：新建模板默认 <code>draft: true</code>，草稿在构建时会被整个跳过。发布前把 draft 改成 false 即可。反过来想，这其实是个保护机制——没写完的东西永远不会误上线。</li>
+<li><strong>推送失败不可怕</strong>。国内直连 GitHub 偶尔抽风，push 卡住是常态。关键是：提交已经安全地待在本地仓库里，什么都不会丢，等网络缓过来重试一次就好。理解了「本地提交 ≠ 远端推送」，就不会再为红字报错焦虑。</li>
+<li><strong>Obsidian 的 <code>==高亮==</code> 网站不渲染</strong>。双等号是 Obsidian 的原生高亮语法，Hugo 的解析器不认，推上去会原样显示两个等号——这是我拿一篇测试文章实打实验出来的。站内要用约定的 HTML 标签写高亮。启示：编辑器的私有语法不要想当然地通用，任何新语法先本地预览再发布。</li>
+</ol>
+<h2 id="六想明白的几件事">六、想明白的几件事</h2>
+<p>流水线跑顺之后，有三点体会超出了技术本身：</p>
+<p><strong>第一，最好的流程，是让「发布」没有摩擦的流程。</strong> 如果发布需要五个步骤，我大概率会攒着不发，然后不了了之。现在发布等于按一下保存键——写作的冲动出现的那一刻，它就已经在路上了。</p>
+<p><strong>第二，内容质量比数量重要得多。</strong> 网站上线后，我专门做了一次减法：删掉了一批 AI 生成的框架文章，只保留自己逐字敲过、真正消化了的内容。不是亲手写过的东西，挂在网上只是心虚的装饰。网站的价值密度，取决于你敢删多少。</p>
+<p><strong>第三，工具服务于内容，而不是反过来。</strong> 搭站的过程很容易上瘾——换主题、调配色、加特效，折腾一晚上一个字没写。我给这条线定的规矩是：<strong>折腾网站花的时间，必须少于写文章花的时间</strong>。工具链搭好之后，它最好的状态就是让你感觉不到它的存在。</p>
+<p>如果你也在 Obsidian 里攒了不少笔记，不妨试试这条路：一个笔记库、一个 Git 仓库、一条 Actions 流水线，写和发之间，就只剩下一个快捷键的距离。</p>
+<blockquote>
+<p>相关：<a href="/posts/publish-flow/">文章常态化发布流程</a>（站内速查卡）</p>
+</blockquote>
+
+</div>
+<div class="post-copyright-wrap">
+  <ul class="post-copyright">
+    <li class="post-copyright-author">
+      <strong>本文作者：</strong><span class="post-copyright-author-name"> pz-maker</span></li>
+    <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://pz-maker.github.io/posts/obsidian-workflow-retrospective/" target="_blank" rel="noopener" title="本文链接">https://pz-maker.github.io/posts/obsidian-workflow-retrospective/</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong>版权声明：</strong>
+      <span>本站所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="noopener" title="CC BY-NC-SA 4.0">CC BY-NC-SA</a> 许可协议。</span>
+    </li>
+  </ul>
+</div><div class="sakura-post-nav-before-comment"><nav class="sakura-post-nav is-merge" aria-label="文章导航"><a class="sakura-image-card card-prev has-sibling" href="/posts/%E6%88%98%E5%9C%B0%E4%B8%80%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/"><div class="sakura-post-nav-content">
+      <span class="sakura-post-nav-label">Previous Post</span>
+      <span class="sakura-post-nav-title">战地一学习记录</span>
+    </div>
+  </a><a class="sakura-image-card card-next has-sibling" href="/posts/publish-flow/"><div class="sakura-post-nav-content">
+      <span class="sakura-post-nav-label">Next Post</span>
+      <span class="sakura-post-nav-title">文章常态化发布流程</span>
+    </div>
+  </a></nav></div>
+        <section id="page-comment-section" class="sakura-comment sakura-page-comment" data-comment-provider="twikoo"><div class="sakura-twikoo">
+    <div id="tcomment" class="sakura-comment-root"></div>
+  </div></section>
+
+      </div>
+    </div>
+    
+  </div>
+</article>
+
+  </div><footer class="sakura-footer"><div class="sakura-footer__inner">
+
+  
+
+  <div class="sakura-footer-meta">
+    <p class="sakura-footer-powered">
+      Powered by <a href="https://github.com/gohugoio/hugo" target="_blank" class="sakura-footer-powered__link">hugo</a> & theme <a href="https://github.com/AIOVTUE/hugo-theme-aiovtue" target="_blank" class="sakura-footer-powered__link">AIOVTUE</a>
+    </p>
+
+    <p class="sakura-footer-busuanzi">
+      <span class="sakura-footer-busuanzi__row">
+        <span>今日访客：<span id="busuanzi_today_uv">加载中...</span></span>
+        <span class="sakura-footer-busuanzi__sep">|</span>
+        <span>今日访问：<span id="busuanzi_today_pv">加载中...</span></span>
+      </span>
+      <span class="sakura-footer-busuanzi__sep sakura-footer-busuanzi__sep--desktop">|</span>
+      <span class="sakura-footer-busuanzi__row">
+        <span>本站访客：<span id="busuanzi_site_uv">加载中...</span></span>
+        <span class="sakura-footer-busuanzi__sep">|</span>
+        <span>本站访问：<span id="busuanzi_site_pv">加载中...</span></span>
+      </span>
+    </p>
+  </div>
+
+  
+
+  <p class="sakura-footer-runtime" id="site-runtime" data-since="2026-08-01">
+
+    本站已经流畅运行
+
+    <span class="sakura-footer-runtime__num" data-unit="days">0</span>天
+
+    <span class="sakura-footer-runtime__num" data-unit="hours">0</span>小时
+
+    <span class="sakura-footer-runtime__num" data-unit="minutes">0</span>分钟
+
+    <span class="sakura-footer-runtime__num" data-unit="seconds">0</span>秒
+
+  </p>
+
+  
+
+  <div class="sakura-copyright">
+
+    <span>
+
+      Copyright &copy;
+
+      <span itemprop="copyrightYear">
+
+        2026
+
+      </span>
+
+    </span>
+
+    <span>by</span>
+
+    <span itemprop="copyrightHolder"><span class="sakura-copyright-author">pz-maker</span></span>
+
+  </div></div>
+
+</footer>
+<div id="sakura-pjax-loader" class="is-hidden" hidden role="status" aria-hidden="true" aria-live="polite" aria-label="页面加载中" style="--sakura-pjax-ecg-duration: 1350ms">
+  <div class="sakura-pjax-loader__panel">
+    <div class="sakura-pjax-loader__ecg-viewport">
+      <svg class="sakura-pjax-loader__ecg" viewBox="0 0 80 56" preserveAspectRatio="xMidYMid meet" focusable="false" aria-hidden="true">
+        <defs>
+          <clipPath id="sakura-pjax-ecg-clip">
+            <rect x="0" y="0" width="80" height="56" />
+          </clipPath>
+          <linearGradient id="sakura-pjax-ecg-fade" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="80" y2="0">
+            <stop offset="0%" stop-color="#fff" stop-opacity="0" />
+            <stop offset="20%" stop-color="#fff" stop-opacity="0.3" />
+            <stop offset="45%" stop-color="#fff" stop-opacity="1" />
+            <stop offset="100%" stop-color="#fff" stop-opacity="1" />
+          </linearGradient>
+          <mask id="sakura-pjax-ecg-mask">
+            <rect x="0" y="0" width="80" height="56" fill="url(#sakura-pjax-ecg-fade)" />
+          </mask><path id="sakura-pjax-ecg-beat" pathLength="80" d="M0,28 H30 L31,24 L33,28 H36 L37,33 L38,5 L42,45 L45,28 H47 L48,24 L50,28 H80" />
+        </defs>
+        <g clip-path="url(#sakura-pjax-ecg-clip)">
+          <g class="sakura-pjax-loader__ecg-grid" aria-hidden="true">
+            <line x1="0" y1="12" x2="80" y2="12" />
+            <line x1="0" y1="28" x2="80" y2="28" />
+            <line x1="0" y1="44" x2="80" y2="44" />
+          </g>
+          <g class="sakura-pjax-loader__ecg-trace" mask="url(#sakura-pjax-ecg-mask)">
+            <use href="#sakura-pjax-ecg-beat" class="sakura-pjax-loader__ecg-glow" />
+            <use href="#sakura-pjax-ecg-beat" class="sakura-pjax-loader__ecg-line" />
+          </g>
+        </g>
+      </svg>
+    </div>
+  </div>
+</div><div class="mashiro-search" id="search-modal" hidden>
+  <div class="mashiro-search-container">
+    <div class="mashiro-search-input-wrap">
+      <iconify-icon icon="fa6-solid:magnifying-glass" class="mashiro-search-input-icon" aria-hidden="true"></iconify-icon>
+      <input id="search-modal-input" class="mashiro-search-input" type="search" placeholder="输入关键词后回车搜索..." autocomplete="off">
+    </div>
+  </div>
+</div>
+<script src="//cdn.busuanzi.cc/busuanzi/3.6.9/busuanzi.min.js" defer></script>
+
+<script src="/js/main.min.13cad50bcf5a52a7168d23d35414f1abccf70fff27884cc3eb2d63225cc30b42.js" integrity="sha256-E8rVC89aUqcWjSPTVBTxq8z3D/8niEzD6y1jIlzDC0I=" crossorigin="anonymous" defer></script>
+</body>
+</html>

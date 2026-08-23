@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Ddia on AI Infra Wiki</title>
+		<link>https://pz-maker.github.io/tags/ddia/</link>
+		<description>Recent content in Ddia on AI Infra Wiki</description>
+		<generator>Hugo</generator>
+		<language>zh-cn</language>
+		
+		
+		
+		
+			<lastBuildDate>Wed, 12 Aug 2026 00:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="https://pz-maker.github.io/tags/ddia/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>阶段一 · 基础工程筑基（0~3 个月）</title>
+				<link>https://pz-maker.github.io/posts/km-phase-1/</link>
+				<pubDate>Wed, 12 Aug 2026 00:00:00 +0000</pubDate>
+				<guid>https://pz-maker.github.io/posts/km-phase-1/</guid>
+				<description>&lt;h1 id=&#34;阶段一--基础工程筑基&#34;&gt;阶段一 · 基础工程筑基&lt;/h1&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;&lt;strong&gt;时间&lt;/strong&gt;：0 ~ 3 个月　&lt;strong&gt;Deadline&lt;/strong&gt;：&lt;mark class=&#34;va-hl&#34;&gt;2026-11-12&lt;/mark&gt;　&lt;strong&gt;状态&lt;/strong&gt;：⏳ 未开始&#xA;&lt;strong&gt;输出&lt;/strong&gt;：每章学完在 &lt;a href=&#34;https://pz-maker.github.io/posts/knowledge-map/&#34;&gt;知识地图&lt;/a&gt; 下更新进度，Lab 代码存档本站。&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;h2 id=&#34;11-计算机系统底层&#34;&gt;1.1 计算机系统底层&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;教材&lt;/strong&gt;：《深入理解计算机系统（CS:APP）》第三版，Randal E. Bryant 等&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

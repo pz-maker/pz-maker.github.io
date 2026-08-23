@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Phase-3 on AI Infra Wiki</title>
+		<link>https://pz-maker.github.io/tags/phase-3/</link>
+		<description>Recent content in Phase-3 on AI Infra Wiki</description>
+		<generator>Hugo</generator>
+		<language>zh-cn</language>
+		
+		
+		
+		
+			<lastBuildDate>Wed, 12 Aug 2026 00:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="https://pz-maker.github.io/tags/phase-3/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>阶段三 · 系统能力进阶（6~12 个月）</title>
+				<link>https://pz-maker.github.io/posts/km-phase-3/</link>
+				<pubDate>Wed, 12 Aug 2026 00:00:00 +0000</pubDate>
+				<guid>https://pz-maker.github.io/posts/km-phase-3/</guid>
+				<description>&lt;h1 id=&#34;阶段三--系统能力进阶&#34;&gt;阶段三 · 系统能力进阶&lt;/h1&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;&lt;strong&gt;时间&lt;/strong&gt;：6 ~ 12 个月　&lt;strong&gt;Deadline&lt;/strong&gt;：&lt;mark class=&#34;va-hl&#34;&gt;2027-08-12&lt;/mark&gt;　&lt;strong&gt;状态&lt;/strong&gt;：⏳ 未开始&#xA;&lt;strong&gt;输出&lt;/strong&gt;：每章学完在 &lt;a href=&#34;https://pz-maker.github.io/posts/knowledge-map/&#34;&gt;知识地图&lt;/a&gt; 下更新进度，性能分析报告与优化代码存档本站。&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;h2 id=&#34;31-分布式训练系统&#34;&gt;3.1 分布式训练系统&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;教材&lt;/strong&gt;：《分布式机器学习：算法、理论与实践》，刘铁岩、陈薇 等&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

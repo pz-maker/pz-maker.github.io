@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Typography on AI Infra Wiki</title>
+		<link>https://pz-maker.github.io/tags/typography/</link>
+		<description>Recent content in Typography on AI Infra Wiki</description>
+		<generator>Hugo</generator>
+		<language>zh-cn</language>
+		
+		
+		
+		
+			<lastBuildDate>Tue, 11 Aug 2026 00:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="https://pz-maker.github.io/tags/typography/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>文字高亮演示</title>
+				<link>https://pz-maker.github.io/posts/highlight-demo/</link>
+				<pubDate>Mon, 10 Aug 2026 00:00:00 +0000</pubDate>
+				<guid>https://pz-maker.github.io/posts/highlight-demo/</guid>
+				<description>&lt;h1 id=&#34;文字高亮演示&#34;&gt;文字高亮演示&lt;/h1&gt;&#xA;&lt;p&gt;本站支持 &lt;code&gt;&amp;lt;mark class=&amp;quot;va-hl&amp;quot;&amp;gt;文字&amp;lt;/mark&amp;gt;&lt;/code&gt; 霓虹荧光高亮，起排版装饰作用（Obsidian 里直接写 HTML 标签即可，网站渲染为青蓝荧光）。&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

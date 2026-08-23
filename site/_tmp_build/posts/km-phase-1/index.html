@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="zh-CN" translate="no" class="notranslate" data-search-threshold="0.35">
+<head>
+
+<meta charset="utf-8">
+<meta name="google" content="notranslate"><meta http-equiv="content-language" content="zh-CN">
+<style id="sakura-anti-translate">
+  .goog-te-banner-frame,
+  .goog-te-menu-frame,
+  .goog-te-balloon-frame,
+  #goog-gt-tt,
+  .skiptranslate,
+  body > .skiptranslate,
+  iframe.goog-te-banner-frame,
+  iframe.skiptranslate {
+    display: none !important;
+    visibility: hidden !important;
+    height: 0 !important;
+    width: 0 !important;
+    pointer-events: none !important;
+  }
+  html,
+  body {
+    top: 0 !important;
+    position: static !important;
+  }
+</style>
+<script>
+;(function () {
+  var SELECTOR = 'iframe.goog-te-banner-frame, .skiptranslate, #goog-gt-tt, .goog-te-menu-frame, .goog-te-balloon-frame, .goog-te-spinner-pos'
+
+  function lockLanguage() {
+    var root = document.documentElement
+    root.lang = 'zh-CN'
+    root.setAttribute('translate', 'no')
+    root.classList.add('notranslate')
+    if (document.body) {
+      document.body.setAttribute('translate', 'no')
+      document.body.classList.add('notranslate')
+      document.body.style.top = '0'
+      document.body.style.position = ''
+    }
+  }
+
+  function dismissTranslateUi() {
+    lockLanguage()
+    document.querySelectorAll(SELECTOR).forEach(function (el) {
+      el.remove()
+    })
+  }
+
+  lockLanguage()
+  dismissTranslateUi()
+
+  if (typeof MutationObserver !== 'undefined') {
+    new MutationObserver(dismissTranslateUi).observe(document.documentElement, {
+      childList: true,
+      subtree: true,
+    })
+  }
+
+  window.addEventListener('sakura:page-content-visible', dismissTranslateUi)
+  window.__sakuraDismissTranslateUi = dismissTranslateUi
+})()
+</script>
+<link rel="preconnect" href="https://code.iconify.design" crossorigin>
+<link rel="dns-prefetch" href="https://code.iconify.design">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="icon" href="/hero/avatar.png" type="image/png"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>阶段一 · 基础工程筑基（0~3 个月） | AI Infra Wiki</title><meta name="description" content="0~3 个月｜Deadline 2026-11-12：CS:APP、Linux、APUE、数据结构与算法、DDIA。"><meta name="sakura-pjax" content="1" data-fade="200" data-mount-delay="120" data-loader="1"><script type="application/json" id="sakura-site-effects-config">{"maxDuration":12,"mobile":false,"randomTypes":["snow","firefly"],"randomize":true,"script":"/vendor/yzhanweather/yzhanweather.min.js","type":"snow","zIndex":5}</script>
+<script>
+(function () {
+  var el = document.getElementById('sakura-site-effects-config')
+  if (!el?.textContent) return
+  try {
+    var raw = JSON.parse(el.textContent)
+    if (typeof raw === 'string') raw = JSON.parse(raw)
+    document.documentElement.dataset.sakuraEffectsMobile = raw.mobile ? '1' : '0'
+  } catch {}
+})()
+</script><link rel="canonical" href="https://pz-maker.github.io/posts/km-phase-1/">
+<link rel="sitemap" type="application/xml" title="Sitemap" href="https://pz-maker.github.io/sitemap.xml">
+<link rel="alternate" type="application/rss+xml" title="AI Infra Wiki" href="https://pz-maker.github.io/index.xml"><meta name="sakura-comment-provider" content="twikoo"><meta property="og:locale" content="zh-CN">
+<meta property="og:site_name" content="AI Infra Wiki">
+<meta property="og:title" content="阶段一 · 基础工程筑基（0~3 个月）">
+<meta property="og:description" content="0~3 个月｜Deadline 2026-11-12：CS:APP、Linux、APUE、数据结构与算法、DDIA。">
+<meta property="og:image" content="https://pz-maker.github.io/hero/avatar.png">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://pz-maker.github.io/posts/km-phase-1/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="阶段一 · 基础工程筑基（0~3 个月）">
+<meta name="twitter:description" content="0~3 个月｜Deadline 2026-11-12：CS:APP、Linux、APUE、数据结构与算法、DDIA。">
+<meta name="twitter:image" content="https://pz-maker.github.io/hero/avatar.png"><style>:root{--va-c-primary:#5bc8d6;--va-c-primary-rgb:91, 200, 214;--va-c-primary-light:#6fcfdb;--va-c-primary-lighter:#84d6e0;--va-c-primary-dark:#3abdce;--va-c-brand:var(--va-c-primary);--va-c-link:var(--va-c-primary-dark)}</style><style>:root{--sakura-post-font-size:1.05rem;}</style>
+<link rel="stylesheet" href="/fonts/lxgw-wenkai-screen/style.css">
+
+
+<link rel="stylesheet" href="/css/molten.min.9889b509132eb1c41fe4bc7d4c705ad047d1bd102d414e1a84f84f798296d9f7.css" integrity="sha256-mIm1CRMuscQf5Lx9THBa0EfRvRAtQU4ahPhPeYKW2fc=" crossorigin="anonymous">
+<link rel="stylesheet" href="/css/main.min.6813f4c17287362035ac06818cccbc7d91f9ab5841afabc793e91ba3a2be6ea5.css" integrity="sha256-aBP0wXKHNiA1rAaBjMy8fZH5q1hBr6vHk&#43;kbo6K&#43;bqU=" crossorigin="anonymous"><link rel="stylesheet" data-sakura-page-style="comment" href="/css/twikoo-comment.min.9dc20aca7a0a5f01d3512f92cec836ddc000c55bf26ba016a58859629b8c79c0.css" integrity="sha256-ncIKynoKXwHTUS&#43;Szsg23cAAxVvya6AWpYhZYpuMecA=" crossorigin="anonymous"><link rel="stylesheet" data-sakura-page-style="site-effects" href="/css/site-effects.min.96d1db7705ac6e4cd751de30cf9b63a6e7d31ddd3f67e18fbd10ce10e5956a37.css" integrity="sha256-ltHbdwWsbkzXUd4wz5tjpufTHd0/Z&#43;GPvRDOEOWVajc=" crossorigin="anonymous"><link rel="stylesheet" data-sakura-page-style="search-modal" href="/css/search.min.f6d2e23c837b66e290778f6aad8ad70973be82a5a399f02fda57f76ce304519d.css" integrity="sha256-9tLiPIN7ZuKQd49qrYrXCXO&#43;gqWjmfAv2lf3bOMEUZ0=" crossorigin="anonymous"><link rel="stylesheet" data-sakura-page-style="lightbox" href="/css/lightbox.min.ea6548ebdb8c9da82814cabdedc7b3ac57847fa9352705341b3b7a7423223749.css" integrity="sha256-6mVI69uMnagoFMq97cezrFeEf6k1JwU0Gzt6dCMiN0k=" crossorigin="anonymous"><link rel="stylesheet" data-sakura-page-style="pjax" href="/css/pjax.min.bad1bcaa11e67200cf71d5d7d2c0e8c78d0cef8585f511ff5ee5c2e29b73f45b.css" integrity="sha256-utG8qhHmcgDPcdXX0sDox40M74WF9RH/XuXC4ptz9Fs=" crossorigin="anonymous">
+<script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js" defer></script>
+</head>
+<body class="notranslate" translate="no"><header
+  class="sakura-navbar"
+  id="navbar" data-mobile-collapse="1" data-scroll-threshold="5" data-scroll-delta="10" data-reveal-mode="scrollUp" data-mobile-collapse-home="0" data-desktop-collapse="1" data-desktop-scroll-threshold="5" data-desktop-scroll-delta="5" data-desktop-reveal-mode="scrollUp" data-desktop-collapse-home="0">
+  <div class="navbar-content sakura-safe-padding" id="navbar-content">
+    <div class="sakura-navbar__brand-wrap">
+      <button type="button" class="mobile-btn sakura-navbar__menu-btn" id="sidebar-toggle" aria-label="mobile navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="sakura-navbar-brand">
+        <ruby class="navbar-title relative">
+          <a class="logo-link" href="/" title="AI Infra Wiki-熔炉">
+            
+            <span>AI INFRA </span>
+            
+            <span class="sakura-hvr-rotate" id="navbar-brand-rotate">WIKI</span>
+            
+          </a>
+          <rt class="navbar-subtitle">熔炉</rt>
+        </ruby>
+      </div>
+    </div>
+
+    <nav class="sakura-navbar-link" id="navbar-links" aria-label="主导航">
+      
+      <div class="sakura-dropdown sakura-navbar-link-item">
+        <a class="sakura-nav-link" href="/" data-nav="/">
+          <iconify-icon icon="ant-design:home-filled" class="sakura-nav-link-icon" aria-hidden="true"></iconify-icon>
+          <span class="sakura-nav-link-text">首页</span>
+        </a>
+        
+      </div>
+      
+      <div class="sakura-dropdown sakura-navbar-link-item" aria-haspopup="true" aria-expanded="false">
+        <a class="sakura-nav-link" href="/categories/" data-nav="/categories/" data-nav-group="posts">
+          <iconify-icon icon="ant-design:read-filled" class="sakura-nav-link-icon" aria-hidden="true"></iconify-icon>
+          <span class="sakura-nav-link-text">文章</span>
+        </a>
+        
+        <div class="sakura-dropdown-menu">
+          <div class="sakura-dropdown-list">
+            
+            <a class="sakura-nav-link" href="/categories/" data-nav="/categories/">
+              <iconify-icon icon="ant-design:appstore-filled" class="sakura-nav-link-icon" aria-hidden="true"></iconify-icon>
+              <span class="sakura-nav-link-text">分类</span>
+            </a>
+            
+            <a class="sakura-nav-link" href="/archives/" data-nav="/archives/">
+              <iconify-icon icon="ant-design:container-filled" class="sakura-nav-link-icon" aria-hidden="true"></iconify-icon>
+              <span class="sakura-nav-link-text">归档</span>
+            </a>
+            
+            <a class="sakura-nav-link" href="/tags/" data-nav="/tags/">
+              <iconify-icon icon="ant-design:tags-filled" class="sakura-nav-link-icon" aria-hidden="true"></iconify-icon>
+              <span class="sakura-nav-link-text">标签</span>
+            </a>
+            
+          </div>
+        </div>
+        
+      </div>
+      
+      <div class="sakura-dropdown sakura-navbar-link-item">
+        <a class="sakura-nav-link" href="/moments/" data-nav="/moments/">
+          <iconify-icon icon="ant-design:compass-filled" class="sakura-nav-link-icon" aria-hidden="true"></iconify-icon>
+          <span class="sakura-nav-link-text">动态</span>
+        </a>
+        
+      </div>
+      
+      <div class="sakura-dropdown sakura-navbar-link-item">
+        <a class="sakura-nav-link" href="/links/" data-nav="/links/">
+          <iconify-icon icon="ant-design:global-outlined" class="sakura-nav-link-icon" aria-hidden="true"></iconify-icon>
+          <span class="sakura-nav-link-text">友链</span>
+        </a>
+        
+      </div>
+      
+      <div class="sakura-dropdown sakura-navbar-link-item">
+        <a class="sakura-nav-link" href="/about/" data-nav="/about/">
+          <iconify-icon icon="ant-design:idcard-filled" class="sakura-nav-link-icon" aria-hidden="true"></iconify-icon>
+          <span class="sakura-nav-link-text">关于</span>
+        </a>
+        
+      </div>
+      
+    </nav>
+
+    <div class="sakura-navbar-tools">
+      <button type="button" class="sakura-icon-btn sakura-navbar-tool" id="theme-toggle" aria-label="切换主题">
+        <iconify-icon icon="ri:moon-line"></iconify-icon>
+      </button>
+      <button type="button" class="sakura-icon-btn sakura-navbar-tool sakura-search-btn" id="search-open" aria-label="搜索" aria-expanded="false">
+        <span class="search-toggle-icon" aria-hidden="true">
+          <iconify-icon class="search-toggle-icon__search" icon="ri:search-line"></iconify-icon>
+          <iconify-icon class="search-toggle-icon__close" icon="ri:close-line"></iconify-icon>
+        </span>
+      </button>
+    </div>
+  </div>
+</header>
+<aside class="sakura-sidebar left" id="sidebar" aria-hidden="true">
+  <div class="site-info">
+    <a href="/about/" class="site-author-avatar"><img class="rounded-full"
+  src="/hero/avatar.png"
+  alt="avatar"
+  loading="lazy"
+  decoding="async"><span class="site-author-status" title="训练中 × 战地一">⚙</span>
+    </a>
+    <div class="site-author-name">
+      <a href="/about/">pz-maker</a>
+    </div>
+    <span class="site-name">AI Infra Wiki</span>
+    <h4 class="site-subtitle">熔炉</h4>
+    <div class="site-description">AI 基础设施学习记录 · 战地一训练中</div>
+  </div>
+
+  <div class="links-of-author">
+    
+    <a
+      class="sakura-icon-btn links-of-author-item"
+      href="https://github.com/pz-maker"
+      title="GitHub"
+      target="_blank"
+      rel="noopener"
+      style="color: #6e5494"
+    >
+      <iconify-icon icon="ri:github-line" class="links-of-author-item__icon" aria-hidden="true"></iconify-icon>
+    </a>
+    
+    <a
+      class="sakura-icon-btn links-of-author-item"
+      href="https://www.zhihu.com/people/zhezhe-5-23"
+      title="知乎"
+      target="_blank"
+      rel="noopener"
+      style="color: #0084ff"
+    >
+      <iconify-icon icon="ri:zhihu-line" class="links-of-author-item__icon" aria-hidden="true"></iconify-icon>
+    </a>
+    
+    <a
+      class="sakura-icon-btn links-of-author-item"
+      href="https://www.xiaohongshu.com/user/profile/6795d4e8000000000a03c78a"
+      title="小红书"
+      target="_blank"
+      rel="noopener"
+      style="color: #ff2442"
+    >
+      <iconify-icon icon="simple-icons:xiaohongshu" class="links-of-author-item__icon" aria-hidden="true"></iconify-icon>
+    </a>
+    
+    <a
+      class="sakura-icon-btn links-of-author-item"
+      href="/index.xml"
+      title="RSS"
+      target="_blank"
+      rel="noopener"
+      style="color: orange"
+    >
+      <iconify-icon icon="ri:rss-line" class="links-of-author-item__icon" aria-hidden="true"></iconify-icon>
+    </a>
+    
+  </div>
+
+  <nav class="sakura-sidebar-link" aria-label="侧边栏导航">
+    <ul class="sakura-sidebar-link-items has-groups mx-auto">
+      
+      <li>
+        
+        <a class="sakura-nav-link sakura-sidebar-link-item" href="/" data-nav="/" title="首页">
+          <iconify-icon icon="ant-design:home-filled" class="sakura-nav-link-icon" aria-hidden="true"></iconify-icon>
+          <span class="sakura-nav-link-text">首页</span>
+        </a>
+        
+      </li>
+      
+      <li>
+        
+        <button
+          type="button"
+          class="sakura-sidebar-link-item sidebar-nav-group__toggle"
+          data-nav="/categories/"
+          aria-expanded="false"
+          data-nav-group="posts"
+        >
+          <iconify-icon icon="ant-design:read-filled" class="sakura-nav-link-icon" aria-hidden="true"></iconify-icon>
+          <span class="sidebar-nav-group__label">文章</span>
+          <iconify-icon icon="ant-design:down-outlined" class="sidebar-nav-group__chevron" aria-hidden="true"></iconify-icon>
+        </button>
+        <ul class="sakura-sidebar-link-sub-items" hidden>
+          
+          <li>
+            <a class="sakura-nav-link sakura-sidebar-link-item" href="/categories/" data-nav="/categories/" title="分类">
+              <iconify-icon icon="ant-design:appstore-filled" class="sakura-nav-link-icon" aria-hidden="true"></iconify-icon>
+              <span class="sakura-nav-link-text">分类</span>
+            </a>
+          </li>
+          
+          <li>
+            <a class="sakura-nav-link sakura-sidebar-link-item" href="/archives/" data-nav="/archives/" title="归档">
+              <iconify-icon icon="ant-design:container-filled" class="sakura-nav-link-icon" aria-hidden="true"></iconify-icon>
+              <span class="sakura-nav-link-text">归档</span>
+            </a>
+          </li>
+          
+          <li>
+            <a class="sakura-nav-link sakura-sidebar-link-item" href="/tags/" data-nav="/tags/" title="标签">
+              <iconify-icon icon="ant-design:tags-filled" class="sakura-nav-link-icon" aria-hidden="true"></iconify-icon>
+              <span class="sakura-nav-link-text">标签</span>
+            </a>
+          </li>
+          
+        </ul>
+        
+      </li>
+      
+      <li>
+        
+        <a class="sakura-nav-link sakura-sidebar-link-item" href="/moments/" data-nav="/moments/" title="动态">
+          <iconify-icon icon="ant-design:compass-filled" class="sakura-nav-link-icon" aria-hidden="true"></iconify-icon>
+          <span class="sakura-nav-link-text">动态</span>
+        </a>
+        
+      </li>
+      
+      <li>
+        
+        <a class="sakura-nav-link sakura-sidebar-link-item" href="/links/" data-nav="/links/" title="友链">
+          <iconify-icon icon="ant-design:global-outlined" class="sakura-nav-link-icon" aria-hidden="true"></iconify-icon>
+          <span class="sakura-nav-link-text">友链</span>
+        </a>
+        
+      </li>
+      
+      <li>
+        
+        <a class="sakura-nav-link sakura-sidebar-link-item" href="/about/" data-nav="/about/" title="关于">
+          <iconify-icon icon="ant-design:idcard-filled" class="sakura-nav-link-icon" aria-hidden="true"></iconify-icon>
+          <span class="sakura-nav-link-text">关于</span>
+        </a>
+        
+      </li>
+      
+    </ul>
+  </nav>
+</aside>
+<div class="sakura-sidebar__overlay va-overlay" id="sidebar-overlay"></div>
+
+<div id="content" class="site-content"><article class="sakura-page sakura-post sakura-post-page"><header class="sakura-page-header sakura-post-header" data-page="posts"><div class="sakura-page-header__inner sakura-header-container">
+    <h1 class="sakura-page-header__title">
+      <span class="sakura-header-title">
+        <span class="sakura-page-header__text sakura-title">阶段一 · 基础工程筑基（0~3 个月）</span>
+      </span>
+    </h1>
+    <div class="sakura-post-header-meta sakura-post-meta">
+      <div class="sakura-post-header-meta__row sakura-post-header-meta__row--date">
+        <span class="sakura-post-date posted-time post-time">
+          <span class="sakura-post-date__inner" title="发表于2026-08-12">
+            <iconify-icon icon="mdi:clock-outline" class="sakura-post-date__icon" aria-hidden="true"></iconify-icon>
+            <span class="sakura-post-date__label">发表于</span>
+            <time datetime="2026-08-12" itemprop="datePublished">2026-08-12</time>
+          </span>
+        </span>
+      </div><div class="sakura-post-header-meta__row sakura-post-header-meta__row--taxonomy"><span class="sakura-post-header-meta__item">分类：<a href="/categories/%E7%9F%A5%E8%AF%86%E5%9C%B0%E5%9B%BE/">知识地图</a></span><span class="sakura-post-header-meta__sep"> · </span><span class="sakura-post-header-meta__item">标签：<a href="/tags/?tag=roadmap">roadmap</a>, <a href="/tags/?tag=phase-1">phase-1</a>, <a href="/tags/?tag=csapp">csapp</a>, <a href="/tags/?tag=linux">linux</a>, <a href="/tags/?tag=ddia">ddia</a></span></div></div><p class="sakura-post-header-reading">本文字数：2814&nbsp;&nbsp;阅读时长：6分钟</p><p class="sakura-post-header-busuanzi">
+  <span>访客数：<span id="busuanzi_page_uv">加载中...</span></span>
+  <span class="sakura-post-header-busuanzi__sep">|</span>
+  <span>阅读量：<span id="busuanzi_page_pv">加载中...</span></span>
+</p></div>
+</header>
+<div class="sakura-triple-columns-base sakura-triple-columns">
+    <aside class="sakura-post-aside-left" aria-hidden="true"></aside>
+    <div class="sakura-post-main">
+      <div class="sakura-page-content sakura-post-body"><div class="markdown-body prose sakura-post-content sakura-text-indent">
+  <h1 id="阶段一--基础工程筑基">阶段一 · 基础工程筑基</h1>
+<blockquote>
+<p><strong>时间</strong>：0 ~ 3 个月　<strong>Deadline</strong>：<mark class="va-hl">2026-11-12</mark>　<strong>状态</strong>：⏳ 未开始
+<strong>输出</strong>：每章学完在 <a href="/posts/knowledge-map/">知识地图</a> 下更新进度，Lab 代码存档本站。</p>
+</blockquote>
+<h2 id="11-计算机系统底层">1.1 计算机系统底层</h2>
+<p><strong>教材</strong>：《深入理解计算机系统（CS:APP）》第三版，Randal E. Bryant 等</p>
+<p><strong>阅读范围</strong>：</p>
+<ul>
+<li>第 1 章：计算机系统漫游（全读）</li>
+<li>第 3 章：程序的机器级表示（精读，理解汇编、调用约定、栈帧）</li>
+<li>第 5 章：优化程序性能（精读，理解编译器优化、循环展开、局部性）</li>
+<li>第 6 章：存储器层次结构（精读，缓存映射、替换策略、伪共享）</li>
+<li>第 8 章：异常控制流（精读，进程、信号、非本地跳转）</li>
+<li>第 9 章：虚拟内存（精读，地址翻译、TLB、内存映射）</li>
+</ul>
+<p><strong>深度要求</strong>：掌握</p>
+<ul>
+<li>能手画 x86-64 栈帧结构</li>
+<li>能计算缓存命中/缺失对程序性能的影响</li>
+<li>理解虚拟地址到物理地址的完整翻译流程</li>
+</ul>
+<p><strong>实战</strong>：完成 CS:APP 官方 Lab（Data Lab、Bomb Lab、Malloc Lab、Cache Lab）</p>
+<h2 id="12-linux-系统与编程">1.2 Linux 系统与编程</h2>
+<p><strong>教材</strong>：《鸟哥的 Linux 私房菜（基础学习篇）》第四版，鸟哥</p>
+<p><strong>阅读范围</strong>：</p>
+<ul>
+<li>第 4~6 章：Linux 文件系统与目录结构（全读）</li>
+<li>第 10~12 章：vim、Bash Shell、正则表达式（全读）</li>
+<li>第 13~17 章：账号管理、权限、进程管理、系统服务（全读）</li>
+<li>第 19~21 章：软件安装、日志、备份策略（选读）</li>
+</ul>
+<p><strong>深度要求</strong>：掌握</p>
+<ul>
+<li>能在纯命令行完成日常开发环境搭建</li>
+<li>熟练使用 grep/awk/sed 做日志分析</li>
+<li>理解 Linux 权限模型（UGO + ACL）</li>
+<li>能排查常见系统问题（CPU 飙高、内存泄漏、磁盘满、网络不通）</li>
+</ul>
+<p><strong>补充教材</strong>：《UNIX 环境高级编程（APUE）》第三版，W. Richard Stevens</p>
+<p><strong>阅读范围</strong>：</p>
+<ul>
+<li>第 3~5 章：文件 I/O、文件和目录、标准 I/O 库（精读）</li>
+<li>第 8~11 章：进程控制、进程关系、信号、线程（精读）</li>
+<li>第 14~16 章：高级 I/O、进程间通信、网络 IPC（选读）</li>
+</ul>
+<p><strong>深度要求</strong>：理解</p>
+<ul>
+<li>理解文件描述符、dup、fcntl 的底层机制</li>
+<li>理解 fork/exec/wait 的完整流程</li>
+<li>理解线程同步（mutex、condition variable、rwlock）</li>
+</ul>
+<h2 id="13-数据结构与算法">1.3 数据结构与算法</h2>
+<p><strong>教材</strong>：无需专门书籍，以 LeetCode +《算法导论》选读为主</p>
+<p><strong>阅读范围</strong>：</p>
+<ul>
+<li>《算法导论》第 6、10、12、13 章：堆、基本数据结构、二叉搜索树、红黑树（选读）</li>
+<li>《算法导论》第 22~24 章：图的基本算法（选读）</li>
+</ul>
+<p><strong>深度要求</strong>：掌握</p>
+<ul>
+<li>LeetCode 中等难度题目能独立写出 bug-free 代码</li>
+<li>重点掌握：数组、链表、栈、队列、哈希表、堆、并查集、拓扑排序</li>
+<li>能分析时间/空间复杂度</li>
+</ul>
+<p><strong>实战要求</strong>：LeetCode 刷题 150 道（其中中等 100 道，困难 20 道）</p>
+<h2 id="14-分布式系统基础">1.4 分布式系统基础</h2>
+<p><strong>教材</strong>：《数据密集型应用系统设计（DDIA）》，Martin Kleppmann</p>
+<p><strong>阅读范围</strong>：</p>
+<ul>
+<li>第 1~2 章：可靠性、可扩展性、可维护性；数据模型与查询语言（精读）</li>
+<li>第 5~7 章：复制、分区、事务（精读，核心中的核心）</li>
+<li>第 8~9 章：分布式系统的麻烦、一致性与共识（精读）</li>
+<li>第 10~12 章：批处理、流处理、数据系统的未来（选读）</li>
+</ul>
+<p><strong>深度要求</strong>：掌握</p>
+<ul>
+<li>能清晰解释主从复制、多主复制、无主复制的优缺点</li>
+<li>理解 CAP 定理的实际含义（不是简单的三选二）</li>
+<li>理解 2PC、共识算法（Raft/Paxos）的基本流程</li>
+<li>能分析一个分布式系统的数据一致性模型</li>
+</ul>
+<h2 id="前置知识检查清单并入自原-00-前置基础">前置知识检查清单（并入自原 00 前置基础）</h2>
+<blockquote>
+<p>进入 CUDA / 分布式之前的<mark class="va-hl">地基</mark>：操作系统、编程语言、深度学习与数学基础。参考 AIInfraGuide「前置基础」模块（约 20 篇），逐项任务见 学习路线总览。本页清单从本地旧站「第零层」合并而来。</p>
+</blockquote>
+<h3 id="linux-与命令行">Linux 与命令行</h3>
+<ul>
+<li><input disabled="" type="checkbox"> 文件系统、权限、进程与作业控制（<code>ps</code> / <code>top</code> / <code>nohup</code> / <code>tmux</code>）</li>
+<li><input disabled="" type="checkbox"> Shell 脚本：变量、循环、管道、<code>xargs</code></li>
+<li><input disabled="" type="checkbox"> 环境管理：<code>conda</code> / <code>venv</code>、<code>LD_LIBRARY_PATH</code>、<code>PATH</code> 排查</li>
+<li><input disabled="" type="checkbox"> 常用工具：<code>nvidia-smi</code>、<code>lspci</code>、<code>htop</code>、<code>nvtop</code></li>
+</ul>
+<h3 id="python-与工具链">Python 与工具链</h3>
+<ul>
+<li><input disabled="" type="checkbox"> 虚拟环境与依赖锁定（<code>pip freeze</code> / <code>requirements.txt</code>）</li>
+<li><input disabled="" type="checkbox"> <code>numpy</code> 广播语义与内存布局（C-contiguous vs F-contiguous）</li>
+<li><input disabled="" type="checkbox"> 调试：<code>pdb</code>、<code>py-spy</code>、<code>faulthandler</code></li>
+<li><input disabled="" type="checkbox"> 性能基础：<code>timeit</code>、<code>cProfile</code>、GIL 的影响边界</li>
+<li><input disabled="" type="checkbox"> 语言进阶：面向对象、装饰器、生成器、多进程/多线程</li>
+<li><input disabled="" type="checkbox"> 对象模型细节（引用 / 闭包 / 深浅拷贝）：见 <a href="/posts/python-notes/">Python 学习笔记</a></li>
+</ul>
+<h3 id="编程语言">编程语言</h3>
+<ul>
+<li><input disabled="" type="checkbox"> <strong>C/C++</strong>：CUDA 编程的宿主语言
+<ul>
+<li><input disabled="" type="checkbox"> 理解指针、内存管理、编译链接过程（不要求精通模板元编程）</li>
+<li><input disabled="" type="checkbox"> 能读懂 C++ 项目代码</li>
+<li><input disabled="" type="checkbox"> 能写简单的 C++ 函数并编译运行</li>
+</ul>
+</li>
+<li><input disabled="" type="checkbox"> <strong>Go 语言</strong>：非常有必要学习</li>
+</ul>
+<h3 id="深度学习与数学基础">深度学习与数学基础</h3>
+<ul>
+<li><input disabled="" type="checkbox"> 反向传播与自动微分（标量到张量）</li>
+<li><input disabled="" type="checkbox"> 常见算子形状推导：卷积、Attention、LayerNorm</li>
+<li><input disabled="" type="checkbox"> 线性代数速查：矩阵乘法、范数、特征分解
+<ul>
+<li><input disabled="" type="checkbox"> 对矩阵维度变换有直觉（如看到 <code>(B, S, H) x (H, V)</code> 能立刻知道结果是 <code>(B, S, V)</code>）</li>
+<li><input disabled="" type="checkbox"> 注意：不需要证明定理</li>
+</ul>
+</li>
+<li><input disabled="" type="checkbox"> 概率论速查：分布、期望、方差、信息论熵
+<ul>
+<li><input disabled="" type="checkbox"> Softmax 的概率解释、交叉熵损失的含义（Speculative Decoding 正确性证明的基础）</li>
+</ul>
+</li>
+<li><input disabled="" type="checkbox"> 微积分（了解即可）：链式法则、梯度的含义（理解反向传播与梯度溢出的前提）</li>
+</ul>
+<h3 id="transformer-架构">Transformer 架构</h3>
+<blockquote>
+<p>大模型时代的&quot;通用底座&quot;，后续每一层都在围绕它做优化——CUDA 层优化它的算子、分布式层切分它的参数、推理层加速它的生成。</p>
+</blockquote>
+<ul>
+<li><input disabled="" type="checkbox"> <strong>Self-Attention 机制</strong>
+<ul>
+<li><input disabled="" type="checkbox"> 理解 Q、K、V 的含义与计算过程（<code>QK^T → scale → softmax → PV</code>）</li>
+<li><input disabled="" type="checkbox"> 理解为什么 Attention 的计算复杂度是 $O(N^2)$（后续理解 FlashAttention 优化的前提）</li>
+</ul>
+</li>
+<li><input disabled="" type="checkbox"> <strong>前馈网络（FFN）</strong>
+<ul>
+<li><input disabled="" type="checkbox"> 掌握两层线性变换 + 激活函数的结构</li>
+<li><input disabled="" type="checkbox"> 理解其为模型参数的大头所在</li>
+</ul>
+</li>
+<li><input disabled="" type="checkbox"> <strong>位置编码</strong>
+<ul>
+<li><input disabled="" type="checkbox"> 了解 Sinusoidal、RoPE 等编码方式</li>
+<li><input disabled="" type="checkbox"> 理解为什么 Transformer 需要额外的位置信息</li>
+</ul>
+</li>
+<li><input disabled="" type="checkbox"> <strong>LayerNorm</strong>
+<ul>
+<li><input disabled="" type="checkbox"> 区分 Pre-Norm vs Post-Norm</li>
+<li><input disabled="" type="checkbox"> 理解为什么大模型普遍采用 Pre-Norm</li>
+</ul>
+</li>
+<li><input disabled="" type="checkbox"> <strong>完整前向过程</strong>
+<ul>
+<li><input disabled="" type="checkbox"> 能从 token embedding 开始，逐步跟踪数据在一个 Transformer Block 中的流转（<code>Attention → Add &amp; Norm → FFN → Add &amp; Norm</code>）</li>
+<li><input disabled="" type="checkbox"> 能说清每一步的输入输出维度</li>
+</ul>
+</li>
+</ul>
+<h3 id="pytorch-框架">PyTorch 框架</h3>
+<ul>
+<li><input disabled="" type="checkbox"> <strong>核心概念</strong>：Tensor 操作、自动微分（autograd）、Module / Parameter 的组织方式</li>
+<li><input disabled="" type="checkbox"> <strong>训练循环</strong>：<code>DataLoader → forward → loss → backward → optimizer.step</code></li>
+<li><input disabled="" type="checkbox"> <strong>模型保存与加载</strong>：<code>state_dict</code> 的使用、<code>checkpoint</code> 的使用</li>
+<li><input disabled="" type="checkbox"> <strong>基本调试</strong>
+<ul>
+<li><input disabled="" type="checkbox"> 使用 <code>torch.cuda.memory_summary()</code> 查看显存使用</li>
+<li><input disabled="" type="checkbox"> 使用 <code>torch.profiler</code> 进行简单性能分析</li>
+</ul>
+</li>
+</ul>
+<h3 id="gpu-基本概念">GPU 基本概念</h3>
+<ul>
+<li><input disabled="" type="checkbox"> GPU vs CPU：并行模型差异、吞吐优先</li>
+<li><input disabled="" type="checkbox"> <code>nvidia-smi</code> 输出解读：显存、SM 占用、温度、功耗</li>
+<li><input disabled="" type="checkbox"> 异构编程的搬运成本：PCIe / NVLink 带宽量级</li>
+</ul>
+<h3 id="通信拓扑">通信拓扑</h3>
+<blockquote>
+<p>分布式训练和多卡推理都离不开高效的卡间、机间通信。这是理解分布式并行策略的前提（例如：不理解 NVLink 与 PCIe 的带宽数量级差异，就无法理解&quot;为什么张量并行不能跨机&quot;）。</p>
+</blockquote>
+<ul>
+<li><input disabled="" type="checkbox"> <strong>单机内部通信</strong>
+<ul>
+<li><input disabled="" type="checkbox"> 理解 NVLink / NVSwitch 的带宽与拓扑</li>
+<li><input disabled="" type="checkbox"> 理解 NVLink 作为同一机箱内 GPU 专用高速通道的角色</li>
+</ul>
+</li>
+<li><input disabled="" type="checkbox"> <strong>多机间通信</strong>
+<ul>
+<li><input disabled="" type="checkbox"> 了解 InfiniBand（IB）网络与 RoCE 协议</li>
+<li><input disabled="" type="checkbox"> 理解 IB 作为跨节点通信基础设施的特点（带宽低于 NVLink 但支持远距离连接）</li>
+</ul>
+</li>
+<li><input disabled="" type="checkbox"> <strong>集合通信原语</strong>
+<ul>
+<li><input disabled="" type="checkbox"> 理解 AllReduce、AllGather、ReduceScatter 的含义与开销</li>
+<li><input disabled="" type="checkbox"> 掌握通信量公式（分析并行策略开销的基础）</li>
+</ul>
+</li>
+<li><input disabled="" type="checkbox"> <strong>NCCL</strong>
+<ul>
+<li><input disabled="" type="checkbox"> NVIDIA 集合通信库的基本用法</li>
+<li><input disabled="" type="checkbox"> NCCL 调优方法</li>
+</ul>
+</li>
+</ul>
+<h3 id="出口检查">出口检查</h3>
+<p>能独立解释「一张 A100 上跑 7B 模型做 prefill，每 token 的算力与带宽需求」—— <mark class="va-hl">算力由 SM 决定，带宽由 HBM 决定</mark>，两者共同决定理论下限。</p>
+<h2 id="验收标准">验收标准</h2>
+<ul>
+<li><input disabled="" type="checkbox"> CS:APP 四个 Lab 独立完成并通过测试</li>
+<li><input disabled="" type="checkbox"> 能在 Linux 服务器上从零搭建开发环境，排查系统问题</li>
+<li><input disabled="" type="checkbox"> LeetCode 150 题完成，面试能现场写中等题</li>
+<li><input disabled="" type="checkbox"> 能向面试官清晰解释 DDIA 中任意一章的核心观点</li>
+</ul>
+<hr>
+<p><a href="/posts/knowledge-map/">← 路线总览</a> · <a href="/posts/km-phase-2/">下一阶段：AI 工程入门 →</a></p>
+
+</div>
+<div class="post-copyright-wrap">
+  <ul class="post-copyright">
+    <li class="post-copyright-author">
+      <strong>本文作者：</strong><span class="post-copyright-author-name"> pz-maker</span></li>
+    <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://pz-maker.github.io/posts/km-phase-1/" target="_blank" rel="noopener" title="本文链接">https://pz-maker.github.io/posts/km-phase-1/</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong>版权声明：</strong>
+      <span>本站所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="noopener" title="CC BY-NC-SA 4.0">CC BY-NC-SA</a> 许可协议。</span>
+    </li>
+  </ul>
+</div><div class="sakura-post-nav-before-comment"><nav class="sakura-post-nav is-merge" aria-label="文章导航"><a class="sakura-image-card card-prev has-sibling" href="/posts/highlight-demo/"><div class="sakura-post-nav-content">
+      <span class="sakura-post-nav-label">Previous Post</span>
+      <span class="sakura-post-nav-title">文字高亮演示</span>
+    </div>
+  </a><a class="sakura-image-card card-next has-sibling" href="/posts/km-phase-4/"><div class="sakura-post-nav-content">
+      <span class="sakura-post-nav-label">Next Post</span>
+      <span class="sakura-post-nav-title">阶段四 · 平台架构与前沿（12~18 个月）</span>
+    </div>
+  </a></nav></div>
+        <section id="page-comment-section" class="sakura-comment sakura-page-comment" data-comment-provider="twikoo"><div class="sakura-twikoo">
+    <div id="tcomment" class="sakura-comment-root"></div>
+  </div></section>
+
+      </div>
+    </div>
+    
+    <aside class="sakura-aside sakura-post-toc"><div class="sakura-toc">
+  <div class="sakura-toc__inner">
+    <div class="outline-title">文章目录</div>
+    <div class="outline-marker" aria-hidden="true"></div>
+    <div class="sakura-toc__nav">
+      <span id="doc-outline-aria-label" class="visually-hidden">Table of Contents for current page</span>
+      <nav id="TableOfContents">
+        <ul><li><a href="#linux-%e4%b8%8e%e5%91%bd%e4%bb%a4%e8%a1%8c" class="toc-link toc-link--3">Linux 与命令行</a></li><li><a href="#python-%e4%b8%8e%e5%b7%a5%e5%85%b7%e9%93%be" class="toc-link toc-link--3">Python 与工具链</a></li><li><a href="#%e7%bc%96%e7%a8%8b%e8%af%ad%e8%a8%80" class="toc-link toc-link--3">编程语言</a></li><li><a href="#%e6%b7%b1%e5%ba%a6%e5%ad%a6%e4%b9%a0%e4%b8%8e%e6%95%b0%e5%ad%a6%e5%9f%ba%e7%a1%80" class="toc-link toc-link--3">深度学习与数学基础</a></li><li><a href="#transformer-%e6%9e%b6%e6%9e%84" class="toc-link toc-link--3">Transformer 架构</a></li><li><a href="#pytorch-%e6%a1%86%e6%9e%b6" class="toc-link toc-link--3">PyTorch 框架</a></li><li><a href="#gpu-%e5%9f%ba%e6%9c%ac%e6%a6%82%e5%bf%b5" class="toc-link toc-link--3">GPU 基本概念</a></li><li><a href="#%e9%80%9a%e4%bf%a1%e6%8b%93%e6%89%91" class="toc-link toc-link--3">通信拓扑</a></li><li><a href="#%e5%87%ba%e5%8f%a3%e6%a3%80%e6%9f%a5" class="toc-link toc-link--3">出口检查</a></li></ul>
+      </nav>
+    </div>
+  </div>
+</div></aside>
+    
+  </div>
+</article>
+
+  </div><footer class="sakura-footer"><div class="sakura-footer__inner">
+
+  
+
+  <div class="sakura-footer-meta">
+    <p class="sakura-footer-powered">
+      Powered by <a href="https://github.com/gohugoio/hugo" target="_blank" class="sakura-footer-powered__link">hugo</a> & theme <a href="https://github.com/AIOVTUE/hugo-theme-aiovtue" target="_blank" class="sakura-footer-powered__link">AIOVTUE</a>
+    </p>
+
+    <p class="sakura-footer-busuanzi">
+      <span class="sakura-footer-busuanzi__row">
+        <span>今日访客：<span id="busuanzi_today_uv">加载中...</span></span>
+        <span class="sakura-footer-busuanzi__sep">|</span>
+        <span>今日访问：<span id="busuanzi_today_pv">加载中...</span></span>
+      </span>
+      <span class="sakura-footer-busuanzi__sep sakura-footer-busuanzi__sep--desktop">|</span>
+      <span class="sakura-footer-busuanzi__row">
+        <span>本站访客：<span id="busuanzi_site_uv">加载中...</span></span>
+        <span class="sakura-footer-busuanzi__sep">|</span>
+        <span>本站访问：<span id="busuanzi_site_pv">加载中...</span></span>
+      </span>
+    </p>
+  </div>
+
+  
+
+  <p class="sakura-footer-runtime" id="site-runtime" data-since="2026-08-01">
+
+    本站已经流畅运行
+
+    <span class="sakura-footer-runtime__num" data-unit="days">0</span>天
+
+    <span class="sakura-footer-runtime__num" data-unit="hours">0</span>小时
+
+    <span class="sakura-footer-runtime__num" data-unit="minutes">0</span>分钟
+
+    <span class="sakura-footer-runtime__num" data-unit="seconds">0</span>秒
+
+  </p>
+
+  
+
+  <div class="sakura-copyright">
+
+    <span>
+
+      Copyright &copy;
+
+      <span itemprop="copyrightYear">
+
+        2026
+
+      </span>
+
+    </span>
+
+    <span>by</span>
+
+    <span itemprop="copyrightHolder"><span class="sakura-copyright-author">pz-maker</span></span>
+
+  </div></div>
+
+</footer>
+<div id="sakura-pjax-loader" class="is-hidden" hidden role="status" aria-hidden="true" aria-live="polite" aria-label="页面加载中" style="--sakura-pjax-ecg-duration: 1350ms">
+  <div class="sakura-pjax-loader__panel">
+    <div class="sakura-pjax-loader__ecg-viewport">
+      <svg class="sakura-pjax-loader__ecg" viewBox="0 0 80 56" preserveAspectRatio="xMidYMid meet" focusable="false" aria-hidden="true">
+        <defs>
+          <clipPath id="sakura-pjax-ecg-clip">
+            <rect x="0" y="0" width="80" height="56" />
+          </clipPath>
+          <linearGradient id="sakura-pjax-ecg-fade" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="80" y2="0">
+            <stop offset="0%" stop-color="#fff" stop-opacity="0" />
+            <stop offset="20%" stop-color="#fff" stop-opacity="0.3" />
+            <stop offset="45%" stop-color="#fff" stop-opacity="1" />
+            <stop offset="100%" stop-color="#fff" stop-opacity="1" />
+          </linearGradient>
+          <mask id="sakura-pjax-ecg-mask">
+            <rect x="0" y="0" width="80" height="56" fill="url(#sakura-pjax-ecg-fade)" />
+          </mask><path id="sakura-pjax-ecg-beat" pathLength="80" d="M0,28 H30 L31,24 L33,28 H36 L37,33 L38,5 L42,45 L45,28 H47 L48,24 L50,28 H80" />
+        </defs>
+        <g clip-path="url(#sakura-pjax-ecg-clip)">
+          <g class="sakura-pjax-loader__ecg-grid" aria-hidden="true">
+            <line x1="0" y1="12" x2="80" y2="12" />
+            <line x1="0" y1="28" x2="80" y2="28" />
+            <line x1="0" y1="44" x2="80" y2="44" />
+          </g>
+          <g class="sakura-pjax-loader__ecg-trace" mask="url(#sakura-pjax-ecg-mask)">
+            <use href="#sakura-pjax-ecg-beat" class="sakura-pjax-loader__ecg-glow" />
+            <use href="#sakura-pjax-ecg-beat" class="sakura-pjax-loader__ecg-line" />
+          </g>
+        </g>
+      </svg>
+    </div>
+  </div>
+</div><div class="mashiro-search" id="search-modal" hidden>
+  <div class="mashiro-search-container">
+    <div class="mashiro-search-input-wrap">
+      <iconify-icon icon="fa6-solid:magnifying-glass" class="mashiro-search-input-icon" aria-hidden="true"></iconify-icon>
+      <input id="search-modal-input" class="mashiro-search-input" type="search" placeholder="输入关键词后回车搜索..." autocomplete="off">
+    </div>
+  </div>
+</div>
+<script src="//cdn.busuanzi.cc/busuanzi/3.6.9/busuanzi.min.js" defer></script>
+
+<script src="/js/main.min.13cad50bcf5a52a7168d23d35414f1abccf70fff27884cc3eb2d63225cc30b42.js" integrity="sha256-E8rVC89aUqcWjSPTVBTxq8z3D/8niEzD6y1jIlzDC0I=" crossorigin="anonymous" defer></script>
+</body>
+</html>

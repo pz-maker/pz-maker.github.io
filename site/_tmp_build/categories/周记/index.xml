@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>周记 on AI Infra Wiki</title>
+		<link>https://pz-maker.github.io/categories/%E5%91%A8%E8%AE%B0/</link>
+		<description>Recent content in 周记 on AI Infra Wiki</description>
+		<generator>Hugo</generator>
+		<language>zh-cn</language>
+		
+		
+		
+		
+			<lastBuildDate>Thu, 13 Aug 2026 00:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="https://pz-maker.github.io/categories/%E5%91%A8%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>2026-W33 周总结</title>
+				<link>https://pz-maker.github.io/posts/weekly/2026-w33/</link>
+				<pubDate>Sun, 09 Aug 2026 00:00:00 +0000</pubDate>
+				<guid>https://pz-maker.github.io/posts/weekly/2026-w33/</guid>
+				<description>&lt;h1 id=&#34;w33--周总结&#34;&gt;W33 · 周总结&lt;/h1&gt;&#xA;&lt;p&gt;本周只做了一件事：把 &lt;strong&gt;Obsidian 写笔记 → Wiki 上线&lt;/strong&gt; 这条工作流搭通。工具链理顺之后，以后所有沉淀都能低成本发出来。&lt;/p&gt;&#xA;&lt;h2 id=&#34;本周完成&#34;&gt;本周完成&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 打通发布链路：Obsidian 写作 → &lt;code&gt;Ctrl+Shift+S&lt;/code&gt; 一键推送 → GitHub Actions 自动构建 → &lt;mark class=&#34;va-hl&#34;&gt;约 1 分钟上线&lt;/mark&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Obsidian vault 与 Hugo 站点内容合一，笔记直接写在 &lt;code&gt;site/content/posts/&lt;/code&gt;，无需搬运&lt;/li&gt;&#xA;&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 配置 Templater 新建模板：&lt;code&gt;Ctrl+N&lt;/code&gt; 自动建好文件夹结构、填好 frontmatter（日期、分类默认值）&lt;/li&gt;&#xA;&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 本地预览：&lt;code&gt;hugo server&lt;/code&gt; 热重载，所见即所得，确认无误再推送&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;卡点与思考&#34;&gt;卡点与思考&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Obsidian 的 &lt;code&gt;[[wiki 链接]]&lt;/code&gt; Hugo 不认，站内引用一律要用标准 Markdown 链接 &lt;code&gt;[标题](/posts/xxx/)&lt;/code&gt;，否则线上是死链&lt;/li&gt;&#xA;&lt;li&gt;图片放文章同名文件夹（page bundle），相对路径引用，本地预览和线上渲染才能一致&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;下周计划&#34;&gt;下周计划&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 按 &lt;a href=&#34;https://pz-maker.github.io/posts/km-phase-1/&#34;&gt;知识地图 · 阶段一&lt;/a&gt; 开始系统学习，从前置检查清单逐项过&lt;/li&gt;&#xA;&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 用这条工作流发出第一篇手敲的技术文章&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;相关：&lt;a href=&#34;https://pz-maker.github.io/posts/publish-flow/&#34;&gt;文章常态化发布流程&lt;/a&gt;&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Learning on AI Infra Wiki</title>
+		<link>https://pz-maker.github.io/tags/learning/</link>
+		<description>Recent content in Learning on AI Infra Wiki</description>
+		<generator>Hugo</generator>
+		<language>zh-cn</language>
+		
+		
+		
+		
+			<lastBuildDate>Fri, 21 Aug 2026 00:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="https://pz-maker.github.io/tags/learning/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>AI桌宠</title>
+				<link>https://pz-maker.github.io/posts/ai%E6%A1%8C%E5%AE%A0/</link>
+				<pubDate>Fri, 21 Aug 2026 00:00:00 +0000</pubDate>
+				<guid>https://pz-maker.github.io/posts/ai%E6%A1%8C%E5%AE%A0/</guid>
+				<description>&lt;blockquote&gt;&#xA;&lt;p&gt;通过一个简单的桌宠项目，初步感受软件开发的全流程，体会AI在软件开发上带来的变革&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;h2 id=&#34;正文&#34;&gt;正文&lt;/h2&gt;&#xA;&lt;h3 id=&#34;软件开发初探&#34;&gt;软件开发初探&lt;/h3&gt;&#xA;&lt;p&gt;AI时代的软件开发，不仅意味着敲代码，还意味着&lt;mark class=&#34;va-hl&#34;&gt;环境，规范，安全，项目管理&lt;/mark&gt;&lt;/p&gt;&#xA;&lt;h4 id=&#34;1环境&#34;&gt;1.环境&lt;/h4&gt;&#xA;&lt;p&gt;在使用Agent时，先检查开发环境，若无开发环境，则安装并配置，需要区分：&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>《学习变现》读书笔记</title>
+				<link>https://pz-maker.github.io/posts/learn-for-money/</link>
+				<pubDate>Mon, 03 Aug 2026 00:00:00 +0000</pubDate>
+				<guid>https://pz-maker.github.io/posts/learn-for-money/</guid>
+				<description>&lt;h1 id=&#34;学习变现学习笔记&#34;&gt;《学习变现》学习笔记&lt;/h1&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;书籍：《学习变现》&#xA;笔记来源：手写笔记整理&#xA;整理方式：提炼关键词 + 结构化重组&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;一核心关键词&#34;&gt;一、核心关键词&lt;/h2&gt;&#xA;&lt;table&gt;&#xA;&#x9;&lt;thead&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;th style=&#34;text-align: left&#34;&gt;关键词&lt;/th&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;th style=&#34;text-align: left&#34;&gt;含义&lt;/th&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&lt;/thead&gt;&#xA;&#x9;&lt;tbody&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td style=&#34;text-align: left&#34;&gt;&lt;strong&gt;知识地图&lt;/strong&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td style=&#34;text-align: left&#34;&gt;以书单或课程为节点，可视化地展示学习领域的全貌&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td style=&#34;text-align: left&#34;&gt;&lt;strong&gt;学习路线图&lt;/strong&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td style=&#34;text-align: left&#34;&gt;带有截止时间、学习顺序和输出目标的计划表&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td style=&#34;text-align: left&#34;&gt;&lt;strong&gt;因式分解&lt;/strong&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td style=&#34;text-align: left&#34;&gt;将他人的长处拆解为可学习的模块，再组合利用&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td style=&#34;text-align: left&#34;&gt;&lt;strong&gt;学习状态库&lt;/strong&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td style=&#34;text-align: left&#34;&gt;记录能让自己进入高效心流状态的环境与工具组合&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td style=&#34;text-align: left&#34;&gt;&lt;strong&gt;应用与原创&lt;/strong&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td style=&#34;text-align: left&#34;&gt;将输入转化为输出，是专业人区别于普通学习者的核心价值&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td style=&#34;text-align: left&#34;&gt;&lt;strong&gt;学习环境&lt;/strong&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td style=&#34;text-align: left&#34;&gt;沉浸式的氛围比刻意学习更有效，&amp;ldquo;只是待在那里就很好了&amp;rdquo;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&lt;/tbody&gt;&#xA;&lt;/table&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;二学习体系搭建&#34;&gt;二、学习体系搭建&lt;/h2&gt;&#xA;&lt;h3 id=&#34;21-制作知识地图&#34;&gt;2.1 制作知识地图&lt;/h3&gt;&#xA;&lt;p&gt;&lt;strong&gt;核心问题：&lt;/strong&gt; 读哪个部分？读到何种程度？&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>零碎想法 on AI Infra Wiki</title>
+		<link>https://pz-maker.github.io/categories/%E9%9B%B6%E7%A2%8E%E6%83%B3%E6%B3%95/</link>
+		<description>Recent content in 零碎想法 on AI Infra Wiki</description>
+		<generator>Hugo</generator>
+		<language>zh-cn</language>
+		
+		
+		
+		
+			<lastBuildDate>Thu, 13 Aug 2026 00:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="https://pz-maker.github.io/categories/%E9%9B%B6%E7%A2%8E%E6%83%B3%E6%B3%95/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>文章常态化发布流程</title>
+				<link>https://pz-maker.github.io/posts/publish-flow/</link>
+				<pubDate>Thu, 13 Aug 2026 00:00:00 +0000</pubDate>
+				<guid>https://pz-maker.github.io/posts/publish-flow/</guid>
+				<description>&lt;blockquote&gt;&#xA;&lt;p&gt;一句话记忆：在 &lt;code&gt;posts/&lt;/code&gt; 下新建 → 写 → &lt;code&gt;Ctrl+Shift+S&lt;/code&gt;，其余全自动。这篇是随手可翻的速查卡。&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;h2 id=&#34;一图流&#34;&gt;一图流&lt;/h2&gt;&#xA;&lt;div class=&#34;language-text&#34; data-line-count=&#34;2&#34;&gt;&#xD;&#xA;  &lt;button type=&#34;button&#34; title=&#34;Copy code&#34; class=&#34;copy&#34; aria-label=&#34;复制代码&#34;&gt;&lt;/button&gt;&#xD;&#xA;  &lt;span class=&#34;lang&#34;&gt;text&lt;/span&gt;&#xD;&#xA;  &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Obsidian 写文章 ──▶ Ctrl+Shift+S ──▶ GitHub Actions 自动构建 ──▶ 上线&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   （唯一要做的）      （一键推送）          （不用管）          （约 1 分钟）&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&#xD;&#xA;  &lt;button type=&#34;button&#34; class=&#34;code-block-unfold-btn&#34; aria-label=&#34;展开代码&#34; hidden&gt;&lt;/button&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&lt;h2 id=&#34;三种内容的发法&#34;&gt;三种内容的发法&lt;/h2&gt;&#xA;&lt;h3 id=&#34;-发新文章最常用&#34;&gt;① 发新文章（最常用）&lt;/h3&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Obsidian 里进入 &lt;code&gt;site/content/posts/&lt;/code&gt;，按 &lt;code&gt;Ctrl+N&lt;/code&gt;&lt;/li&gt;&#xA;&lt;li&gt;输入标题回车——&lt;mark class=&#34;va-hl&#34;&gt;完事了&lt;/mark&gt;。Templater 自动：&#xA;&lt;ul&gt;&#xA;&lt;li&gt;建好 &lt;code&gt;posts/&amp;lt;标题&amp;gt;/index.md&lt;/code&gt; 文件夹结构&lt;/li&gt;&#xA;&lt;li&gt;填好 frontmatter（日期自动、分类默认「技术文章」）&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;直接写正文，需要时改一下 frontmatter 的分类&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h3 id=&#34;-发周记&#34;&gt;② 发周记&lt;/h3&gt;&#xA;&lt;p&gt;在 &lt;code&gt;site/content/posts/weekly/&lt;/code&gt; 下新建 → 自动套周记模板（ISO 周号、&lt;code&gt;issue&lt;/code&gt; 编号都自动算好）。&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>我把 Obsidian 变成了个人网站：从笔记到上线，只隔一个快捷键</title>
+				<link>https://pz-maker.github.io/posts/obsidian-workflow-retrospective/</link>
+				<pubDate>Thu, 13 Aug 2026 00:00:00 +0000</pubDate>
+				<guid>https://pz-maker.github.io/posts/obsidian-workflow-retrospective/</guid>
+				<description>&lt;h1 id=&#34;我把-obsidian-变成了个人网站从笔记到上线只隔一个快捷键&#34;&gt;我把 Obsidian 变成了个人网站：从笔记到上线，只隔一个快捷键&lt;/h1&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;写作工具与发布工具共用同一套文件，「发布」就不再是负担。这篇文章复盘我从零搭起这条 Obsidian → 个人网站全自动流水线的全过程：为什么做、怎么选、踩了哪些坑、最后想明白了什么。&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>文字高亮演示</title>
+				<link>https://pz-maker.github.io/posts/highlight-demo/</link>
+				<pubDate>Mon, 10 Aug 2026 00:00:00 +0000</pubDate>
+				<guid>https://pz-maker.github.io/posts/highlight-demo/</guid>
+				<description>&lt;h1 id=&#34;文字高亮演示&#34;&gt;文字高亮演示&lt;/h1&gt;&#xA;&lt;p&gt;本站支持 &lt;code&gt;&amp;lt;mark class=&amp;quot;va-hl&amp;quot;&amp;gt;文字&amp;lt;/mark&amp;gt;&lt;/code&gt; 霓虹荧光高亮，起排版装饰作用（Obsidian 里直接写 HTML 标签即可，网站渲染为青蓝荧光）。&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>增删文章指南</title>
+				<link>https://pz-maker.github.io/posts/howto/</link>
+				<pubDate>Mon, 10 Aug 2026 00:00:00 +0000</pubDate>
+				<guid>https://pz-maker.github.io/posts/howto/</guid>
+				<description>&lt;h1 id=&#34;增删文章指南&#34;&gt;增删文章指南&lt;/h1&gt;&#xA;&lt;p&gt;本站是 Hugo 静态站，所有文章都是 &lt;code&gt;site/content/posts/&lt;/code&gt; 下的 Markdown 文件。增删一篇文章只需动文件，&lt;mark class=&#34;va-hl&#34;&gt;不需要懂代码&lt;/mark&gt;。&lt;/p&gt;&#xA;&lt;h2 id=&#34;一新增文章三步&#34;&gt;一、新增文章（&lt;mark class=&#34;va-hl&#34;&gt;三步&lt;/mark&gt;）&lt;/h2&gt;&#xA;&lt;h3 id=&#34;1-新建笔记自动套模板&#34;&gt;1. 新建笔记（自动套模板）&lt;/h3&gt;&#xA;&lt;p&gt;在 Obsidian 中进入 &lt;code&gt;site/content/posts/&lt;/code&gt; 目录，&lt;code&gt;Ctrl+N&lt;/code&gt; 新建笔记，输入标题回车：&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>
