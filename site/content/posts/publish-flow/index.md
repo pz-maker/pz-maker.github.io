@@ -75,4 +75,4 @@ pinned: true   # 可选：置顶
 ## 关联
 
 - [增删文章指南](/posts/howto/)：frontmatter 全字段与写作约定
-- [知识地图总览](/posts/knowledge-map/)：写什么——四阶段学习路线
+- [学习计划](/posts/knowledge-map/)：写什么——四阶段学习路线

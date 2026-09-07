@@ -133,7 +133,7 @@ print(double(3.0))  # 6.0
 
 ## 下一步
 
-- [ ] 面向对象、装饰器、生成器（见 [阶段一 · 前置检查清单](/posts/km-phase-1/)）
+- [ ] 面向对象、装饰器、生成器
 - [ ] 多进程 / 多线程与 GIL 影响边界
 
-> 相关：[阶段一 · 前置检查清单](/posts/km-phase-1/) ｜ [AI Infra 学习路线](/posts/knowledge-map/)
+> 相关：[我的学习计划](/posts/knowledge-map/)
