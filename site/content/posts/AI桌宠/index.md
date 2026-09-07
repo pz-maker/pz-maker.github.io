@@ -1,4 +1,4 @@
-﻿---
+---
 title: AI桌宠
 date: 2026-08-21
 lastmod: 2026-08-21
@@ -30,10 +30,15 @@ AI时代的软件开发，不仅意味着敲代码，还意味着<mark class="va
 #### 3.安全
 如：
 不给页面不必要的本地系统权限；
+
 不接入API；
+
 不添加数据库；
+
 不写入任何密钥；
+
 不擅自更换技术栈。
+
 #### 4.项目管理
 熟练掌握git命令：
 
@@ -42,16 +47,27 @@ git init开始管理
 git log --oneline --all 查看项目主干进程
 
 <mark class="va-hl">管理方法：先在分支上改动，若满意则拉回主干，不满意回退原始状态</mark>
+
 1.git checkout -b dev(dev只是分支名称) 从当前主干中进入分支
+
 2.写代码
+
 3.git status (还没有commit时查看有哪些改动)
+
 4.若写崩了：
+
   git restore
+  
   git clean -fd
+  
   若满意：
+  
   git add .
+  
   git commit -m "本次改动的名称"
+  
   git switch master
+  
   git merge dev (注：移除分支)
 5.回看状态
 git log --oneline --all
