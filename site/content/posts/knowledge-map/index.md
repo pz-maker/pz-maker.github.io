@@ -2,47 +2,61 @@
 title: 我的学习计划
 date: 2026-08-12
 lastmod: 2026-09-07
-tags: [roadmap]
+tags: [roadmap, ai-infra]
 categories:
   - 知识地图
-description: "删掉了 AI 生成的四阶段 18 个月路线图，换一份写得出、也做得到的计划：从数学基础开始，养成严密的工程基础能力。"
+description: "近期详细、长远骨架：从数学基石开始，对接 AI Infra 职业路径的自学计划，附全部公开资源链接。"
 ---
 
 # 我的学习计划
 
-> 这一页原来是一份「四阶段 18 个月」的学习路线图：铁律 Deadline、书单、逐章阅读范围、验收标准，一应俱全。它是 AI 生成的，我删了——过于繁杂，根本做不到，挂在网站上显得没有诚意。
-> 现在这一页只写我真的会做的事。
+> 这一页原来是一份 AI 生成的「四阶段 18 个月」路线图，删了：过于繁杂，做不到，挂出来没有诚意。
+> 现在换成两层结构——**近期详细，长远只留骨架**。近期的部分是我马上动手的数学基石；长远的部分是通向 AI Infra 的台阶，只留方向和对标课程，不再给自己排那种完成不了的日程。
 
-## 主线：养成严密的工程基础能力
+核心逻辑一句话：<mark class="va-hl">拒绝「视频通关」的虚假熟练感，以「高强度作业 + 底层手写 + 同行评审」为唯一衡量标准。</mark>
 
-受一段话的启发：很多自学者喜欢跳过离散数学直接去写框架，觉得「学这玩意没用」。但当你以后在真实工程环境里遇到复杂的系统状态机转换，或者需要严格论证一个高并发程序会不会产生死锁时，缺乏形式化逻辑训练的人只能全凭直觉堆砌代码，然后给系统埋下成百上千个毫无规律且无法复现的缺陷。
+## 三条铁律
 
-所以我的第一门课，是数学。
+1. **时间换算**：1 学分 = 每周 3 小时投入。一门 5 学分的硬核课 = 每周 15 小时——其中只有 3 小时看课，剩下 12 小时全部用来做题、Debug、写代码
+2. **AI 使用禁令**：初学核心底层机制时彻底关掉代码补全，手敲每一行建立神经连接；只在完全掌握后的工程生产阶段用 AI 提效
+3. **验证标准**：不是「看完了」，而是独立解决了多少挑战题、手写了多少行底层代码、接受了多少次真实评审
 
-### 学什么
+## 近期（详细）：数学基石，不可跳过
 
-对标斯坦福 **CS103《计算机科学的数学基础》**。这门课教的东西看起来和写代码毫无关系：
+目标：建立形式化逻辑思维与概率直觉，避免成为「调参侠」。很多自学者喜欢跳过离散数学直接写框架，但遇到复杂系统的状态机转换、需要严格论证高并发程序会不会死锁时，缺乏形式化逻辑训练的人只能凭直觉堆代码，埋下成百上千个无法复现的缺陷。
 
-- 逻辑学、集合论、函数与关系
-- 图论、自动机理论
-- 可计算性与复杂度理论
+### 离散数学与证明 ← 正在做
 
-但它的核心是**严苛的形式化证明训练**——这正是工程严密性的地基。
+- **对标**：斯坦福 CS103（Mathematical Foundations of Computing）
+- **自学资源**：MIT 6.042J《Mathematics for Computer Science》，课程与习题集完全公开
+- **内容**：逻辑学、集合论、函数与关系、图论、自动机理论、可计算性与复杂度理论——看起来和写代码毫无关系，核心其实是严苛的形式化证明训练
+- **做法**：习题集拿纸笔推演，不敲进电脑里敷衍自己
+- **验收**：<mark class="va-hl">能熟练运用数学归纳法、反证法和鸽巢原理，完成算法正确性的证明</mark>。做不到这条，后面读再多书也是自我感动
 
-### 用什么学
+### 概率论与统计 ← 下一门
 
-自学材料选 MIT 公开课 **Mathematics for Computer Science**：
+- **对标**：斯坦福 CS109（Probability for Computer Scientists）
+- **自学资源**：Harvard Stat 110，课程视频与作业公开
+- **验收**：完成高质量作业；理解 MLE、贝叶斯、信息论背后的数学逻辑
 
-- 课程与课后习题集完全公开
-- 习题一定拿纸笔推演，不敲进电脑里敷衍自己
+## 长远（骨架）：通向 AI Infra 的五个台阶
 
-### 怎么算学会
+只列方向、对标与关键动作，不排时间——数学基石完成后，再展开下一级。
 
-不设 Deadline，只设一条底线：
+| 台阶 | 对标课程 | 关键动作（一句话） |
+| :--- | :--- | :--- |
+| ① 计算机系统（分水岭） | CS107 / CS111 | 死磕 CSAPP Labs（Data / Bomb / Malloc）；完成 xv6 全部实验，从「使用计算机」进阶到「理解程序在硬件上的物理执行」 |
+| ② 算法设计与分析 | CS161 | 超越刷题：用数学语言证明算法在所有情况下的正确性与时空复杂度 |
+| ③ AI 硬核路线 | CS229 / CS336 | 手推公式、不依赖现成库实现底层逻辑；从零手写分词器、Transformer、优化器、分布式训练 |
+| ④ 造出东西（工程巅峰） | CS144 / CS143 | 徒手实现 TCP 收发端与 IP 路由器串成完整协议栈；手写词法/语法分析器、类型检查与简易 GC |
+| ⑤ 第三层环境 | 无课程可下载 | 真实项目 + 开源评审 + 科研锤炼 + 费曼小组 |
 
-<mark class="va-hl">能熟练运用数学归纳法、反证法和鸽巢原理，去完成算法正确性的证明。</mark>
+第⑤级决定我是「做题家」还是「工程师」，需要人为创造：
 
-做不到这条，后面读再多书也只是自我感动。
+- **大型项目**：持续半年以上、无现成答案、有真实用户或活跃社区（禁止二手商城、博客后台这类保姆级教程项目）
+- **开源贡献**：翻常用工具的 Issue 列表 → 修简单 Bug → 提 PR → 接受核心开发者严苛的代码审查，这是替代名校 Peer Review 的最佳途径
+- **科研破局**：主动联系高校实验室申请科研助理，体验「想法被否定」和「严密实验设计」的锤炼
+- **费曼小组**：3~5 人硬核小组，标准是把并发死锁这类底层问题给外行讲得清晰透彻、无逻辑断层
 
 ## 同时在做的实践
 
@@ -51,11 +65,46 @@ description: "删掉了 AI 生成的四阶段 18 个月路线图，换一份写�
 - [AI 桌宠](/posts/ai桌宠/)：环境、规范、安全、git 管理的全流程初体验
 - [战地一学习记录](/posts/战地一学习记录/)：兴趣也是学习的一部分
 
-## 给自己的三条规矩
+## 给自己的规矩
 
 1. 计划宁可小，也要做得到：不设 18 个月的宏图，只设本周的目标
 2. 学过的东西在本站留一篇笔记——写不出来，说明没学会
 3. 纸笔推演优先：证明题敲进 Markdown 里不算数
+4. 感到痛苦和望而生畏是正确的——学得舒服，说明强度不够
+
+## 资源清单（全部公开，集中在此）
+
+**数学基石**
+
+- MIT 6.042J：[ocw.mit.edu/6-042j](https://ocw.mit.edu/courses/6-042j-mathematics-for-computer-science-spring-2015/)
+- 斯坦福 CS103：[web.stanford.edu/class/cs103](https://web.stanford.edu/class/cs103/)
+- Harvard Stat 110：[课程站](https://projects.iq.harvard.edu/stat110) ｜ [视频合集](https://www.youtube.com/playlist?list=PL2SOU6wwxB0uwwH80KTQ6ht66KWxbz-Qo)
+- 斯坦福 CS109：[web.stanford.edu/class/cs109](https://web.stanford.edu/class/cs109/) ｜ [视频合集](https://www.youtube.com/playlist?list=PLoROMvodv4rOpr_A7B9SriE_iZmkanvUg)
+
+**计算机系统**
+
+- CMU 15-213（CS:APP）：[课程站](https://www.cs.cmu.edu/~213/) ｜ [Labs](https://csapp.cs.cmu.edu/3e/labs.html)
+- MIT 6.S081（xv6）：[pdos.csail.mit.edu/6.S081](https://pdos.csail.mit.edu/6.S081/)
+
+**算法**
+
+- 斯坦福 CS161：[cs161.org](https://cs161.org/)
+- Princeton Algorithms：[algs4.cs.princeton.edu](https://algs4.cs.princeton.edu/home/)
+- MIT 6.046J：[ocw.mit.edu/6-046j](https://ocw.mit.edu/courses/6-046j-design-and-analysis-of-algorithms-spring-2015/)
+
+**AI 硬核**
+
+- 斯坦福 CS229：[cs229.stanford.edu](https://cs229.stanford.edu/)
+- 斯坦福 CS336：[课程站](https://stanford-cs336.github.io/) ｜ [GitHub](https://github.com/stanford-cs336)
+
+**工程实战**
+
+- 斯坦福 CS144：[web.stanford.edu/class/cs144](https://web.stanford.edu/class/cs144/)（官方页，会跳转到 [cs144.github.io](https://cs144.github.io/) 的 Lab 站）
+- 斯坦福 CS143：[web.stanford.edu/class/cs143](https://web.stanford.edu/class/cs143/)
+- Crafting Interpreters：[craftinginterpreters.com](https://craftinginterpreters.com/)
+
+> **访问说明**：以上全是公开教育资源，无需任何账号或校内权限。但国内直连时 YouTube、GitHub（含 `*.github.io`）经常打不开或超时，需要自备网络环境；Harvard 的课程站对非浏览器访问会返回 403，用浏览器正常打开即可。
+> 课程内容每年更新，最新 Lab 与 Reading List 以各课程官网为准；部分斯坦福课程的完整作业材料不公开，但核心 Labs 通常托管在 GitHub 上。
 
 ---
 
