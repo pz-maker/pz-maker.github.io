@@ -1,0 +1,28 @@
+# =============================================================================
+# 友链数据 —— 友链页 /links/ 读取此文件（模板取 hugo.Data.links.linkGroups）
+# 页面壳子在 content/links.md；文章侧边栏也会取第一组（post-sidebar-links.html）
+#
+# 单条卡片字段：
+#   url      站点链接（必填）
+#   avatar   站长头像（必填；模板没有 onerror 兜底，图裂会直接露出破图标）
+#   name     站点名称（必填，同时用作图片 alt）
+#   blog     卡片显示名（缺省回落到 name）
+#   desc     一句话简介
+#   color    卡片主色（缺省 #0078e7）
+#   siteshot 站点截图（缺省走 s0.wp.com/mshots 自动生成，国内可访问）
+#   pinLast  true 时固定排在组末尾
+# =============================================================================
+
+# 组内卡片是否随机打乱顺序
+shuffleGroups: false
+
+linkGroups:
+  - name: 友情链接
+    desc: 一起学计算机的同学
+    links:
+      - url: https://hikazyo.dpdns.org/
+        avatar: https://free.picui.cn/free/2025-08-11/6898ea1c320e1.jpeg
+        name: Hikazyo
+        blog: Hikazyo's Blog
+        desc: 计科同学的博客 · 掛在夜之帳幕的星群，引導出虛假的時光
+        color: "#5bc8d6"
