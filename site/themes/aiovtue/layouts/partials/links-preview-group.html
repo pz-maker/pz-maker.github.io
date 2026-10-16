@@ -31,7 +31,7 @@
       <li class="links-preview-item" style="--link-color: {{ .color | default `#0078e7` }}"{{ with .pinLast }} data-pin-last="true"{{ end }}>
         {{- if eq $groupLayout "simple" -}}
         <a class="links-preview-card links-preview-card--simple" href="{{ .url }}" target="_blank" rel="friend noopener">
-          <img class="sakura-lazy-img links-preview-avatar" src="{{ .avatar }}" alt="{{ .name }}" loading="lazy" decoding="async">
+          <img class="sakura-lazy-img links-preview-avatar" src="{{ .avatar }}" alt="{{ .name }}" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='{{ `hero/avatar.png` | relURL }}';">
           <div class="links-preview-text">
             <div class="links-preview-name">{{ .blog | default .name }}</div>
             <div class="links-preview-desc">{{ .desc }}</div>
@@ -46,7 +46,7 @@
             <img class="sakura-lazy-img" src="{{ $siteshot }}" alt="{{ .name }}" loading="lazy" decoding="async">
           </div>
           <div class="links-preview-meta">
-            <img class="sakura-lazy-img links-preview-avatar" src="{{ .avatar }}" alt="{{ .name }}" loading="lazy" decoding="async">
+            <img class="sakura-lazy-img links-preview-avatar" src="{{ .avatar }}" alt="{{ .name }}" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='{{ `hero/avatar.png` | relURL }}';">
             <div class="links-preview-text">
               <div class="links-preview-name">{{ .blog | default .name }}</div>
               <div class="links-preview-desc">{{ .desc }}</div>

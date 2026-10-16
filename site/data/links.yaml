@@ -4,7 +4,7 @@
 #
 # 单条卡片字段：
 #   url      站点链接（必填）
-#   avatar   站长头像（必填；模板没有 onerror 兜底，图裂会直接露出破图标）
+#   avatar   站长头像（可选；留空或图裂时自动回退到 /hero/avatar.png 默认头像）
 #   name     站点名称（必填，同时用作图片 alt）
 #   blog     卡片显示名（缺省回落到 name）
 #   desc     一句话简介
@@ -21,7 +21,8 @@ linkGroups:
     desc: 一起学计算机的同学
     links:
       - url: https://hikazyo.dpdns.org/
-        avatar: https://free.picui.cn/free/2025-08-11/6898ea1c320e1.jpeg
+        # free.picui.cn 图床已失效(404)，留空自动回退默认头像；有新头像地址填这里
+        avatar: ""
         name: Hikazyo
         blog: Hikazyo's Blog
         desc: 计科同学的博客 · 掛在夜之帳幕的星群，引導出虛假的時光
