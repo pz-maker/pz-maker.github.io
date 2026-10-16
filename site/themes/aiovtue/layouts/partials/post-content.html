@@ -1,4 +1,6 @@
-{{- $content := partial "render-signature-content.html" (dict "content" .Content) -}}
+{{- $raw := partial "obsidian-wikilinks.html" (dict "content" .RawContent) -}}
+{{- $rendered := .RenderString (dict "display" "block") $raw -}}
+{{- $content := partial "render-signature-content.html" (dict "content" $rendered) -}}
 <div class="markdown-body prose sakura-post-content{{ partial "post-text-indent-class.html" . }}">
   {{ $content | safeHTML }}
 </div>

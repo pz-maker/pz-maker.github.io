@@ -8,4 +8,5 @@
 {{- $content = replace $content "[签名]" $sig -}}
 {{- $content = replace $content $placeholderPrimary "![签名]" -}}
 {{- $content = replace $content $placeholder "[签名]" -}}
+{{- $content = partial "obsidian-wikilinks.html" (dict "content" $content) -}}
 {{- return $content -}}

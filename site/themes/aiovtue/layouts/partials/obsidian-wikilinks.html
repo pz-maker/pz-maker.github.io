@@ -1,0 +1,27 @@
+{{- /*
+  将 Obsidian 的 wiki 语法转换为标准 Markdown（在 Goldmark 渲染前处理 RawContent）：
+    ![[图片.jpg]]           -> ![图片.jpg](图片.jpg)
+    ![[图片.jpg|说明]]       -> ![说明](图片.jpg)
+    [[图片.jpg]]            -> ![图片.jpg](图片.jpg)    无 ! 但为图片扩展名，自动转图片
+    [[图片.jpg|说明]]        -> ![说明](图片.jpg)
+    [[文章标题]]            -> [文章标题](文章标题)
+    [[文章标题|显示文字]]    -> [显示文字](文章标题)
+*/ -}}
+{{- $content := .content -}}
+
+{{- /* 1. 显式图片嵌入 ![[file|alt]] */ -}}
+{{- $content = replaceRE `!\[\[([^\]\|]+?)(?:\|([^\]]*?))?\]\]` "![$2]($1)" $content -}}
+
+{{- /* 2. 带 ! 但 alt 为空： ![](x) -> ![x](x) */ -}}
+{{- $content = replaceRE `!\[\]\(([^)]+)\)` "![$1]($1)" $content -}}
+
+{{- /* 3. 双链但目标是图片文件： [[file.jpg]] / [[file.jpg|alt]] -> 图片 */ -}}
+{{- $content = replaceRE `\[\[([^\]\|]+?\.(?:jpg|jpeg|png|gif|webp|svg|bmp|avif))(?:\|([^\]]*?))?\]\]` "![$2]($1)" $content -}}
+
+{{- /* 4. alt 仍为空（图片名兜底） */ -}}
+{{- $content = replaceRE `!\[\]\(([^)]+)\)` "![$1]($1)" $content -}}
+
+{{- /* 5. 其余普通双链 [[target|text]] -> 站内链接 */ -}}
+{{- $content = replaceRE `\[\[([^\]\|]+?)(?:\|([^\]]*?))?\]\]` "[$2]($1)" $content -}}
+
+{{- return $content -}}
